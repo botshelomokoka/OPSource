@@ -1,0 +1,211 @@
+name: TODO Tracker
+
+on:
+  push:
+    branches:
+      - development
+      - 'feature/**'
+      - 'fix/**'
+  pull_request:
+    types: [opened, synchronize, reopened]
+  schedule:
+    - cron: '0 0 * * *'  # Daily at midnight
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update of all TODOs'
+        required: false
+        default: 'false'
+
+jobs:
+  scan-todos:
+    runs-on: ubuntu-latest
+    outputs:
+      todo_count: ${{ steps.scan.outputs.todo_count }}
+      has_changes: ${{ steps.scan.outputs.has_changes }}
+    
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install leasot pyyaml
+      
+      - name: Scan for TODOs
+        id: scan
+        run: |
+          # Create todo scanner script
+          cat > scan_todos.py << 'EOL'
+          import os
+          import re
+          import yaml
+          from datetime import datetime
+          
+          TODO_PATTERN = re.compile(r'(?:TODO|FIXME|XXX|HACK|BUG|OPTIMIZE|NOTE)\s*(?:\(([^)]+)\))?\s*:?\s*(.*)')
+          
+          def scan_file(filepath):
+              todos = []
+              with open(filepath, 'r', encoding='utf-8') as f:
+                  for line_num, line in enumerate(f, 1):
+                      match = TODO_PATTERN.search(line)
+                      if match:
+                          assignee = match.group(1) or 'unassigned'
+                          text = match.group(2).strip()
+                          todos.append({
+                              'file': filepath,
+                              'line': line_num,
+                              'assignee': assignee,
+                              'text': text,
+                              'type': match.group(0).split(':')[0].strip(),
+                              'created': datetime.now().isoformat()
+                          })
+              return todos
+          
+          def scan_directory(directory):
+              todos = []
+              for root, _, files in os.walk(directory):
+                  if '.git' in root or 'node_modules' in root:
+                      continue
+                  for file in files:
+                      if file.endswith(('.py', '.js', '.jsx', '.ts', '.tsx', '.cpp', '.h', '.cs')):
+                          filepath = os.path.join(root, file)
+                          todos.extend(scan_file(filepath))
+              return todos
+          
+          def main():
+              todos = scan_directory('.')
+              
+              # Group TODOs by type
+              todo_groups = {}
+              for todo in todos:
+                  todo_type = todo['type']
+                  if todo_type not in todo_groups:
+                      todo_groups[todo_type] = []
+                  todo_groups[todo_type].append(todo)
+              
+              # Save to YAML
+              with open('todos.yaml', 'w') as f:
+                  yaml.dump(todo_groups, f, default_flow_style=False)
+              
+              # Create markdown report
+              with open('TODO.md', 'w') as f:
+                  f.write('# TODO Report\n\n')
+                  f.write(f'Generated on: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n\n')
+                  
+                  for todo_type, items in todo_groups.items():
+                      f.write(f'## {todo_type}\n\n')
+                      for item in items:
+                          f.write(f'- [{item["assignee"]}] {item["text"]} ')
+                          f.write(f'(__{item["file"]}:{item["line"]}__)\n')
+                      f.write('\n')
+              
+              print(f'::set-output name=todo_count::{len(todos)}')
+              
+          if __name__ == '__main__':
+              main()
+          EOL
+          
+          # Run the scanner
+          python scan_todos.py
+          
+          # Check if there are changes
+          if [[ $(git status --porcelain TODO.md) ]]; then
+            echo "::set-output name=has_changes::true"
+          else
+            echo "::set-output name=has_changes::false"
+          fi
+
+      - name: Upload TODO report
+        uses: actions/upload-artifact@v3
+        with:
+          name: todo-report
+          path: |
+            TODO.md
+            todos.yaml
+
+  update-todos:
+    needs: scan-todos
+    if: needs.scan-todos.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Download TODO report
+        uses: actions/download-artifact@v3
+        with:
+          name: todo-report
+      
+      - name: Update TODO tracking
+        run: |
+          # Update TODO.md
+          mv TODO.md docs/TODO.md
+          
+          # Create or update TODO issue
+          echo "Creating/updating TODO tracking issue..."
+          
+          # Format issue body
+          body="# TODO Tracking Issue
+          
+          This issue is automatically updated with TODOs found in the codebase.
+          
+          $(cat docs/TODO.md)
+          
+          ## Statistics
+          - Total TODOs: ${{ needs.scan-todos.outputs.todo_count }}
+          - Last updated: $(date -u)
+          
+          ## Notes
+          - This issue is automatically updated daily
+          - TODOs are extracted from code comments
+          - Format: TODO(assignee): description
+          "
+          
+          # Use GitHub API to create/update issue
+          issue_number=$(gh issue list --label "todo-tracking" --json number -q '.[0].number')
+          if [ -n "$issue_number" ]; then
+            gh issue edit "$issue_number" --body "$body"
+          else
+            gh issue create --title "TODO Tracking" --body "$body" --label "todo-tracking"
+          fi
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/TODO.md
+          git commit -m "docs: update TODO tracking"
+          git push
+
+  notify-updates:
+    needs: [scan-todos, update-todos]
+    if: always() && needs.scan-todos.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Send notification
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const todoCount = ${{ needs.scan-todos.outputs.todo_count }};
+            const message = `🔄 TODO tracking has been updated\n\n` +
+                          `Total TODOs: ${todoCount}\n` +
+                          `See the [TODO tracking issue](${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/issues?q=is%3Aissue+label%3Atodo-tracking) for details.`;
+            
+            // Create a comment on the PR if this is a PR
+            if (context.payload.pull_request) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                body: message
+              });
+            }

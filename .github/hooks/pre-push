@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Load git configuration
+CONFIG_FILE=".github/git-config.yml"
+if [ -f "$CONFIG_FILE" ]; then
+    echo "Loading git configuration..."
+else
+    echo "Error: Git configuration file not found"
+    exit 1
+fi
+
+# Check if pushing to protected branch
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+PROTECTED_BRANCHES=$(yq e '.repository.protected_branches[]' "$CONFIG_FILE")
+for protected in $PROTECTED_BRANCHES; do
+    if [ "$BRANCH_NAME" = "$protected" ]; then
+        echo "Error: Direct push to $protected branch is not allowed"
+        echo "Please create a pull request instead"
+        exit 1
+    fi
+done
+
+# Verify version file exists and is valid
+VERSION_FILE="VERSION"
+if [ ! -f "$VERSION_FILE" ]; then
+    echo "Error: VERSION file is missing"
+    exit 1
+fi
+
+# Verify CHANGELOG exists and is updated
+CHANGELOG_FILE="CHANGELOG.md"
+if [ ! -f "$CHANGELOG_FILE" ]; then
+    echo "Error: CHANGELOG.md is missing"
+    exit 1
+fi
+
+# Run tests if they exist
+if [ -f "pytest.ini" ] || [ -d "tests" ]; then
+    echo "Running tests..."
+    python -m pytest
+    if [ $? -ne 0 ]; then
+        echo "Error: Tests failed"
+        exit 1
+    fi
+fi
+
+exit 0

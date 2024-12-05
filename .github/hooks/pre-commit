@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# Load git configuration
+CONFIG_FILE=".github/git-config.yml"
+if [ -f "$CONFIG_FILE" ]; then
+    echo "Loading git configuration..."
+else
+    echo "Error: Git configuration file not found"
+    exit 1
+fi
+
+# Check branch naming
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+BRANCH_PATTERN=$(yq e '.branches.naming.pattern' "$CONFIG_FILE")
+if ! echo "$BRANCH_NAME" | grep -qE "$BRANCH_PATTERN"; then
+    echo "Error: Branch name '$BRANCH_NAME' doesn't match required pattern"
+    echo "Example: feat/new-feature, fix/bug-fix"
+    exit 1
+fi
+
+# Check commit message
+COMMIT_MSG=$(cat "$1")
+COMMIT_PATTERN=$(yq e '.commit.message.pattern' "$CONFIG_FILE")
+MAX_LENGTH=$(yq e '.commit.message.max_length' "$CONFIG_FILE")
+if ! echo "$COMMIT_MSG" | grep -qE "$COMMIT_PATTERN"; then
+    echo "Error: Commit message doesn't match conventional commits format"
+    echo "Format: type(scope): description"
+    exit 1
+fi
+if [ ${#COMMIT_MSG} -gt "$MAX_LENGTH" ]; then
+    echo "Error: Commit message too long (max $MAX_LENGTH characters)"
+    exit 1
+fi
+
+# Check required files
+for file in $(yq e '.documentation.required_files[]' "$CONFIG_FILE"); do
+    if [ ! -f "$file" ]; then
+        echo "Error: Required file '$file' is missing"
+        exit 1
+    fi
+done
+
+exit 0

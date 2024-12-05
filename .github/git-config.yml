@@ -1,0 +1,229 @@
+repository:
+  main_branch: main
+  development_branch: development
+  release_candidate_pattern: 'release-candidate/*'
+  protected_branches:
+    - main
+    - development
+    - 'release-candidate/*'
+  
+branches:
+  naming:
+    pattern: '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)\/[a-z0-9-]+$'
+    examples:
+      - 'feat/new-feature'
+      - 'fix/bug-fix'
+      - 'docs/update-readme'
+  release_candidate:
+    pattern: '^release-candidate/v[0-9]+\.[0-9]+\.[0-9]+$'
+    required_files:
+      - VERSION
+      - CHANGELOG.md
+      - 'docs/release-notes/*.md'
+    required_checks:
+      - tests
+      - security
+      - documentation
+      - style
+
+commit:
+  message:
+    pattern: '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z-]+\))?: .+'
+    max_length: 72
+    scope_required: true
+    scopes:
+      - repo
+      - core
+      - deps
+      - ci
+      - docs
+      - security
+
+versioning:
+  strategy: semantic
+  format: 'v{major}.{minor}.{patch}'
+  files:
+    - VERSION
+    - CHANGELOG.md
+  auto_increment:
+    main: 'minor'
+    development: 'patch'
+    release_candidate: 'minor'
+
+submodules:
+  sync_strategy: rebase
+  version_tracking: true
+  protected_branches:
+    - main
+    - development
+    - 'release-candidate/*'
+  auto_update: true
+
+workflows:
+  base_path: .github/workflows
+  required:
+    - pr-review.yml
+    - version-management.yml
+    - branch-management.yml
+    - release-candidate.yml
+  templates_path: .github/templates
+
+documentation:
+  required_files:
+    - README.md
+    - CHANGELOG.md
+    - VERSION
+    - LICENSE
+    - docs/TODO.md
+    - ROADMAP.md
+  templates_path: .github/templates/docs
+  release_notes:
+    template: .github/templates/release-notes.md
+    path: docs/release-notes
+  roadmap:
+    template: .github/templates/roadmap.md
+    update_schedule: "0 0 * * *"  # Daily
+    sections:
+      - current_version
+      - upcoming_releases
+      - long_term_goals
+      - todos
+      - integration_points
+      - dependencies
+      - notes
+      - timeline
+    todo_integration: true
+    version_tracking: true
+  changelog:
+    template: .github/templates/changelog.md
+    auto_update: true
+    sections:
+      - added
+      - changed
+      - deprecated
+      - removed
+      - fixed
+      - security
+    link_to_prs: true
+    include_contributors: true
+  todo_tracking:
+    enabled: true
+    template: .github/templates/todo.md
+    required_todos:
+      - pattern: "TODO(john)[high]: Implement error handling"
+        type: TODO
+        assignee: john
+        priority: high
+      - pattern: "FIXME(jane)[critical]: Fix memory leak"
+        type: FIXME
+        assignee: jane
+        priority: critical
+      - pattern: "NOTE(team)[normal]: Consider optimization"
+        type: NOTE
+        assignee: team
+        priority: normal
+    scan_patterns:
+      - "TODO"
+      - "FIXME"
+      - "XXX"
+      - "HACK"
+      - "BUG"
+      - "OPTIMIZE"
+      - "NOTE"
+    priorities:
+      - critical
+      - high
+      - normal
+      - low
+    format: "TODO(assignee)[priority]: description"
+    scan_extensions:
+      - .py
+      - .js
+      - .jsx
+      - .ts
+      - .tsx
+      - .cpp
+      - .h
+      - .cs
+    excluded_dirs:
+      - .git
+      - node_modules
+      - venv
+      - build
+      - dist
+    update_schedule: "0 0 * * *"
+    notifications:
+      - type: github_issue
+      - type: pull_request_comment
+
+  mkdocs:
+    site_name: "Project Documentation"
+    theme: "material"
+    nav:
+      - Home: index.md
+      - Roadmap: ROADMAP.md
+      - Changelog: CHANGELOG.md
+      - TODOs: TODO.md
+    plugins:
+      - search
+      - git-revision-date
+    markdown_extensions:
+      - pymdownx.highlight
+      - pymdownx.superfences
+
+  site:
+    name: 'OPSource Documentation'
+    description: 'Official documentation for OPSource project'
+    url: 'https://pages.github.com/OPSource'
+    theme: 'material'
+  
+  sync:
+    directories:
+      - 'docs/'
+      - '.github/docs/'
+      - '**/README.md'
+      - '**/CHANGELOG.md'
+      - '**/ROADMAP.md'
+    
+    templates:
+      - source: '.github/templates/weekly-report.md'
+        target: 'docs/reports'
+      - source: '.github/templates/release-notes.md'
+        target: 'docs/release-notes'
+    
+    auto_generate:
+      - type: 'todo-report'
+        source: '.github/scripts/todo_migration.py'
+        target: 'docs/TODO.md'
+        schedule: 'daily'
+      - type: 'changelog'
+        source: '.github/scripts/changelog_generator.py'
+        target: 'CHANGELOG.md'
+        schedule: 'on-release'
+      - type: 'roadmap'
+        source: '.github/scripts/roadmap_generator.py'
+        target: 'ROADMAP.md'
+        schedule: 'weekly'
+
+  github_pages:
+    branch: 'gh-pages'
+    deploy_directory: 'site'
+    custom_domain: ''
+    enforce_https: true
+
+reports:
+  weekly:
+    schedule: '0 0 * * MON'
+    template: .github/templates/weekly-report.md
+    sections:
+      - development_status
+      - release_candidates
+      - pending_reviews
+      - failed_checks
+      - todo_summary
+    output:
+      format: markdown
+      path: reports/weekly
+    notifications:
+      - type: email
+      - type: github_issue
