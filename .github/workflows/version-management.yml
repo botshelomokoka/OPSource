@@ -4,14 +4,31 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    types: [closed]
+    branches:
+      - main
 
 jobs:
   version-tag:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          submodules: recursive
+          
+      - name: Load Version Rules
+        id: version_rules
+        run: |
+          echo "::set-output name=rules::$(cat .github/version-rules.yml | base64 -w 0)"
+          
+      - name: Determine Version Bump
+        id: bump_type
+        uses: zwaldowski/match-label-action@v4
+        with:
+          configuration: .github/version-rules.yml
           
       - name: Get latest version
         id: get_version
@@ -25,13 +42,55 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-          DEFAULT_BUMP: patch
+          DEFAULT_BUMP: ${{ steps.bump_type.outputs.match }}
           RELEASE_BRANCHES: main
+          TAG_CONTEXT: repo
+          PRERELEASE: false
           
-      - name: Update submodules
+      - name: Sync Submodule Versions
         if: steps.bump_version.outputs.new_tag != steps.get_version.outputs.LATEST_TAG
         run: |
-          git submodule foreach 'git fetch origin && git checkout $(git describe --tags --abbrev=0 || echo main)'
-          git add .
-          git commit -m "chore(deps): update submodules to latest tags"
-          git push
+          # Read version rules
+          RULES_FILE=.github/version-rules.yml
+          
+          # Function to sync submodule version
+          sync_submodule() {
+            local submodule_path=$1
+            cd $submodule_path
+            
+            # Get latest tag from submodule
+            local latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+            
+            # Create new tag with same version as parent
+            git tag -a ${{ steps.bump_version.outputs.new_tag }} -m "Version sync with parent repository"
+            git push origin ${{ steps.bump_version.outputs.new_tag }}
+            
+            cd -
+          }
+          
+          # Sync all tracked submodules
+          while IFS= read -r submodule
+          do
+            if [[ $(yq e ".tracking.central.submodules[] | select(.name == \"$submodule\").version_sync" $RULES_FILE) == "true" ]]; then
+              sync_submodule $submodule
+            fi
+          done < <(git submodule --quiet foreach 'echo $path')
+          
+      - name: Update CHANGELOG.md
+        uses: conventional-changelog/conventional-changelog-action@v3
+        with:
+          config: conventional-changelog-conventionalcommits
+          release-count: 0
+          git-message: 'chore(release): ${{ steps.bump_version.outputs.new_tag }}'
+          
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.bump_version.outputs.new_tag }}
+          release_name: Release ${{ steps.bump_version.outputs.new_tag }}
+          body: |
+            Release ${{ steps.bump_version.outputs.new_tag }}
+            
+            See [CHANGELOG.md](CHANGELOG.md) for details.

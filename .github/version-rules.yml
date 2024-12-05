@@ -1,0 +1,40 @@
+version:
+  major:
+    prefix: 'BREAKING CHANGE:'
+    labels: ['breaking', 'major']
+  minor:
+    types: ['feat']
+    labels: ['feature', 'enhancement']
+  patch:
+    types: ['fix', 'perf', 'refactor']
+    labels: ['bug', 'performance', 'refactor']
+  skip:
+    types: ['docs', 'style', 'test', 'chore']
+    labels: ['documentation', 'dependencies']
+
+tracking:
+  central:
+    repo: 'OPSource'
+    branch: 'main'
+    submodules:
+      - name: 'anya'
+        track: 'tags'
+        version_sync: true
+      - name: 'anya/dash33'
+        track: 'tags'
+        version_sync: true
+      - name: 'anya/dependencies'
+        track: 'tags'
+        version_sync: true
+      - name: 'anya/enterprise'
+        track: 'tags'
+        version_sync: true
+      - name: 'anya/mobile'
+        track: 'tags'
+        version_sync: true
+
+tag_format:
+  prefix: 'v'
+  build_metadata: true
+  include_branch: false
+  include_commit: false
