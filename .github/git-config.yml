@@ -108,53 +108,86 @@ documentation:
     include_contributors: true
   todo_tracking:
     enabled: true
-    template: .github/templates/todo.md
-    required_todos:
-      - pattern: "TODO(john)[high]: Implement error handling"
-        type: TODO
-        assignee: john
-        priority: high
-      - pattern: "FIXME(jane)[critical]: Fix memory leak"
-        type: FIXME
-        assignee: jane
-        priority: critical
-      - pattern: "NOTE(team)[normal]: Consider optimization"
-        type: NOTE
-        assignee: team
-        priority: normal
-    scan_patterns:
-      - "TODO"
-      - "FIXME"
-      - "XXX"
-      - "HACK"
-      - "BUG"
-      - "OPTIMIZE"
-      - "NOTE"
+    format:
+      pattern: '^(TODO|FIXME|BUG|HACK|NOTE|OPTIMIZE|XXX)\(([^)]+)\)\[([^]]+)\]: (.+)$'
+      example: 'TODO(dev)[priority]: description'
+      priorities:
+        - p0-critical    # Must fix before release
+        - p1-high        # Should fix before release
+        - p2-normal      # Nice to have
+        - p3-low         # Can be deferred
+      types:
+        TODO: 'Planned work'
+        FIXME: 'Known broken code'
+        BUG: 'Known bug to fix'
+        HACK: 'Temporary solution'
+        NOTE: 'Important information'
+        OPTIMIZE: 'Needs performance work'
+        XXX: 'Needs attention'
+      scopes:
+        - core           # Core wallet functionality
+        - security       # Security-related
+        - ui            # User interface
+        - network       # Network operations
+        - crypto        # Cryptographic operations
+        - rgb           # RGB protocol
+        - lightning     # Lightning network
+        - test          # Testing infrastructure
+        - docs          # Documentation
+        - build         # Build system
+        - deps          # Dependencies
+    tracking:
+      locations:
+        - '**.{py,rs,go,js,ts,dart}'
+        - '!**/vendor/**'
+        - '!**/node_modules/**'
+        - '!**/target/**'
+      report:
+        path: 'docs/TODO.md'
+        format: 'markdown'
+        sections:
+          - title: 'Critical (P0)'
+            priority: 'p0-critical'
+          - title: 'High Priority (P1)'
+            priority: 'p1-high'
+          - title: 'Normal Priority (P2)'
+            priority: 'p2-normal'
+          - title: 'Low Priority (P3)'
+            priority: 'p3-low'
+      archive:
+        enabled: true
+        directory: 'docs/archived_todos'
+        format: '{filename}_{date}.md'
+
+  todo:
+    format:
+      pattern: '^TODO\(([^)]+)\)\[([^]]+)\]: (.+)$'
+      examples:
+        - 'TODO(alice)[high]: Implement security feature'
+        - 'TODO(bob)[medium]: Add documentation'
     priorities:
-      - critical
       - high
-      - normal
+      - medium
       - low
-    format: "TODO(assignee)[priority]: description"
-    scan_extensions:
-      - .py
-      - .js
-      - .jsx
-      - .ts
-      - .tsx
-      - .cpp
-      - .h
-      - .cs
-    excluded_dirs:
-      - .git
-      - node_modules
-      - venv
-      - build
-      - dist
-    update_schedule: "0 0 * * *"
-    notifications:
-      - type: github_issue
-      - type: pull_request_comment
+    types:
+      - feature
+      - bug
+      - docs
+      - refactor
+      - security
+    tracking:
+      locations:
+        - '**/*.py'
+        - '**/*.js'
+        - '**/*.cpp'
+        - '**/*.h'
+      exclude:
+        - 'node_modules/**'
+        - 'build/**'
+        - 'dist/**'
+    archive:
+      path: '.github/archive/todos'
+      retention_days: 90
 
   mkdocs:
     site_name: "Project Documentation"

@@ -1,17 +1,65 @@
-#!/bin/sh
+#!/bin/bash
 
 # Load git configuration
-CONFIG_FILE=".github/git-config.yml"
-if [ -f "$CONFIG_FILE" ]; then
-    echo "Loading git configuration..."
-else
-    echo "Error: Git configuration file not found"
+config_file=".github/git-config.yml"
+if [ ! -f "$config_file" ]; then
+    echo "Error: git-config.yml not found"
     exit 1
 fi
 
+# Extract TODO pattern from config
+todo_pattern=$(yq -r '.todo.format.pattern' "$config_file")
+if [ -z "$todo_pattern" ]; then
+    echo "Error: TODO pattern not found in config"
+    exit 1
+fi
+
+# Get staged files
+files=$(git diff --cached --name-only --diff-filter=ACM)
+if [ -z "$files" ]; then
+    exit 0
+fi
+
+# Check each staged file for TODOs
+error=0
+for file in $files; do
+    # Skip files in excluded directories
+    if echo "$file" | grep -q -E "node_modules|vendor|target|build|dist"; then
+        continue
+    fi
+
+    # Check file extension
+    if echo "$file" | grep -q -E "\.(py|rs|go|js|ts|dart)$"; then
+        # Find TODOs that don't match the pattern
+        todos=$(git diff --cached -U0 "$file" | grep -E "^\\+.*TODO" | grep -v -E "$todo_pattern")
+        if [ ! -z "$todos" ]; then
+            echo "Error: Found incorrectly formatted TODOs in $file:"
+            echo "$todos"
+            echo "TODOs must follow the format: TODO(dev)[priority]: description"
+            echo "Example: TODO(john)[p1-high]: Implement error handling"
+            error=1
+        fi
+    fi
+done
+
+if [ $error -ne 0 ]; then
+    echo "Commit failed: Please fix the TODO format issues"
+    exit 1
+fi
+
+# Run TODO format validation and migration
+python .github/scripts/todo_migration.py || exit 1
+
+# Update changelog and roadmap
+python .github/scripts/update_changelog.py || exit 1
+python .github/scripts/update_roadmap.py || exit 1
+
+# Add the updated files to the commit
+git add docs/TODO.md docs/CHANGELOG.md docs/ROADMAP.md
+
 # Check branch naming
 BRANCH_NAME=$(git symbolic-ref --short HEAD)
-BRANCH_PATTERN=$(yq e '.branches.naming.pattern' "$CONFIG_FILE")
+BRANCH_PATTERN=$(yq e '.branches.naming.pattern' "$config_file")
 if ! echo "$BRANCH_NAME" | grep -qE "$BRANCH_PATTERN"; then
     echo "Error: Branch name '$BRANCH_NAME' doesn't match required pattern"
     echo "Example: feat/new-feature, fix/bug-fix"
@@ -20,8 +68,8 @@ fi
 
 # Check commit message
 COMMIT_MSG=$(cat "$1")
-COMMIT_PATTERN=$(yq e '.commit.message.pattern' "$CONFIG_FILE")
-MAX_LENGTH=$(yq e '.commit.message.max_length' "$CONFIG_FILE")
+COMMIT_PATTERN=$(yq e '.commit.message.pattern' "$config_file")
+MAX_LENGTH=$(yq e '.commit.message.max_length' "$config_file")
 if ! echo "$COMMIT_MSG" | grep -qE "$COMMIT_PATTERN"; then
     echo "Error: Commit message doesn't match conventional commits format"
     echo "Format: type(scope): description"
@@ -33,7 +81,7 @@ if [ ${#COMMIT_MSG} -gt "$MAX_LENGTH" ]; then
 fi
 
 # Check required files
-for file in $(yq e '.documentation.required_files[]' "$CONFIG_FILE"); do
+for file in $(yq e '.documentation.required_files[]' "$config_file"); do
     if [ ! -f "$file" ]; then
         echo "Error: Required file '$file' is missing"
         exit 1
