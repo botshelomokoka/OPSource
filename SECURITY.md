@@ -13,7 +13,7 @@ We actively support and provide security updates for the following versions of O
 If you discover a security vulnerability within OPSource, please follow these steps:
 
 1. **Do not disclose the vulnerability publicly.**
-2. Email the details of the vulnerability to our security team at [security@opsource.com](mailto:security@opsource.com).
+2. Email the details of the vulnerability to our security team at [botshelomokoka@github.com](mailto:botshelomokoka@github.com).
 
 Please include the following information:
 - A detailed description of the vulnerability.
@@ -49,7 +49,7 @@ We recommend the following best practices for users deploying OPSource:
 
 ## Contact
 
-For security-related inquiries, please contact our security team at [security@opsource.com](mailto:security@opsource.com).
+For security-related inquiries, please contact our security team at [botshelomokoka@github.com](mailto:botshelomokoka@github.com).
 
 ---
 
