@@ -1,0 +1,11 @@
+# Development TODOs
+
+## Critical Tasks
+- [ ] (@alice) Implement secure key generation
+- [ ] (@dave) Fix memory leak in transaction signing
+
+## High Priority
+- [ ] (@bob) Add transaction history pagination
+
+## Normal Priority
+- [ ] (@charlie) Add unit tests for wallet backup

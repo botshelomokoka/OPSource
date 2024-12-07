@@ -1,0 +1,262 @@
+repository:
+  main_branch: main
+  development_branch: development
+  release_candidate_pattern: 'release-candidate/*'
+  protected_branches:
+    - main
+    - development
+    - 'release-candidate/*'
+  
+branches:
+  naming:
+    pattern: '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)\/[a-z0-9-]+$'
+    examples:
+      - 'feat/new-feature'
+      - 'fix/bug-fix'
+      - 'docs/update-readme'
+  release_candidate:
+    pattern: '^release-candidate/v[0-9]+\.[0-9]+\.[0-9]+$'
+    required_files:
+      - VERSION
+      - CHANGELOG.md
+      - 'docs/release-notes/*.md'
+    required_checks:
+      - tests
+      - security
+      - documentation
+      - style
+
+commit:
+  message:
+    pattern: '^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z-]+\))?: .+'
+    max_length: 72
+    scope_required: true
+    scopes:
+      - repo
+      - core
+      - deps
+      - ci
+      - docs
+      - security
+
+versioning:
+  strategy: semantic
+  format: 'v{major}.{minor}.{patch}'
+  files:
+    - VERSION
+    - CHANGELOG.md
+  auto_increment:
+    main: 'minor'
+    development: 'patch'
+    release_candidate: 'minor'
+
+submodules:
+  sync_strategy: rebase
+  version_tracking: true
+  protected_branches:
+    - main
+    - development
+    - 'release-candidate/*'
+  auto_update: true
+
+workflows:
+  base_path: .github/workflows
+  required:
+    - pr-review.yml
+    - version-management.yml
+    - branch-management.yml
+    - release-candidate.yml
+  templates_path: .github/templates
+
+documentation:
+  required_files:
+    - README.md
+    - CHANGELOG.md
+    - VERSION
+    - LICENSE
+    - docs/TODO.md
+    - ROADMAP.md
+  templates_path: .github/templates/docs
+  release_notes:
+    template: .github/templates/release-notes.md
+    path: docs/release-notes
+  roadmap:
+    template: .github/templates/roadmap.md
+    update_schedule: "0 0 * * *"  # Daily
+    sections:
+      - current_version
+      - upcoming_releases
+      - long_term_goals
+      - todos
+      - integration_points
+      - dependencies
+      - notes
+      - timeline
+    todo_integration: true
+    version_tracking: true
+  changelog:
+    template: .github/templates/changelog.md
+    auto_update: true
+    sections:
+      - added
+      - changed
+      - deprecated
+      - removed
+      - fixed
+      - security
+    link_to_prs: true
+    include_contributors: true
+  todo_tracking:
+    enabled: true
+    format:
+      pattern: '^(TODO|FIXME|BUG|HACK|NOTE|OPTIMIZE|XXX)\(([^)]+)\)\[([^]]+)\]: (.+)$'
+      example: 'TODO(dev)[priority]: description'
+      priorities:
+        - p0-critical    # Must fix before release
+        - p1-high        # Should fix before release
+        - p2-normal      # Nice to have
+        - p3-low         # Can be deferred
+      types:
+        TODO: 'Planned work'
+        FIXME: 'Known broken code'
+        BUG: 'Known bug to fix'
+        HACK: 'Temporary solution'
+        NOTE: 'Important information'
+        OPTIMIZE: 'Needs performance work'
+        XXX: 'Needs attention'
+      scopes:
+        - core           # Core wallet functionality
+        - security       # Security-related
+        - ui            # User interface
+        - network       # Network operations
+        - crypto        # Cryptographic operations
+        - rgb           # RGB protocol
+        - lightning     # Lightning network
+        - test          # Testing infrastructure
+        - docs          # Documentation
+        - build         # Build system
+        - deps          # Dependencies
+    tracking:
+      locations:
+        - '**.{py,rs,go,js,ts,dart}'
+        - '!**/vendor/**'
+        - '!**/node_modules/**'
+        - '!**/target/**'
+      report:
+        path: 'docs/TODO.md'
+        format: 'markdown'
+        sections:
+          - title: 'Critical (P0)'
+            priority: 'p0-critical'
+          - title: 'High Priority (P1)'
+            priority: 'p1-high'
+          - title: 'Normal Priority (P2)'
+            priority: 'p2-normal'
+          - title: 'Low Priority (P3)'
+            priority: 'p3-low'
+      archive:
+        enabled: true
+        directory: 'docs/archived_todos'
+        format: '{filename}_{date}.md'
+
+  todo:
+    format:
+      pattern: '^TODO\(([^)]+)\)\[([^]]+)\]: (.+)$'
+      examples:
+        - 'TODO(alice)[high]: Implement security feature'
+        - 'TODO(bob)[medium]: Add documentation'
+    priorities:
+      - high
+      - medium
+      - low
+    types:
+      - feature
+      - bug
+      - docs
+      - refactor
+      - security
+    tracking:
+      locations:
+        - '**/*.py'
+        - '**/*.js'
+        - '**/*.cpp'
+        - '**/*.h'
+      exclude:
+        - 'node_modules/**'
+        - 'build/**'
+        - 'dist/**'
+    archive:
+      path: '.github/archive/todos'
+      retention_days: 90
+
+  mkdocs:
+    site_name: "Project Documentation"
+    theme: "material"
+    nav:
+      - Home: index.md
+      - Roadmap: ROADMAP.md
+      - Changelog: CHANGELOG.md
+      - TODOs: TODO.md
+    plugins:
+      - search
+      - git-revision-date
+    markdown_extensions:
+      - pymdownx.highlight
+      - pymdownx.superfences
+
+  site:
+    name: 'OPSource Documentation'
+    description: 'Official documentation for OPSource project'
+    url: 'https://pages.github.com/OPSource'
+    theme: 'material'
+  
+  sync:
+    directories:
+      - 'docs/'
+      - '.github/docs/'
+      - '**/README.md'
+      - '**/CHANGELOG.md'
+      - '**/ROADMAP.md'
+    
+    templates:
+      - source: '.github/templates/weekly-report.md'
+        target: 'docs/reports'
+      - source: '.github/templates/release-notes.md'
+        target: 'docs/release-notes'
+    
+    auto_generate:
+      - type: 'todo-report'
+        source: '.github/scripts/todo_migration.py'
+        target: 'docs/TODO.md'
+        schedule: 'daily'
+      - type: 'changelog'
+        source: '.github/scripts/changelog_generator.py'
+        target: 'CHANGELOG.md'
+        schedule: 'on-release'
+      - type: 'roadmap'
+        source: '.github/scripts/roadmap_generator.py'
+        target: 'ROADMAP.md'
+        schedule: 'weekly'
+
+  github_pages:
+    branch: 'gh-pages'
+    deploy_directory: 'site'
+    custom_domain: ''
+    enforce_https: true
+
+reports:
+  weekly:
+    schedule: '0 0 * * MON'
+    template: .github/templates/weekly-report.md
+    sections:
+      - development_status
+      - release_candidates
+      - pending_reviews
+      - failed_checks
+      - todo_summary
+    output:
+      format: markdown
+      path: reports/weekly
+    notifications:
+      - type: email
+      - type: github_issue

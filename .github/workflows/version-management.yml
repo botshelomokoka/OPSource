@@ -1,96 +1,55 @@
-name: Version Management
+name: Basic Version Management
 
 on:
   push:
     branches:
       - main
+      - development
   pull_request:
     types: [closed]
     branches:
       - main
+      - development
 
 jobs:
-  version-tag:
+  update-version:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          submodules: recursive
           
-      - name: Load Version Rules
-        id: version_rules
+      - name: Update Version File
         run: |
-          echo "::set-output name=rules::$(cat .github/version-rules.yml | base64 -w 0)"
+          # Create or update version file
+          VERSION_FILE=VERSION
+          CURRENT_VERSION=$(cat $VERSION_FILE 2>/dev/null || echo "0.0.0")
           
-      - name: Determine Version Bump
-        id: bump_type
-        uses: zwaldowski/match-label-action@v4
-        with:
-          configuration: .github/version-rules.yml
+          # Simple version bump based on branch
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            # Production release - bump minor version
+            IFS='.' read -r -a version_parts <<< "$CURRENT_VERSION"
+            NEW_VERSION="${version_parts[0]}.$(( ${version_parts[1]} + 1 )).0"
+          else
+            # Development - bump patch version
+            IFS='.' read -r -a version_parts <<< "$CURRENT_VERSION"
+            NEW_VERSION="${version_parts[0]}.${version_parts[1]}.$(( ${version_parts[2]} + 1 ))"
+          fi
           
-      - name: Get latest version
-        id: get_version
-        run: |
-          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
-          echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_OUTPUT
+          echo "$NEW_VERSION" > $VERSION_FILE
           
-      - name: Bump version
-        id: bump_version
-        uses: anothrNick/github-tag-action@1.67.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
-          DEFAULT_BUMP: ${{ steps.bump_type.outputs.match }}
-          RELEASE_BRANCHES: main
-          TAG_CONTEXT: repo
-          PRERELEASE: false
-          
-      - name: Sync Submodule Versions
-        if: steps.bump_version.outputs.new_tag != steps.get_version.outputs.LATEST_TAG
-        run: |
-          # Read version rules
-          RULES_FILE=.github/version-rules.yml
-          
-          # Function to sync submodule version
-          sync_submodule() {
-            local submodule_path=$1
-            cd $submodule_path
+          # Update changelog if version changed
+          if [[ "$NEW_VERSION" != "$CURRENT_VERSION" ]]; then
+            echo "## [$NEW_VERSION] - $(date +%Y-%m-%d)" >> CHANGELOG.md
+            echo "" >> CHANGELOG.md
+            echo "* $(git log -1 --pretty=%B)" >> CHANGELOG.md
+            echo "" >> CHANGELOG.md
             
-            # Get latest tag from submodule
-            local latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
-            
-            # Create new tag with same version as parent
-            git tag -a ${{ steps.bump_version.outputs.new_tag }} -m "Version sync with parent repository"
-            git push origin ${{ steps.bump_version.outputs.new_tag }}
-            
-            cd -
-          }
-          
-          # Sync all tracked submodules
-          while IFS= read -r submodule
-          do
-            if [[ $(yq e ".tracking.central.submodules[] | select(.name == \"$submodule\").version_sync" $RULES_FILE) == "true" ]]; then
-              sync_submodule $submodule
-            fi
-          done < <(git submodule --quiet foreach 'echo $path')
-          
-      - name: Update CHANGELOG.md
-        uses: conventional-changelog/conventional-changelog-action@v3
-        with:
-          config: conventional-changelog-conventionalcommits
-          release-count: 0
-          git-message: 'chore(release): ${{ steps.bump_version.outputs.new_tag }}'
-          
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.bump_version.outputs.new_tag }}
-          release_name: Release ${{ steps.bump_version.outputs.new_tag }}
-          body: |
-            Release ${{ steps.bump_version.outputs.new_tag }}
-            
-            See [CHANGELOG.md](CHANGELOG.md) for details.
+            # Commit version changes
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add VERSION CHANGELOG.md
+            git commit -m "chore(version): bump to $NEW_VERSION" || true
+            git push || true
+          fi

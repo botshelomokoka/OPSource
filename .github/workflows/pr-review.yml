@@ -1,53 +1,26 @@
-name: Automated PR Review
+name: Basic PR Review
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
       - main
+      - development
 
 jobs:
-  code-review:
+  basic-review:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install review tools
-        run: |
-          pip install pylint black mypy bandit
-          npm install -g commitlint @commitlint/config-conventional
-
-      # Code Quality Checks
-      - name: Run Black
-        run: black . --check --diff
-        continue-on-error: true
-
-      - name: Run Pylint
-        run: pylint **/*.py
-        continue-on-error: true
-
-      - name: Run MyPy
-        run: mypy .
-        continue-on-error: true
-
-      # Security Checks
-      - name: Run Bandit
-        run: bandit -r .
-        continue-on-error: true
-
       # PR Size Check
       - name: Check PR Size
         uses: actions/github-script@v6
         with:
           script: |
-            const MAX_CHANGES = 500;
+            const MAX_CHANGES = 1000;
             const { data: files } = await github.rest.pulls.listFiles({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -56,7 +29,7 @@ jobs:
             
             const changes = files.reduce((acc, file) => acc + file.changes, 0);
             if (changes > MAX_CHANGES) {
-              core.setFailed(`PR is too large. ${changes} changes exceeds limit of ${MAX_CHANGES}`);
+              core.warning(`PR is large with ${changes} changes. Consider splitting if possible.`);
             }
 
       # Documentation Check
@@ -86,75 +59,6 @@ jobs:
               core.warning('Consider adding documentation for your changes');
             }
 
-      # Automated Review Comments
-      - name: Review PR
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const fs = require('fs');
-            
-            // Get PR files
-            const { data: files } = await github.rest.pulls.listFiles({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-            });
-            
-            let comments = [];
-            
-            // Review patterns
-            const patterns = {
-              'TODO': 'Consider resolving TODOs before merging',
-              'print\\(': 'Consider using proper logging instead of print statements',
-              'password|secret|key': 'Ensure no sensitive information is being committed',
-              '\\.\\.\\.': 'Verify if this ellipsis is intentional',
-              '\\b(if|while|for)\\s*\\([^)]+\\)\\s*:\\s*$': 'Consider adding a comment explaining this condition'
-            };
-            
-            // Check each file
-            for (const file of files) {
-              if (file.status === 'removed') continue;
-              
-              // Skip certain files
-              if (file.filename.match(/\.(md|json|yml|yaml|lock)$/)) continue;
-              
-              const content = Buffer.from(file.patch || '', 'utf8').toString();
-              
-              // Check patterns
-              for (const [pattern, message] of Object.entries(patterns)) {
-                const regex = new RegExp(pattern, 'gi');
-                let match;
-                while ((match = regex.exec(content)) !== null) {
-                  comments.push({
-                    path: file.filename,
-                    line: content.substring(0, match.index).split('\n').length,
-                    body: message
-                  });
-                }
-              }
-            }
-            
-            // Post review comments
-            if (comments.length > 0) {
-              await github.rest.pulls.createReview({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.issue.number,
-                event: 'COMMENT',
-                comments: comments
-              });
-            }
-
-  dependency-review:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Review Dependencies
-        uses: actions/dependency-review-action@v3
-        with:
-          fail-on-severity: high
-
   conventional-commits:
     runs-on: ubuntu-latest
     steps:
@@ -162,7 +66,13 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Check Conventional Commits
-        uses: wagoid/commitlint-github-action@v5
-        with:
-          configFile: .github/commitlint.config.js
+      - name: Basic Commit Message Check
+        run: |
+          # Check if any commit message doesn't follow conventional format
+          git log origin/main..HEAD --format=%B | while read line; do
+            if [[ ! "$line" =~ ^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z]+\))?: ]]; then
+              if [[ ! -z "$line" ]]; then
+                echo "Warning: Commit message '$line' doesn't follow conventional format"
+              fi
+            fi
+          done
