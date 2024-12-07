@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPSource Architecture Overview &mdash; OPSource 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=2ae16414" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=30646c52"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/js/custom.js?v=d845f544"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2c3e50" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPSource
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/trading.html">Trading Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="anya/index.html">Anya AI/ML Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dash33/index.html">Dash33 High-Performance Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enterprise/index.html">Enterprise Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobile/index.html">Mobile Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture/index.html">Architecture Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/index.html">Support Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2c3e50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPSource</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">OPSource Architecture Overview</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/botshelomokoka/opsource/blob/main/docs/ARCHITECTURE.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="opsource-architecture-overview">
+<h1>OPSource Architecture Overview<a class="headerlink" href="#opsource-architecture-overview" title="Link to this heading"></a></h1>
+<section id="system-architecture">
+<h2>System Architecture<a class="headerlink" href="#system-architecture" title="Link to this heading"></a></h2>
+<section id="high-level-overview">
+<h3>High-Level Overview<a class="headerlink" href="#high-level-overview" title="Link to this heading"></a></h3>
+<p>OPSource is a distributed system composed of four main components:</p>
+<ol class="arabic simple">
+<li><p><strong>Anya</strong> - AI/ML Processing Engine</p></li>
+<li><p><strong>Dash33</strong> - Blockchain Trading Platform</p></li>
+<li><p><strong>Enterprise</strong> - Business Process Management</p></li>
+<li><p><strong>Mobile</strong> - Mobile Integration Layer</p></li>
+</ol>
+<p></p>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TB
+    Client[Client Applications] --&gt; API[API Gateway]
+    API --&gt; Anya[Anya - AI Engine]
+    API --&gt; Dash33[Dash33 - Trading]
+    API --&gt; Enterprise[Enterprise System]
+    API --&gt; Mobile[Mobile Backend]
+    
+    Anya --&gt; DB[(Database)]
+    Dash33 --&gt; DB
+    Enterprise --&gt; DB
+    Mobile --&gt; DB
+    
+    Anya --&gt; Cache[(Redis Cache)]
+    Dash33 --&gt; Cache
+    Enterprise --&gt; Cache
+    Mobile --&gt; Cache
+</pre></div>
+</div>
+</section>
+<section id="component-details">
+<h3>Component Details<a class="headerlink" href="#component-details" title="Link to this heading"></a></h3>
+<section id="anya-ai-ml-engine">
+<h4>1. Anya (AI/ML Engine)<a class="headerlink" href="#anya-ai-ml-engine" title="Link to this heading"></a></h4>
+<p><strong>Purpose</strong>: Handles all AI/ML processing, including:</p>
+<ul class="simple">
+<li><p>Market prediction</p></li>
+<li><p>Risk assessment</p></li>
+<li><p>Pattern recognition</p></li>
+<li><p>Anomaly detection</p></li>
+</ul>
+<p><strong>Key Components</strong>:</p>
+<ul class="simple">
+<li><p>Model Training Pipeline</p></li>
+<li><p>Inference Engine</p></li>
+<li><p>Feature Store</p></li>
+<li><p>Model Registry</p></li>
+</ul>
+</section>
+<section id="dash33-trading-platform">
+<h4>2. Dash33 (Trading Platform)<a class="headerlink" href="#dash33-trading-platform" title="Link to this heading"></a></h4>
+<p><strong>Purpose</strong>: Manages blockchain trading operations:</p>
+<ul class="simple">
+<li><p>Order execution</p></li>
+<li><p>Market data processing</p></li>
+<li><p>Portfolio management</p></li>
+<li><p>Risk management</p></li>
+</ul>
+<p><strong>Key Components</strong>:</p>
+<ul class="simple">
+<li><p>Order Book Engine</p></li>
+<li><p>Market Data Processor</p></li>
+<li><p>Trading Engine</p></li>
+<li><p>Settlement System</p></li>
+</ul>
+</section>
+<section id="enterprise-system">
+<h4>3. Enterprise System<a class="headerlink" href="#enterprise-system" title="Link to this heading"></a></h4>
+<p><strong>Purpose</strong>: Handles business operations:</p>
+<ul class="simple">
+<li><p>User management</p></li>
+<li><p>Workflow processing</p></li>
+<li><p>Reporting</p></li>
+<li><p>Integration</p></li>
+</ul>
+<p><strong>Key Components</strong>:</p>
+<ul class="simple">
+<li><p>Authentication Service</p></li>
+<li><p>Workflow Engine</p></li>
+<li><p>Reporting Service</p></li>
+<li><p>Integration Hub</p></li>
+</ul>
+</section>
+<section id="mobile-backend">
+<h4>4. Mobile Backend<a class="headerlink" href="#mobile-backend" title="Link to this heading"></a></h4>
+<p><strong>Purpose</strong>: Supports mobile applications:</p>
+<ul class="simple">
+<li><p>API endpoints</p></li>
+<li><p>Push notifications</p></li>
+<li><p>Data synchronization</p></li>
+<li><p>Mobile-specific features</p></li>
+</ul>
+<p><strong>Key Components</strong>:</p>
+<ul class="simple">
+<li><p>Mobile API</p></li>
+<li><p>Notification Service</p></li>
+<li><p>Sync Engine</p></li>
+<li><p>Mobile Security</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="data-flow">
+<h2>Data Flow<a class="headerlink" href="#data-flow" title="Link to this heading"></a></h2>
+<section id="request-flow">
+<h3>1. Request Flow<a class="headerlink" href="#request-flow" title="Link to this heading"></a></h3>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+    participant C as Client
+    participant G as API Gateway
+    participant S as Service
+    participant D as Database
+    participant R as Redis
+
+    C-&gt;&gt;G: Request
+    G-&gt;&gt;G: Authenticate
+    G-&gt;&gt;R: Check Cache
+    alt Cache Hit
+        R--&gt;&gt;G: Return Cached Data
+        G--&gt;&gt;C: Response
+    else Cache Miss
+        G-&gt;&gt;S: Process Request
+        S-&gt;&gt;D: Query Data
+        D--&gt;&gt;S: Return Data
+        S-&gt;&gt;R: Update Cache
+        S--&gt;&gt;G: Response
+        G--&gt;&gt;C: Response
+    end
+</pre></div>
+</div>
+</section>
+<section id="data-processing-flow">
+<h3>2. Data Processing Flow<a class="headerlink" href="#data-processing-flow" title="Link to this heading"></a></h3>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+    participant A as Anya
+    participant D as Dash33
+    participant E as Enterprise
+    participant DB as Database
+
+    A-&gt;&gt;A: Process Market Data
+    A-&gt;&gt;D: Send Predictions
+    D-&gt;&gt;D: Execute Trades
+    D-&gt;&gt;E: Update Portfolio
+    E-&gt;&gt;DB: Store Results
+</pre></div>
+</div>
+</section>
+</section>
+<section id="technical-stack">
+<h2>Technical Stack<a class="headerlink" href="#technical-stack" title="Link to this heading"></a></h2>
+<section id="backend-services">
+<h3>Backend Services<a class="headerlink" href="#backend-services" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Language</strong>: Rust</p></li>
+<li><p><strong>Framework</strong>: Actix-web</p></li>
+<li><p><strong>Database</strong>: PostgreSQL</p></li>
+<li><p><strong>Cache</strong>: Redis</p></li>
+<li><p><strong>Message Queue</strong>: RabbitMQ</p></li>
+</ul>
+</section>
+<section id="ai-ml-stack">
+<h3>AI/ML Stack<a class="headerlink" href="#ai-ml-stack" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Framework</strong>: PyTorch</p></li>
+<li><p><strong>Data Processing</strong>: Pandas</p></li>
+<li><p><strong>Feature Store</strong>: Redis</p></li>
+<li><p><strong>Model Registry</strong>: MLflow</p></li>
+</ul>
+</section>
+<section id="infrastructure">
+<h3>Infrastructure<a class="headerlink" href="#infrastructure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Container</strong>: Docker</p></li>
+<li><p><strong>Orchestration</strong>: Kubernetes</p></li>
+<li><p><strong>CI/CD</strong>: GitHub Actions</p></li>
+<li><p><strong>Monitoring</strong>: Prometheus/Grafana</p></li>
+</ul>
+</section>
+</section>
+<section id="security-architecture">
+<h2>Security Architecture<a class="headerlink" href="#security-architecture" title="Link to this heading"></a></h2>
+<section id="authentication-flow">
+<h3>Authentication Flow<a class="headerlink" href="#authentication-flow" title="Link to this heading"></a></h3>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>sequenceDiagram
+    participant C as Client
+    participant A as Auth Service
+    participant S as Service
+    participant D as Database
+
+    C-&gt;&gt;A: Login Request
+    A-&gt;&gt;D: Verify Credentials
+    D--&gt;&gt;A: Credentials Valid
+    A-&gt;&gt;A: Generate JWT
+    A--&gt;&gt;C: Return Token
+    C-&gt;&gt;S: API Request + Token
+    S-&gt;&gt;S: Validate Token
+    S--&gt;&gt;C: Response
+</pre></div>
+</div>
+</section>
+<section id="security-layers">
+<h3>Security Layers<a class="headerlink" href="#security-layers" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Network Security</strong></p>
+<ul class="simple">
+<li><p>TLS/SSL encryption</p></li>
+<li><p>VPN access</p></li>
+<li><p>Network segregation</p></li>
+</ul>
+</li>
+<li><p><strong>Application Security</strong></p>
+<ul class="simple">
+<li><p>JWT authentication</p></li>
+<li><p>Role-based access control</p></li>
+<li><p>Input validation</p></li>
+<li><p>Rate limiting</p></li>
+</ul>
+</li>
+<li><p><strong>Data Security</strong></p>
+<ul class="simple">
+<li><p>Encryption at rest</p></li>
+<li><p>Encryption in transit</p></li>
+<li><p>Secure key management</p></li>
+</ul>
+</li>
+<li><p><strong>Infrastructure Security</strong></p>
+<ul class="simple">
+<li><p>Container security</p></li>
+<li><p>Network policies</p></li>
+<li><p>Security groups</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="scalability">
+<h2>Scalability<a class="headerlink" href="#scalability" title="Link to this heading"></a></h2>
+<section id="horizontal-scaling">
+<h3>Horizontal Scaling<a class="headerlink" href="#horizontal-scaling" title="Link to this heading"></a></h3>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TB
+    LB[Load Balancer] --&gt; S1[Service Instance 1]
+    LB --&gt; S2[Service Instance 2]
+    LB --&gt; S3[Service Instance 3]
+    S1 --&gt; DB[(Database Cluster)]
+    S2 --&gt; DB
+    S3 --&gt; DB
+</pre></div>
+</div>
+</section>
+<section id="vertical-scaling">
+<h3>Vertical Scaling<a class="headerlink" href="#vertical-scaling" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Database optimization</p></li>
+<li><p>Cache utilization</p></li>
+<li><p>Resource allocation</p></li>
+</ul>
+</section>
+</section>
+<section id="monitoring-and-observability">
+<h2>Monitoring and Observability<a class="headerlink" href="#monitoring-and-observability" title="Link to this heading"></a></h2>
+<section id="metrics-collection">
+<h3>Metrics Collection<a class="headerlink" href="#metrics-collection" title="Link to this heading"></a></h3>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+    Services[Services] --&gt; Prometheus
+    Prometheus --&gt; Grafana
+    Prometheus --&gt; AlertManager
+    AlertManager --&gt; Notifications
+</pre></div>
+</div>
+</section>
+<section id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Link to this heading"></a></h3>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph LR
+    Services[Services] --&gt; Fluentd
+    Fluentd --&gt; Elasticsearch
+    Elasticsearch --&gt; Kibana
+</pre></div>
+</div>
+</section>
+</section>
+<section id="deployment-architecture">
+<h2>Deployment Architecture<a class="headerlink" href="#deployment-architecture" title="Link to this heading"></a></h2>
+<section id="production-environment">
+<h3>Production Environment<a class="headerlink" href="#production-environment" title="Link to this heading"></a></h3>
+<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TB
+    Internet --&gt; CDN
+    CDN --&gt; LB[Load Balancer]
+    LB --&gt; K8S[Kubernetes Cluster]
+    K8S --&gt; Services[Service Pods]
+    Services --&gt; DB[(Database)]
+    Services --&gt; Cache[(Redis)]
+    Services --&gt; Queue[(Message Queue)]
+</pre></div>
+</div>
+</section>
+<section id="development-environment">
+<h3>Development Environment<a class="headerlink" href="#development-environment" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Local development setup</p></li>
+<li><p>Testing environment</p></li>
+<li><p>Staging environment</p></li>
+<li><p>CI/CD pipeline</p></li>
+</ul>
+</section>
+</section>
+<section id="disaster-recovery">
+<h2>Disaster Recovery<a class="headerlink" href="#disaster-recovery" title="Link to this heading"></a></h2>
+<section id="backup-strategy">
+<h3>Backup Strategy<a class="headerlink" href="#backup-strategy" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Database Backups</strong></p>
+<ul class="simple">
+<li><p>Full daily backups</p></li>
+<li><p>Incremental backups</p></li>
+<li><p>Point-in-time recovery</p></li>
+</ul>
+</li>
+<li><p><strong>Application State</strong></p>
+<ul class="simple">
+<li><p>Configuration backups</p></li>
+<li><p>State persistence</p></li>
+<li><p>Recovery procedures</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="recovery-procedures">
+<h3>Recovery Procedures<a class="headerlink" href="#recovery-procedures" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Service Recovery</strong></p>
+<ul class="simple">
+<li><p>Automated failover</p></li>
+<li><p>Manual intervention procedures</p></li>
+<li><p>Data consistency checks</p></li>
+</ul>
+</li>
+<li><p><strong>Data Recovery</strong></p>
+<ul class="simple">
+<li><p>Backup restoration</p></li>
+<li><p>Data validation</p></li>
+<li><p>Service verification</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="future-architecture">
+<h2>Future Architecture<a class="headerlink" href="#future-architecture" title="Link to this heading"></a></h2>
+<section id="planned-improvements">
+<h3>Planned Improvements<a class="headerlink" href="#planned-improvements" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Scalability</strong></p>
+<ul class="simple">
+<li><p>Enhanced load balancing</p></li>
+<li><p>Improved caching</p></li>
+<li><p>Database sharding</p></li>
+</ul>
+</li>
+<li><p><strong>Performance</strong></p>
+<ul class="simple">
+<li><p>Query optimization</p></li>
+<li><p>Cache strategy updates</p></li>
+<li><p>Resource allocation</p></li>
+</ul>
+</li>
+<li><p><strong>Security</strong></p>
+<ul class="simple">
+<li><p>Zero trust architecture</p></li>
+<li><p>Enhanced encryption</p></li>
+<li><p>Security automation</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="integration-points">
+<h3>Integration Points<a class="headerlink" href="#integration-points" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>External Systems</strong></p>
+<ul class="simple">
+<li><p>API integrations</p></li>
+<li><p>Data exchange</p></li>
+<li><p>Security protocols</p></li>
+</ul>
+</li>
+<li><p><strong>Internal Systems</strong></p>
+<ul class="simple">
+<li><p>Service mesh</p></li>
+<li><p>Event bus</p></li>
+<li><p>Shared services</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, OPSource Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

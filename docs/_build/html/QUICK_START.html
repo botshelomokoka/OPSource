@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPSource Quick Start Guide &mdash; OPSource 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=2ae16414" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=30646c52"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/js/custom.js?v=d845f544"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2c3e50" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPSource
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/trading.html">Trading Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="anya/index.html">Anya AI/ML Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dash33/index.html">Dash33 High-Performance Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enterprise/index.html">Enterprise Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobile/index.html">Mobile Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture/index.html">Architecture Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/index.html">Support Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2c3e50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPSource</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">OPSource Quick Start Guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/botshelomokoka/opsource/blob/main/docs/QUICK_START.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="opsource-quick-start-guide">
+<h1>OPSource Quick Start Guide<a class="headerlink" href="#opsource-quick-start-guide" title="Link to this heading"></a></h1>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Rust 1.70+</p></li>
+<li><p>PostgreSQL 13+</p></li>
+<li><p>Redis 6+</p></li>
+<li><p>Node.js 18+</p></li>
+<li><p>Git</p></li>
+</ul>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Clone Repository</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/botshelomokoka/opsource.git
+<span class="nb">cd</span><span class="w"> </span>opsource
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Set Up Environment</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy environment template</span>
+cp<span class="w"> </span>.env.example<span class="w"> </span>.env
+
+<span class="c1"># Edit .env with your settings</span>
+nano<span class="w"> </span>.env
+
+<span class="c1"># Create Python virtual environment (optional)</span>
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w">  </span><span class="c1"># or .venv\Scripts\activate on Windows</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Install Dependencies</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install Rust dependencies</span>
+cargo<span class="w"> </span>build
+
+<span class="c1"># Install Python dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c1"># Install development dependencies (optional)</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+</pre></div>
+</div>
+</section>
+<section id="quick-setup">
+<h2>Quick Setup<a class="headerlink" href="#quick-setup" title="Link to this heading"></a></h2>
+<section id="database-setup">
+<h3>1. Database Setup<a class="headerlink" href="#database-setup" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize database</span>
+./scripts/setup_db.sh
+
+<span class="c1"># Run migrations</span>
+./scripts/migrate_db.sh
+</pre></div>
+</div>
+</section>
+<section id="start-services">
+<h3>2. Start Services<a class="headerlink" href="#start-services" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start Redis</span>
+redis-server
+
+<span class="c1"># Start development server</span>
+cargo<span class="w"> </span>run
+</pre></div>
+</div>
+</section>
+<section id="verify-installation">
+<h3>3. Verify Installation<a class="headerlink" href="#verify-installation" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run tests</span>
+cargo<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># Check API status</span>
+curl<span class="w"> </span>http://localhost:8080/health
+</pre></div>
+</div>
+</section>
+</section>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading"></a></h2>
+<section id="anya-integration">
+<h3>1. Anya Integration<a class="headerlink" href="#anya-integration" title="Link to this heading"></a></h3>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initialize Anya</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">anya</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Anya</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Start AI processing</span>
+<span class="n">anya</span><span class="p">.</span><span class="n">start_processing</span><span class="p">().</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Make predictions</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">prediction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">anya</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="dash33-trading">
+<h3>2. Dash33 Trading<a class="headerlink" href="#dash33-trading" title="Link to this heading"></a></h3>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Setup trading environment</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">trading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Trading</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Connect to market</span>
+<span class="n">trading</span><span class="p">.</span><span class="n">connect_market</span><span class="p">(</span><span class="s">&quot;BTC/USD&quot;</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Place order</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Order</span><span class="p">::</span><span class="n">market_buy</span><span class="p">(</span><span class="s">&quot;BTC/USD&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+<span class="n">trading</span><span class="p">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">order</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="enterprise-features">
+<h3>3. Enterprise Features<a class="headerlink" href="#enterprise-features" title="Link to this heading"></a></h3>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initialize enterprise system</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">enterprise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Enterprise</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Start workflow</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">workflow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Workflow</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;approval_process&quot;</span><span class="p">);</span>
+<span class="n">enterprise</span><span class="p">.</span><span class="n">start_workflow</span><span class="p">(</span><span class="n">workflow</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="mobile-integration">
+<h3>4. Mobile Integration<a class="headerlink" href="#mobile-integration" title="Link to this heading"></a></h3>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Setup mobile backend</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">mobile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mobile</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">config</span><span class="p">)</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Initialize wallet</span>
+<span class="n">mobile</span><span class="p">.</span><span class="n">init_wallet</span><span class="p">().</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Process transaction</span>
+<span class="n">mobile</span><span class="p">.</span><span class="n">send_transaction</span><span class="p">(</span><span class="n">tx</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="common-tasks">
+<h2>Common Tasks<a class="headerlink" href="#common-tasks" title="Link to this heading"></a></h2>
+<section id="user-management">
+<h3>User Management<a class="headerlink" href="#user-management" title="Link to this heading"></a></h3>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create user</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;john@example.com&quot;</span><span class="p">);</span>
+<span class="n">auth</span><span class="p">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">user</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Authenticate</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auth</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">credentials</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="data-processing">
+<h3>Data Processing<a class="headerlink" href="#data-processing" title="Link to this heading"></a></h3>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Process market data</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">processor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DataProcessor</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
+<span class="n">processor</span><span class="p">.</span><span class="n">process_batch</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Generate analytics</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">analytics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Analytics</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
+<span class="n">analytics</span><span class="p">.</span><span class="n">generate_report</span><span class="p">().</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="blockchain-operations">
+<h3>Blockchain Operations<a class="headerlink" href="#blockchain-operations" title="Link to this heading"></a></h3>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Connect to blockchain</span>
+<span class="kd">let</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Node</span><span class="p">::</span><span class="n">connect</span><span class="p">(</span><span class="n">network</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+
+<span class="c1">// Submit transaction</span>
+<span class="n">node</span><span class="p">.</span><span class="n">submit_transaction</span><span class="p">(</span><span class="n">tx</span><span class="p">).</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="development-workflow">
+<h2>Development Workflow<a class="headerlink" href="#development-workflow" title="Link to this heading"></a></h2>
+<section id="create-feature-branch">
+<h3>1. Create Feature Branch<a class="headerlink" href="#create-feature-branch" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/new-feature
+</pre></div>
+</div>
+</section>
+<section id="make-changes">
+<h3>2. Make Changes<a class="headerlink" href="#make-changes" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Edit code</span>
+code<span class="w"> </span>.
+
+<span class="c1"># Format code</span>
+cargo<span class="w"> </span>fmt
+
+<span class="c1"># Check lints</span>
+cargo<span class="w"> </span>clippy
+</pre></div>
+</div>
+</section>
+<section id="test-changes">
+<h3>3. Test Changes<a class="headerlink" href="#test-changes" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run unit tests</span>
+cargo<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># Run integration tests</span>
+cargo<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--test<span class="w"> </span><span class="s1">&#39;*&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="submit-changes">
+<h3>4. Submit Changes<a class="headerlink" href="#submit-changes" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Commit changes</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add new feature&quot;</span>
+
+<span class="c1"># Push changes</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/new-feature
+</pre></div>
+</div>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="common-issues">
+<h3>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Database Connection</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check database status</span>
+pg_isready
+
+<span class="c1"># Verify connection string</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$DATABASE_URL</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Redis Connection</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check Redis status</span>
+redis-cli<span class="w"> </span>ping
+
+<span class="c1"># Clear Redis cache</span>
+redis-cli<span class="w"> </span>flushall
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>API Issues</strong></p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check logs</span>
+tail<span class="w"> </span>-f<span class="w"> </span>log/opsource.log
+
+<span class="c1"># Verify API status</span>
+curl<span class="w"> </span>http://localhost:8080/health
+</pre></div>
+</div>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Read Documentation</strong></p>
+<ul class="simple">
+<li><p><a class="reference internal" href="API_REFERENCE.html"><span class="std std-doc">API Reference</span></a></p></li>
+<li><p><a class="reference internal" href="ARCHITECTURE.html"><span class="std std-doc">Architecture Guide</span></a></p></li>
+<li><p><a class="reference internal" href="SECURITY.html"><span class="std std-doc">Security Guide</span></a></p></li>
+</ul>
+</li>
+<li><p><strong>Explore Features</strong></p>
+<ul class="simple">
+<li><p>Anya AI capabilities</p></li>
+<li><p>Dash33 trading features</p></li>
+<li><p>Enterprise workflows</p></li>
+<li><p>Mobile functionality</p></li>
+</ul>
+</li>
+<li><p><strong>Join Community</strong></p>
+<ul class="simple">
+<li><p>GitHub discussions</p></li>
+<li><p>Developer forum</p></li>
+<li><p>Discord channel</p></li>
+<li><p>Mailing list</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="support">
+<h2>Support<a class="headerlink" href="#support" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Documentation: <a class="reference internal" href="INDEX.html"><span class="std std-doc">docs/</span></a></p></li>
+<li><p>Issues: GitHub Issues</p></li>
+<li><p>Chat: Discord</p></li>
+<li><p>Email: <a class="reference external" href="mailto:support&#37;&#52;&#48;opsource&#46;com">support<span>&#64;</span>opsource<span>&#46;</span>com</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, OPSource Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
