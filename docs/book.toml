@@ -1,0 +1,56 @@
+[book]
+name = "OPSource Documentation"
+authors = ["Botshelo Mokoka"]
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/botshelomokoka/opsource"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/botshelomokoka/opsource/edit/main/docs/{path}"
+site-url = "/opsource/"
+cname = "docs.opsource.dev"
+additional-css = ["theme/css/custom.css"]
+additional-js = ["theme/js/custom.js"]
+no-section-label = false
+mathjax-support = true
+copy-fonts = true
+search-enabled = true
+search-js = ["theme/js/elasticlunr.min.js"]
+
+[output.html.print]
+enable = true
+page-break = true
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.playground]
+editable = true
+copyable = true
+line-numbers = true
+runnable = true
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.0"
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2

@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPSource Deployment Guide &mdash; OPSource 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=2ae16414" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=30646c52"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/js/custom.js?v=d845f544"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2c3e50" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPSource
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/trading.html">Trading Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="anya/index.html">Anya AI/ML Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dash33/index.html">Dash33 High-Performance Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enterprise/index.html">Enterprise Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobile/index.html">Mobile Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture/index.html">Architecture Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/index.html">Support Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2c3e50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPSource</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">OPSource Deployment Guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/botshelomokoka/opsource/blob/main/docs/DEPLOYMENT.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="opsource-deployment-guide">
+<h1>OPSource Deployment Guide<a class="headerlink" href="#opsource-deployment-guide" title="Link to this heading"></a></h1>
+<section id="deployment-environments">
+<h2>Deployment Environments<a class="headerlink" href="#deployment-environments" title="Link to this heading"></a></h2>
+<section id="development-environment">
+<h3>1. Development Environment<a class="headerlink" href="#development-environment" title="Link to this heading"></a></h3>
+<section id="requirements">
+<h4>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Docker Desktop</p></li>
+<li><p>Kubernetes (local)</p></li>
+<li><p>Helm</p></li>
+<li><p>kubectl</p></li>
+</ul>
+</section>
+<section id="setup">
+<h4>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create development namespace</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>opsource-dev
+
+<span class="c1"># Deploy services</span>
+helm<span class="w"> </span>install<span class="w"> </span>opsource-dev<span class="w"> </span>./helm/opsource<span class="w"> </span>-f<span class="w"> </span>values-dev.yaml
+</pre></div>
+</div>
+</section>
+</section>
+<section id="staging-environment">
+<h3>2. Staging Environment<a class="headerlink" href="#staging-environment" title="Link to this heading"></a></h3>
+<section id="id1">
+<h4>Requirements<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Kubernetes cluster</p></li>
+<li><p>CI/CD pipeline</p></li>
+<li><p>Monitoring setup</p></li>
+</ul>
+</section>
+<section id="deployment">
+<h4>Deployment<a class="headerlink" href="#deployment" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create staging namespace</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>opsource-staging
+
+<span class="c1"># Deploy services</span>
+helm<span class="w"> </span>install<span class="w"> </span>opsource-staging<span class="w"> </span>./helm/opsource<span class="w"> </span>-f<span class="w"> </span>values-staging.yaml
+</pre></div>
+</div>
+</section>
+</section>
+<section id="production-environment">
+<h3>3. Production Environment<a class="headerlink" href="#production-environment" title="Link to this heading"></a></h3>
+<section id="id2">
+<h4>Requirements<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Production Kubernetes cluster</p></li>
+<li><p>Load balancers</p></li>
+<li><p>Monitoring and alerting</p></li>
+<li><p>Backup systems</p></li>
+</ul>
+</section>
+<section id="id3">
+<h4>Deployment<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create production namespace</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>opsource-prod
+
+<span class="c1"># Deploy services</span>
+helm<span class="w"> </span>install<span class="w"> </span>opsource-prod<span class="w"> </span>./helm/opsource<span class="w"> </span>-f<span class="w"> </span>values-prod.yaml
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="deployment-process">
+<h2>Deployment Process<a class="headerlink" href="#deployment-process" title="Link to this heading"></a></h2>
+<section id="build-process">
+<h3>1. Build Process<a class="headerlink" href="#build-process" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build Docker images</span>
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>opsource/anya:latest<span class="w"> </span>./anya
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>opsource/dash33:latest<span class="w"> </span>./dash33
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>opsource/enterprise:latest<span class="w"> </span>./enterprise
+docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>opsource/mobile:latest<span class="w"> </span>./mobile
+
+<span class="c1"># Push images</span>
+docker<span class="w"> </span>push<span class="w"> </span>opsource/anya:latest
+docker<span class="w"> </span>push<span class="w"> </span>opsource/dash33:latest
+docker<span class="w"> </span>push<span class="w"> </span>opsource/enterprise:latest
+docker<span class="w"> </span>push<span class="w"> </span>opsource/mobile:latest
+</pre></div>
+</div>
+</section>
+<section id="database-migration">
+<h3>2. Database Migration<a class="headerlink" href="#database-migration" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run migrations</span>
+./scripts/migrate.sh<span class="w"> </span>--env<span class="w"> </span>production
+
+<span class="c1"># Verify migration</span>
+./scripts/verify-migration.sh
+</pre></div>
+</div>
+</section>
+<section id="service-deployment">
+<h3>3. Service Deployment<a class="headerlink" href="#service-deployment" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Deploy core services</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/core/
+
+<span class="c1"># Deploy supporting services</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/support/
+
+<span class="c1"># Verify deployment</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>opsource-prod
+</pre></div>
+</div>
+</section>
+</section>
+<section id="configuration-management">
+<h2>Configuration Management<a class="headerlink" href="#configuration-management" title="Link to this heading"></a></h2>
+<section id="environment-variables">
+<h3>1. Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># config/production.yaml</span>
+<span class="nt">database</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql://user:pass@host:5432/db</span>
+<span class="w">  </span><span class="nt">pool_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="nt">redis</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis://host:6379</span>
+<span class="w">  </span><span class="nt">pool_size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+
+<span class="nt">api</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="w">  </span><span class="nt">workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</pre></div>
+</div>
+</section>
+<section id="secrets-management">
+<h3>2. Secrets Management<a class="headerlink" href="#secrets-management" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create secrets</span>
+kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>db-credentials<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span>myuser<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span>mypass
+
+<span class="c1"># Use secrets in deployment</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/secrets/
+</pre></div>
+</div>
+</section>
+</section>
+<section id="monitoring-setup">
+<h2>Monitoring Setup<a class="headerlink" href="#monitoring-setup" title="Link to this heading"></a></h2>
+<section id="prometheus-configuration">
+<h3>1. Prometheus Configuration<a class="headerlink" href="#prometheus-configuration" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># prometheus/config.yaml</span>
+<span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span>
+
+<span class="nt">scrape_configs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;opsource&#39;</span>
+<span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;localhost:9090&#39;</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</section>
+<section id="grafana-dashboards">
+<h3>2. Grafana Dashboards<a class="headerlink" href="#grafana-dashboards" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import dashboards</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>monitoring/dashboards/
+
+<span class="c1"># Configure data sources</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>monitoring/datasources/
+</pre></div>
+</div>
+</section>
+</section>
+<section id="backup-and-recovery">
+<h2>Backup and Recovery<a class="headerlink" href="#backup-and-recovery" title="Link to this heading"></a></h2>
+<section id="database-backup">
+<h3>1. Database Backup<a class="headerlink" href="#database-backup" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Backup database</span>
+./scripts/backup-db.sh
+
+<span class="c1"># Verify backup</span>
+./scripts/verify-backup.sh
+</pre></div>
+</div>
+</section>
+<section id="configuration-backup">
+<h3>2. Configuration Backup<a class="headerlink" href="#configuration-backup" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Backup configurations</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>configmap<span class="w"> </span>-n<span class="w"> </span>opsource-prod<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>configs-backup.yaml
+
+<span class="c1"># Backup secrets</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>-n<span class="w"> </span>opsource-prod<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>secrets-backup.yaml
+</pre></div>
+</div>
+</section>
+</section>
+<section id="scaling-configuration">
+<h2>Scaling Configuration<a class="headerlink" href="#scaling-configuration" title="Link to this heading"></a></h2>
+<section id="horizontal-pod-autoscaling">
+<h3>1. Horizontal Pod Autoscaling<a class="headerlink" href="#horizontal-pod-autoscaling" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># k8s/hpa.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autoscaling/v2</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HorizontalPodAutoscaler</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource-hpa</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">scaleTargetRef</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource</span>
+<span class="w">  </span><span class="nt">minReplicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">maxReplicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
+<span class="w">    </span><span class="nt">resource</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpu</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Utilization</span>
+<span class="w">        </span><span class="nt">averageUtilization</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70</span>
+</pre></div>
+</div>
+</section>
+<section id="vertical-pod-autoscaling">
+<h3>2. Vertical Pod Autoscaling<a class="headerlink" href="#vertical-pod-autoscaling" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># k8s/vpa.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">autoscaling.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VerticalPodAutoscaler</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource-vpa</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">targetRef</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;apps/v1&quot;</span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource</span>
+<span class="w">  </span><span class="nt">updatePolicy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">updateMode</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Auto&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="security-configuration">
+<h2>Security Configuration<a class="headerlink" href="#security-configuration" title="Link to this heading"></a></h2>
+<section id="network-policies">
+<h3>1. Network Policies<a class="headerlink" href="#network-policies" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># k8s/network-policy.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource-network-policy</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">podSelector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource</span>
+<span class="w">  </span><span class="nt">policyTypes</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ingress</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Egress</span>
+<span class="w">  </span><span class="nt">ingress</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">from</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">podSelector</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+<span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+</pre></div>
+</div>
+</section>
+<section id="rbac-configuration">
+<h3>2. RBAC Configuration<a class="headerlink" href="#rbac-configuration" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># k8s/rbac.yaml</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource-prod</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">opsource-role</span>
+<span class="nt">rules</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;pods&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;list&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;watch&quot;</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="common-issues">
+<h3>1. Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h3>
+<section id="database-connection-issues">
+<h4>Database Connection Issues<a class="headerlink" href="#database-connection-issues" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check database connectivity</span>
+kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="si">${</span><span class="nv">POD_NAME</span><span class="si">}</span><span class="w"> </span>--<span class="w"> </span>pg_isready<span class="w"> </span>-h<span class="w"> </span><span class="si">${</span><span class="nv">DB_HOST</span><span class="si">}</span>
+
+<span class="c1"># View database logs</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span><span class="si">${</span><span class="nv">DB_POD_NAME</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+<section id="service-health-issues">
+<h4>Service Health Issues<a class="headerlink" href="#service-health-issues" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check service health</span>
+kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span><span class="si">${</span><span class="nv">POD_NAME</span><span class="si">}</span>
+
+<span class="c1"># View service logs</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span><span class="si">${</span><span class="nv">POD_NAME</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="recovery-procedures">
+<h3>2. Recovery Procedures<a class="headerlink" href="#recovery-procedures" title="Link to this heading"></a></h3>
+<section id="service-recovery">
+<h4>Service Recovery<a class="headerlink" href="#service-recovery" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart service</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>deployment<span class="w"> </span><span class="si">${</span><span class="nv">DEPLOYMENT_NAME</span><span class="si">}</span>
+
+<span class="c1"># Verify recovery</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-w
+</pre></div>
+</div>
+</section>
+<section id="data-recovery">
+<h4>Data Recovery<a class="headerlink" href="#data-recovery" title="Link to this heading"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restore database</span>
+./scripts/restore-db.sh<span class="w"> </span><span class="si">${</span><span class="nv">BACKUP_FILE</span><span class="si">}</span>
+
+<span class="c1"># Verify restoration</span>
+./scripts/verify-db.sh
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="maintenance-procedures">
+<h2>Maintenance Procedures<a class="headerlink" href="#maintenance-procedures" title="Link to this heading"></a></h2>
+<section id="updates-and-patches">
+<h3>1. Updates and Patches<a class="headerlink" href="#updates-and-patches" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update services</span>
+kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/<span class="si">${</span><span class="nv">DEPLOYMENT_NAME</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">CONTAINER_NAME</span><span class="si">}</span><span class="o">=</span><span class="si">${</span><span class="nv">NEW_IMAGE</span><span class="si">}</span>
+
+<span class="c1"># Rollback if needed</span>
+kubectl<span class="w"> </span>rollout<span class="w"> </span>undo<span class="w"> </span>deployment/<span class="si">${</span><span class="nv">DEPLOYMENT_NAME</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+<section id="health-checks">
+<h3>2. Health Checks<a class="headerlink" href="#health-checks" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check system health</span>
+./scripts/health-check.sh
+
+<span class="c1"># Generate health report</span>
+./scripts/generate-report.sh
+</pre></div>
+</div>
+</section>
+</section>
+<section id="deployment-checklist">
+<h2>Deployment Checklist<a class="headerlink" href="#deployment-checklist" title="Link to this heading"></a></h2>
+<section id="pre-deployment">
+<h3>Pre-deployment<a class="headerlink" href="#pre-deployment" title="Link to this heading"></a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Review changes</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Run tests</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Update documentation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Backup data</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Notify stakeholders</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Deployment<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Deploy database changes</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Deploy service updates</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Verify deployment</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Run smoke tests</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Monitor metrics</p></li>
+</ul>
+</section>
+<section id="post-deployment">
+<h3>Post-deployment<a class="headerlink" href="#post-deployment" title="Link to this heading"></a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Verify functionality</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Check logs</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Monitor performance</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Update status</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Document issues</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, OPSource Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

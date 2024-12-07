@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting Guide &mdash; OPSource 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=2ae16414" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=30646c52"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../_static/js/custom.js?v=d845f544"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="../faq/index.html" />
+    <link rel="prev" title="Contributing Guide" href="../contributing/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2c3e50" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            OPSource
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/trading.html">Trading Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../anya/index.html">Anya AI/ML Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dash33/index.html">Dash33 High-Performance Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise/index.html">Enterprise Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mobile/index.html">Mobile Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Architecture Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#common-issues">Common Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-issues">Installation Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configuration-issues">Configuration Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-issues">API Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#component-issues">Component Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#anya-ai-ml-engine">Anya AI/ML Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dash33-trading-engine">Dash33 Trading Engine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enterprise-integration">Enterprise Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mobile-platform">Mobile Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-help">Getting Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2c3e50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OPSource</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting Guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/botshelomokoka/opsource/blob/main/docs/troubleshooting/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting-guide">
+<h1>Troubleshooting Guide<a class="headerlink" href="#troubleshooting-guide" title="Link to this heading"></a></h1>
+<section id="common-issues">
+<h2>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h2>
+<section id="installation-issues">
+<h3>Installation Issues<a class="headerlink" href="#installation-issues" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Problem: Package installation fails
+Solution: Check Python version compatibility and pip installation</p></li>
+<li><p>Problem: Missing dependencies
+Solution: Run <cite>pip install -r requirements.txt</cite></p></li>
+</ul>
+</section>
+<section id="configuration-issues">
+<h3>Configuration Issues<a class="headerlink" href="#configuration-issues" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Problem: Configuration file not found
+Solution: Copy the example config file and update settings</p></li>
+<li><p>Problem: Invalid configuration
+Solution: Validate configuration against schema</p></li>
+</ul>
+</section>
+<section id="api-issues">
+<h3>API Issues<a class="headerlink" href="#api-issues" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Problem: Authentication fails
+Solution: Check API credentials and permissions</p></li>
+<li><p>Problem: Rate limiting
+Solution: Review and adjust request rates</p></li>
+</ul>
+</section>
+</section>
+<section id="component-issues">
+<h2>Component Issues<a class="headerlink" href="#component-issues" title="Link to this heading"></a></h2>
+<section id="anya-ai-ml-engine">
+<h3>Anya AI/ML Engine<a class="headerlink" href="#anya-ai-ml-engine" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Problem: Model training fails
+Solution: Check data format and memory requirements</p></li>
+<li><p>Problem: Predictions not accurate
+Solution: Review model parameters and training data</p></li>
+</ul>
+</section>
+<section id="dash33-trading-engine">
+<h3>Dash33 Trading Engine<a class="headerlink" href="#dash33-trading-engine" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Problem: High latency
+Solution: Check network configuration and system resources</p></li>
+<li><p>Problem: Order execution fails
+Solution: Verify account permissions and margin requirements</p></li>
+</ul>
+</section>
+<section id="enterprise-integration">
+<h3>Enterprise Integration<a class="headerlink" href="#enterprise-integration" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Problem: Connection failures
+Solution: Check network connectivity and firewall settings</p></li>
+<li><p>Problem: Data synchronization issues
+Solution: Review integration configuration</p></li>
+</ul>
+</section>
+<section id="mobile-platform">
+<h3>Mobile Platform<a class="headerlink" href="#mobile-platform" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Problem: App crashes
+Solution: Update to latest version and clear cache</p></li>
+<li><p>Problem: Market data delays
+Solution: Check network connection and data feed settings</p></li>
+</ul>
+</section>
+</section>
+<section id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Link to this heading"></a></h2>
+<p>If you need additional help:</p>
+<ol class="arabic simple">
+<li><p>Check our <a class="reference internal" href="../faq/index.html"><span class="doc">Frequently Asked Questions</span></a></p></li>
+<li><p>Join our <a class="reference external" href="https://discord.gg/opsource">Discord Community</a></p></li>
+<li><p>Contact <a class="reference internal" href="../support/index.html"><span class="doc">Support Resources</span></a></p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../contributing/index.html" class="btn btn-neutral float-left" title="Contributing Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../faq/index.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, OPSource Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

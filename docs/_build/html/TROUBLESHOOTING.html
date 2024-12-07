@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPSource Troubleshooting Guide &mdash; OPSource 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=2ae16414" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=30646c52"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/js/custom.js?v=d845f544"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2c3e50" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPSource
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/trading.html">Trading Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="anya/index.html">Anya AI/ML Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dash33/index.html">Dash33 High-Performance Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enterprise/index.html">Enterprise Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobile/index.html">Mobile Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture/index.html">Architecture Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/index.html">Support Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2c3e50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPSource</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">OPSource Troubleshooting Guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/botshelomokoka/opsource/blob/main/docs/TROUBLESHOOTING.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="opsource-troubleshooting-guide">
+<h1>OPSource Troubleshooting Guide<a class="headerlink" href="#opsource-troubleshooting-guide" title="Link to this heading"></a></h1>
+<section id="common-issues-and-solutions">
+<h2>Common Issues and Solutions<a class="headerlink" href="#common-issues-and-solutions" title="Link to this heading"></a></h2>
+<section id="service-connection-issues">
+<h3>1. Service Connection Issues<a class="headerlink" href="#service-connection-issues" title="Link to this heading"></a></h3>
+<section id="database-connection-failures">
+<h4>Database Connection Failures<a class="headerlink" href="#database-connection-failures" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>Service logs show database connection errors</p></li>
+<li><p>API endpoints return 500 errors</p></li>
+<li><p>Services fail to start</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Check Database Status</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check if database is running</span>
+pg_isready<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>
+
+<span class="c1"># Check connection string</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$DATABASE_URL</span>
+
+<span class="c1"># Verify credentials</span>
+psql<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-U<span class="w"> </span>username<span class="w"> </span>-d<span class="w"> </span>database<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;\conninfo&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Verify Network Connectivity</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test network connection</span>
+telnet<span class="w"> </span>localhost<span class="w"> </span><span class="m">5432</span>
+
+<span class="c1"># Check firewall rules</span>
+netstat<span class="w"> </span>-an<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">5432</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Review Logs</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># View database logs</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/postgresql/postgresql.log
+
+<span class="c1"># View application logs</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span><span class="si">${</span><span class="nv">POD_NAME</span><span class="si">}</span>
+</pre></div>
+</div>
+</section>
+<section id="redis-connection-issues">
+<h4>Redis Connection Issues<a class="headerlink" href="#redis-connection-issues" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>Cache misses</p></li>
+<li><p>Slow response times</p></li>
+<li><p>Connection timeout errors</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Check Redis Status</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test Redis connection</span>
+redis-cli<span class="w"> </span>ping
+
+<span class="c1"># Check Redis info</span>
+redis-cli<span class="w"> </span>info
+
+<span class="c1"># Monitor Redis</span>
+redis-cli<span class="w"> </span>monitor
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Clear Cache</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clear specific key</span>
+redis-cli<span class="w"> </span>DEL<span class="w"> </span>key_name
+
+<span class="c1"># Clear all cache</span>
+redis-cli<span class="w"> </span>FLUSHALL
+</pre></div>
+</div>
+</section>
+</section>
+<section id="performance-issues">
+<h3>2. Performance Issues<a class="headerlink" href="#performance-issues" title="Link to this heading"></a></h3>
+<section id="high-cpu-usage">
+<h4>High CPU Usage<a class="headerlink" href="#high-cpu-usage" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>Slow response times</p></li>
+<li><p>High system load</p></li>
+<li><p>Service throttling</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Identify Resource Usage</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check CPU usage</span>
+top<span class="w"> </span>-H
+
+<span class="c1"># Monitor process stats</span>
+pidstat<span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># View container metrics</span>
+docker<span class="w"> </span>stats
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Profile Application</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run profiler</span>
+perf<span class="w"> </span>record<span class="w"> </span>-F<span class="w"> </span><span class="m">99</span><span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">PID</span><span class="si">}</span><span class="w"> </span>-g<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span><span class="m">30</span>
+
+<span class="c1"># Analyze results</span>
+perf<span class="w"> </span>report
+</pre></div>
+</div>
+</section>
+<section id="memory-leaks">
+<h4>Memory Leaks<a class="headerlink" href="#memory-leaks" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>Increasing memory usage</p></li>
+<li><p>OOM errors</p></li>
+<li><p>Service restarts</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Monitor Memory</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check memory usage</span>
+free<span class="w"> </span>-m
+
+<span class="c1"># View detailed memory stats</span>
+vmstat<span class="w"> </span><span class="m">1</span>
+
+<span class="c1"># Monitor specific process</span>
+ps<span class="w"> </span>-o<span class="w"> </span>pid,user,%mem,command<span class="w"> </span>ax<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-b<span class="w"> </span>-k3<span class="w"> </span>-r
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Analyze Heap</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate heap dump</span>
+jmap<span class="w"> </span>-dump:format<span class="o">=</span>b,file<span class="o">=</span>heap.bin<span class="w"> </span><span class="si">${</span><span class="nv">PID</span><span class="si">}</span>
+
+<span class="c1"># Analyze dump</span>
+jhat<span class="w"> </span>heap.bin
+</pre></div>
+</div>
+</section>
+</section>
+<section id="api-issues">
+<h3>3. API Issues<a class="headerlink" href="#api-issues" title="Link to this heading"></a></h3>
+<section id="endpoint-failures">
+<h4>Endpoint Failures<a class="headerlink" href="#endpoint-failures" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>HTTP 4xx/5xx errors</p></li>
+<li><p>Timeout errors</p></li>
+<li><p>Invalid responses</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Check API Status</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test endpoint</span>
+curl<span class="w"> </span>-v<span class="w"> </span>http://localhost:8080/health
+
+<span class="c1"># Monitor API logs</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/opsource/api.log
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Verify Request/Response</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use API debugging tools</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/endpoint<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;key&quot;: &quot;value&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v
+</pre></div>
+</div>
+</section>
+<section id="rate-limiting">
+<h4>Rate Limiting<a class="headerlink" href="#rate-limiting" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>HTTP 429 errors</p></li>
+<li><p>Throttled requests</p></li>
+<li><p>Inconsistent response times</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Check Rate Limits</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># View rate limit config</span>
+cat<span class="w"> </span>/etc/opsource/rate-limits.conf
+
+<span class="c1"># Monitor rate limit metrics</span>
+redis-cli<span class="w"> </span>--scan<span class="w"> </span>--pattern<span class="w"> </span><span class="s2">&quot;ratelimit:*&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Adjust Limits</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update rate limits</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>k8s/rate-limits.yaml
+
+<span class="c1"># Verify changes</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>configmap<span class="w"> </span>rate-limits<span class="w"> </span>-o<span class="w"> </span>yaml
+</pre></div>
+</div>
+</section>
+</section>
+<section id="authentication-issues">
+<h3>4. Authentication Issues<a class="headerlink" href="#authentication-issues" title="Link to this heading"></a></h3>
+<section id="token-validation-failures">
+<h4>Token Validation Failures<a class="headerlink" href="#token-validation-failures" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>Authentication errors</p></li>
+<li><p>Invalid token messages</p></li>
+<li><p>Session expiration</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Check Token</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Decode JWT</span>
+<span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">TOKEN</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
+
+<span class="c1"># Verify token signature</span>
+jwt<span class="w"> </span>verify<span class="w"> </span><span class="si">${</span><span class="nv">TOKEN</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">PUBLIC_KEY</span><span class="si">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Review Auth Config</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check auth settings</span>
+cat<span class="w"> </span>/etc/opsource/auth.conf
+
+<span class="c1"># Test auth endpoint</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/auth/token<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;username&quot;: &quot;test&quot;, &quot;password&quot;: &quot;test&quot;}&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="deployment-issues">
+<h3>5. Deployment Issues<a class="headerlink" href="#deployment-issues" title="Link to this heading"></a></h3>
+<section id="failed-deployments">
+<h4>Failed Deployments<a class="headerlink" href="#failed-deployments" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>Deployment timeout</p></li>
+<li><p>Pod creation failures</p></li>
+<li><p>Service unavailability</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Check Deployment Status</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># View deployment status</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>deployments
+
+<span class="c1"># Check pod status</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>pods
+
+<span class="c1"># View deployment events</span>
+kubectl<span class="w"> </span>describe<span class="w"> </span>deployment<span class="w"> </span><span class="si">${</span><span class="nv">DEPLOYMENT_NAME</span><span class="si">}</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Review Logs</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># View pod logs</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span><span class="si">${</span><span class="nv">POD_NAME</span><span class="si">}</span>
+
+<span class="c1"># Check previous pod logs</span>
+kubectl<span class="w"> </span>logs<span class="w"> </span><span class="si">${</span><span class="nv">POD_NAME</span><span class="si">}</span><span class="w"> </span>--previous
+</pre></div>
+</div>
+</section>
+</section>
+<section id="data-synchronization-issues">
+<h3>6. Data Synchronization Issues<a class="headerlink" href="#data-synchronization-issues" title="Link to this heading"></a></h3>
+<section id="inconsistent-data">
+<h4>Inconsistent Data<a class="headerlink" href="#inconsistent-data" title="Link to this heading"></a></h4>
+<p><strong>Symptoms</strong>:</p>
+<ul class="simple">
+<li><p>Data mismatches</p></li>
+<li><p>Sync failures</p></li>
+<li><p>Stale data</p></li>
+</ul>
+<p><strong>Solutions</strong>:</p>
+<ol class="arabic simple">
+<li><p>Check Sync Status</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># View sync logs</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/opsource/sync.log
+
+<span class="c1"># Check sync metrics</span>
+curl<span class="w"> </span>http://localhost:8080/metrics<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>sync
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Force Resync</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Trigger manual sync</span>
+./scripts/force-sync.sh
+
+<span class="c1"># Verify sync completion</span>
+./scripts/verify-sync.sh
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="diagnostic-tools">
+<h2>Diagnostic Tools<a class="headerlink" href="#diagnostic-tools" title="Link to this heading"></a></h2>
+<section id="logging-tools">
+<h3>1. Logging Tools<a class="headerlink" href="#logging-tools" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enable debug logging</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/log_level=info/log_level=debug/&#39;</span><span class="w"> </span>/etc/opsource/logging.conf
+
+<span class="c1"># Collect all logs</span>
+./scripts/collect-logs.sh
+
+<span class="c1"># Analyze log patterns</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>/var/log/opsource/
+</pre></div>
+</div>
+</section>
+<section id="monitoring-tools">
+<h3>2. Monitoring Tools<a class="headerlink" href="#monitoring-tools" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check system metrics</span>
+prometheus-query<span class="w"> </span><span class="s1">&#39;rate(http_requests_total[5m])&#39;</span>
+
+<span class="c1"># View service health</span>
+curl<span class="w"> </span>http://localhost:8080/health
+
+<span class="c1"># Monitor resources</span>
+top<span class="w"> </span>-H
+</pre></div>
+</div>
+</section>
+<section id="debugging-tools">
+<h3>3. Debugging Tools<a class="headerlink" href="#debugging-tools" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start debug session</span>
+dlv<span class="w"> </span>attach<span class="w"> </span><span class="si">${</span><span class="nv">PID</span><span class="si">}</span>
+
+<span class="c1"># Profile CPU usage</span>
+go<span class="w"> </span>tool<span class="w"> </span>pprof<span class="w"> </span>http://localhost:8080/debug/pprof/profile
+
+<span class="c1"># Trace requests</span>
+opentelemetry-cli<span class="w"> </span>trace
+</pre></div>
+</div>
+</section>
+</section>
+<section id="recovery-procedures">
+<h2>Recovery Procedures<a class="headerlink" href="#recovery-procedures" title="Link to this heading"></a></h2>
+<section id="service-recovery">
+<h3>1. Service Recovery<a class="headerlink" href="#service-recovery" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart service</span>
+systemctl<span class="w"> </span>restart<span class="w"> </span>opsource
+
+<span class="c1"># Verify service status</span>
+systemctl<span class="w"> </span>status<span class="w"> </span>opsource
+
+<span class="c1"># Check logs after restart</span>
+journalctl<span class="w"> </span>-u<span class="w"> </span>opsource<span class="w"> </span>-f
+</pre></div>
+</div>
+</section>
+<section id="data-recovery">
+<h3>2. Data Recovery<a class="headerlink" href="#data-recovery" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restore from backup</span>
+./scripts/restore-backup.sh<span class="w"> </span><span class="si">${</span><span class="nv">BACKUP_FILE</span><span class="si">}</span>
+
+<span class="c1"># Verify data integrity</span>
+./scripts/verify-data.sh
+
+<span class="c1"># Sync after recovery</span>
+./scripts/sync-data.sh
+</pre></div>
+</div>
+</section>
+</section>
+<section id="prevention-measures">
+<h2>Prevention Measures<a class="headerlink" href="#prevention-measures" title="Link to this heading"></a></h2>
+<section id="monitoring-setup">
+<h3>1. Monitoring Setup<a class="headerlink" href="#monitoring-setup" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up alerts</span>
+./scripts/setup-alerts.sh
+
+<span class="c1"># Configure metrics</span>
+./scripts/configure-metrics.sh
+
+<span class="c1"># Test monitoring</span>
+./scripts/test-monitoring.sh
+</pre></div>
+</div>
+</section>
+<section id="backup-procedures">
+<h3>2. Backup Procedures<a class="headerlink" href="#backup-procedures" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Schedule backups</span>
+crontab<span class="w"> </span>-e
+<span class="c1"># Add: 0 0 * * * /scripts/backup.sh</span>
+
+<span class="c1"># Verify backup success</span>
+./scripts/verify-backup.sh
+
+<span class="c1"># Test restoration</span>
+./scripts/test-restore.sh
+</pre></div>
+</div>
+</section>
+</section>
+<section id="support-escalation">
+<h2>Support Escalation<a class="headerlink" href="#support-escalation" title="Link to this heading"></a></h2>
+<section id="support-levels">
+<h3>1. Support Levels<a class="headerlink" href="#support-levels" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Level 1</strong>: Basic troubleshooting</p>
+<ul class="simple">
+<li><p>Log analysis</p></li>
+<li><p>Configuration checks</p></li>
+<li><p>Common fixes</p></li>
+</ul>
+</li>
+<li><p><strong>Level 2</strong>: Advanced troubleshooting</p>
+<ul class="simple">
+<li><p>Performance analysis</p></li>
+<li><p>Security issues</p></li>
+<li><p>Complex bugs</p></li>
+</ul>
+</li>
+<li><p><strong>Level 3</strong>: Expert support</p>
+<ul class="simple">
+<li><p>Architecture issues</p></li>
+<li><p>Critical failures</p></li>
+<li><p>Custom solutions</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="contact-information">
+<h3>2. Contact Information<a class="headerlink" href="#contact-information" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Emergency Support</strong>: <a class="reference external" href="mailto:support-emergency&#37;&#52;&#48;opsource&#46;com">support-emergency<span>&#64;</span>opsource<span>&#46;</span>com</a></p></li>
+<li><p><strong>Technical Support</strong>: <a class="reference external" href="mailto:support-tech&#37;&#52;&#48;opsource&#46;com">support-tech<span>&#64;</span>opsource<span>&#46;</span>com</a></p></li>
+<li><p><strong>Security Team</strong>: <a class="reference external" href="mailto:security&#37;&#52;&#48;opsource&#46;com">security<span>&#64;</span>opsource<span>&#46;</span>com</a></p></li>
+</ul>
+</section>
+<section id="escalation-process">
+<h3>3. Escalation Process<a class="headerlink" href="#escalation-process" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Create support ticket</p></li>
+<li><p>Collect relevant logs and data</p></li>
+<li><p>Document reproduction steps</p></li>
+<li><p>Follow up with support team</p></li>
+<li><p>Track resolution progress</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, OPSource Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
