@@ -29,4 +29,4 @@ yq==3.4.3
 # Development Tools
 ipython>=8.12.0
 ipdb>=0.13.0
-commitizen==3.2.2
+commitizen==4.1.0
