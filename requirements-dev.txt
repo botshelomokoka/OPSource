@@ -11,7 +11,7 @@ isort==5.13.2
 # Testing
 pytest==8.3.4
 pytest-cov==6.0.0
-coverage==7.6.9
+coverage==7.6.10
 
 # Documentation
 mkdocs>=1.4.0
