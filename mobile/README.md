@@ -8,8 +8,7 @@ This component provides functionality for mobile blockchain analytics, allowing 
 
 1. Install the necessary dependencies using `pip install -r requirements.txt`.
 2. Run the application using `python main.py`.
-3. Configure the application by setting up the blockchain platform and API keys.
-4. Start exploring the blockchain data and analytics.
+3. Configure the application to connect to your blockchain data sources.
 
 ## Features
 

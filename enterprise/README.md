@@ -20,4 +20,4 @@ This component provides functionality for enterprise-grade blockchain analytics,
 
 For more details, refer to the [documentation](https://docs.example.com) which includes detailed API documentation and usage examples.
 
-*Last updated: 2024-12-07*
+# *Last updated: 2024-12-07*
