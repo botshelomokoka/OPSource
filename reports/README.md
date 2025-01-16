@@ -17,3 +17,6 @@ This directory contains automated development tracking reports for the OPSource 
 - Repository health
 
 Reports are automatically updated daily and after significant changes through GitHub Actions.
+
+## Usage
+To access the reports, navigate to the respective files listed above.
