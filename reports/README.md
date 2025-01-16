@@ -19,4 +19,4 @@ This directory contains automated development tracking reports for the OPSource 
 Reports are automatically updated daily and after significant changes through GitHub Actions.
 
 ## Usage
-To access the reports, navigate to the respective files listed above.
+To access the reports, navigate to the respective files listed above. The reports provide insights into the development process and can be used for performance analysis and team productivity assessment.
