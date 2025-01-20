@@ -1,5 +1,5 @@
 [submodule "anya"]
-	path = anya
+	path = anya-core/anya
 	url = https://github.com/botshelomokoka/anya-core.git
 	branch = main
 	update = merge
@@ -33,6 +33,11 @@
 	branch = main
 	update = merge
 	fetchRecurseSubmodules = true
+
+[submodule "anya-core"]
+	path = anya-core
+	url = https://www.github.com/botshelomokoka/anya-core
+
 [submodule "dependencies/web5-rs"]
 	path = dependencies/web5-rs
 	url = https://github.com/botshelomokoka/web5-rs.git
