@@ -1,0 +1,4 @@
+[submodule "anya-core"]
+	path = anya-core
+	url = https://github.com/botshelomokoka/anya-core
+	branch = main
