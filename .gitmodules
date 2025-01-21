@@ -1,43 +1,11 @@
 [submodule "anya"]
-	path = anya-core/anya
+	path = OPSource/anya
 	url = https://github.com/botshelomokoka/anya-core.git
 	branch = main
 	update = merge
 	fetchRecurseSubmodules = true
 	ignore = dirty
 
-[submodule "anya/dash33"]
-	path = anya/dash33
-	url = https://github.com/botshelomokoka/dash33.git
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
-[submodule "anya/dependencies"]
-	path = anya/dependencies
-	url = https://github.com/botshelomokoka/dependencies.git
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
-[submodule "anya/enterprise"]
-	path = anya/enterprise
-	url = https://github.com/botshelomokoka/enterprise.git
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
-[submodule "anya/mobile"]
-	path = anya/mobile
-	url = https://github.com/botshelomokoka/mobile.git
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
 [submodule "anya-core"]
-	path = anya-core
+	path = OPSource/anya-core
 	url = https://www.github.com/botshelomokoka/anya-core
-
-[submodule "dependencies/web5-rs"]
-	path = dependencies/web5-rs
-	url = https://github.com/botshelomokoka/web5-rs.git
