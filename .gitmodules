@@ -1,30 +1,32 @@
-[submodule "dash33"]
-	path = anya-core/dash33
-	url = https://github.com/botshelomokoka/dash33
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
-[submodule "enterprise"]
-	path = anya-core/enterprise
-	url = https://github.com/botshelomokoka/anya-enterprise
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
-[submodule "mobile"]
-	path = anya-core/mobile
-	url = https://github.com/botshelomokoka/anya-mobile
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
-[submodule "web5-rs"]
-	path = anya-core/web5-rs
-	url = https://github.com/botshelomokoka/web5-rs
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
 [submodule "anya-core"]
 	path = anya-core
-	url = https://github.com/botshelomokoka/anya-core.git
+	url = git@github.com:botshelomokoka/anya-core.git
+	branch = main
+
+[submodule "anya-core/dash33"]
+	path = anya-core/dash33
+	url = git@github.com:botshelomokoka/dash33.git
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
+
+[submodule "anya-core/enterprise"]
+	path = anya-core/enterprise
+	url = git@github.com:botshelomokoka/anya-enterprise.git
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
+
+[submodule "anya-core/mobile"]
+	path = anya-core/mobile
+	url = git@github.com:botshelomokoka/anya-mobile.git
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
+
+[submodule "anya-core/web5-rs"]
+	path = anya-core/web5-rs
+	url = git@github.com:botshelomokoka/web5-rs.git
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
