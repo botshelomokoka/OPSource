@@ -1,10 +1,3 @@
-[submodule "anya-core"]
-	path = anya-core
-	url = https://github.com/botshelomokoka/anya-core
-	branch = main
-	update = merge
-	fetchRecurseSubmodules = true
-
 [submodule "dash33"]
 	path = anya-core/dash33
 	url = https://github.com/botshelomokoka/dash33
@@ -32,3 +25,6 @@
 	branch = main
 	update = merge
 	fetchRecurseSubmodules = true
+[submodule "anya-core"]
+	path = anya-core
+	url = https://github.com/botshelomokoka/anya-core.git
