@@ -43,18 +43,56 @@ OPSource is an enterprise-grade blockchain analytics platform that combines cutt
 - **Timeline**: September 2024 - Present
 - **Latest Updates**: [Development Report](reports/development_summary.md)
 
-## Architecture
+## Repository Structure
+
+The project follows a modular architecture with the following structure:
 
 ```
-OPSource/
-├── anya/                  # Core Platform Components
-│   ├── dependencies/     # Core Dependencies & Libraries
-│   ├── enterprise/       # Enterprise Features & Solutions
-│   └── mobile/          # Mobile Application Source
-├── dash33/               # Analytics Dashboard
-├── reports/              # Development & Analytics Reports
-├── scripts/              # Utility & Automation Scripts
-└── .github/              # GitHub Configurations & Workflows
+anya-core/               # Core AI and system components
+├── dash33/             # AI decision engine
+├── enterprise/         # Enterprise integration layer
+├── mobile/            # Mobile interface and components
+└── web5-rs/           # Web5 Rust implementation
+
+enterprise/             # Enterprise-specific components
+└── web5-rs/           # Web5 integration for enterprise
+
+src/                    # Main source code
+tests/                  # Test suite
+docs/                   # Documentation
+scripts/                # Utility scripts
+```
+
+### Submodule Organization
+
+The project uses Git submodules for managing component dependencies:
+
+1. **Core Components** (`anya-core/`):
+   - All core AI components are organized under the `anya-core` directory
+   - Each component is maintained as a separate repository
+   - Uses SSH for secure access
+   - Configured for automatic updates and recursive fetching
+
+2. **Enterprise Integration** (`enterprise/`):
+   - Contains enterprise-specific implementations
+   - Minimal dependencies with focused integration points
+   - Direct access to required components
+
+### Development Setup
+
+1. Clone the repository with submodules:
+```bash
+git clone --recursive git@github.com:botshelomokoka/OPSource.git
+```
+
+2. Initialize and update submodules:
+```bash
+git submodule update --init --recursive
+```
+
+3. Keep submodules up to date:
+```bash
+git submodule update --remote
 ```
 
 ## Installation
