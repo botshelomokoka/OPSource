@@ -2,3 +2,33 @@
 	path = anya-core
 	url = https://github.com/botshelomokoka/anya-core
 	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
+
+[submodule "dash33"]
+	path = anya-core/dash33
+	url = https://github.com/botshelomokoka/dash33
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
+
+[submodule "enterprise"]
+	path = anya-core/enterprise
+	url = https://github.com/botshelomokoka/anya-enterprise
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
+
+[submodule "mobile"]
+	path = anya-core/mobile
+	url = https://github.com/botshelomokoka/anya-mobile
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
+
+[submodule "web5-rs"]
+	path = anya-core/web5-rs
+	url = https://github.com/botshelomokoka/web5-rs
+	branch = main
+	update = merge
+	fetchRecurseSubmodules = true
