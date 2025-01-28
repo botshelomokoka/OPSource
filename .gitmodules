@@ -3,9 +3,7 @@
 	url = git@github.com:botshelomokoka/anya-core.git
 	branch = main
 
-		path = anya-core/enterprise/dash33
-		url = git@github.com:botshelomokoka/dash33.git
-		branch = main
+[submodule "anya-core/enterprise"]
 	path = anya-core/enterprise
 	url = git@github.com:botshelomokoka/anya-enterprise.git
 	branch = main
@@ -26,17 +24,9 @@
 	update = merge
 	fetchRecurseSubmodules = true
 
-[submodule "anya-core/enterprise"]
-	path = anya-core/enterprise
-	url = git@github.com:botshelomokoka/anya-enterprise.git
+[submodule "anya-core/dash33"]
+	path = anya-core/dash33
+	url = https://github.com/botshelomokoka/dash33.git
 	branch = main
 	update = merge
 	fetchRecurseSubmodules = true
-
-[submodule "anya-core/enterprise/dash33"]
-	path = anya-core/enterprise/dash33
-	url = git@github.com:botshelomokoka/dash33.git
-	branch = main
-[submodule "dash33"]
-	path = dash33
-	url = https://github.com/botshelomokoka/dash33.git
