@@ -1,174 +1,117 @@
-# OPSource
-
-> A comprehensive blockchain analytics and research platform powered by advanced machine learning.
-
-[![Development Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/botshelomokoka/OPSource.svg)](https://github.com/botshelomokoka/OPSource/issues)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+# OPSource: AI IDE Alignment Framework Implementation
 
 ## Overview
 
-OPSource is an enterprise-grade blockchain analytics platform that combines cutting-edge machine learning with comprehensive blockchain data analysis. It provides real-time insights, pattern recognition, and advanced analytics capabilities across multiple blockchain networks.
+OPSource is a comprehensive implementation of the AI IDE Alignment Framework, providing a robust foundation for building intelligent development environments. The project follows strict ethical principles and technical standards to ensure reliable, secure, and user-centric AI-powered development tools.
 
-## Features
+## Core Components
 
-- **Advanced Analytics Engine**
-  - Real-time blockchain data processing
-  - Cross-chain transaction analysis
-  - Pattern recognition and anomaly detection
-  - Custom metrics and KPI tracking
+### 1. anya-core/dash33
+AI Decision Engine implementing:
+- Memory safety guarantees
+- Thread safety
+- Formal verification
+- Zero-cost abstractions
 
-- **Machine Learning Integration**
-  - Predictive analytics models
-  - Automated pattern recognition
-  - Natural language processing for blockchain data
-  - Sentiment analysis and market indicators
+### 2. anya-core/mobile
+Cross-platform UI framework featuring:
+- Material Design 3 compliance
+- Accessibility standards
+- Platform-agnostic patterns
+- Hot reload support
 
-- **Enterprise Solutions**
-  - DAO governance tools and analytics
-  - Multi-chain support and integration
-  - Customizable reporting and dashboards
-  - Advanced security features
+### 3. anya-core/enterprise
+Business logic implementation with:
+- Modular architecture
+- Security-first design
+- Metrics collection
+- Integration patterns
 
-- **Mobile Applications**
-  - Real-time monitoring and alerts
-  - Secure wallet integration
-  - Cross-platform support (iOS/Android)
-  - Push notifications for critical events
+### 4. anya-core/web5-rs
+Decentralized infrastructure providing:
+- DID implementation
+- Verifiable credentials
+- Self-sovereign identity
+- Decentralized storage
 
-## Project Status
+## Technical Standards
 
-- **Version**: 1.0.0 (December 2024)
-- **Phase**: Active Development
-- **Timeline**: September 2024 - Present
-- **Latest Updates**: [Development Report](reports/development_summary.md)
+### Language-Specific Guidelines
 
-## Repository Structure
+#### Rust (Core Systems)
+- Memory safety guarantees
+- Zero-cost abstractions
+- Thread safety
+- Formal verification support
 
-The project follows a modular architecture with the following structure:
+#### Python (Logic/Operations)
+- PEP 8 compliance
+- Type hints
+- Async/await patterns
+- 90%+ test coverage
 
-```
-anya-core/               # Core AI and system components
-├── dash33/             # AI decision engine
-├── enterprise/         # Enterprise integration layer
-├── mobile/            # Mobile interface and components
-└── web5-rs/           # Web5 Rust implementation
+#### Dart (Cross-Platform UI)
+- Platform-agnostic design
+- Material Design 3
+- Accessibility standards
+- State management
 
-enterprise/             # Enterprise-specific components
-└── web5-rs/           # Web5 integration for enterprise
+### Quality Assurance
+- Static analysis
+- Cyclomatic complexity limits
+- Memory leak detection
+- Race condition analysis
 
-src/                    # Main source code
-tests/                  # Test suite
-docs/                   # Documentation
-scripts/                # Utility scripts
-```
-
-### Submodule Organization
-
-The project uses Git submodules for managing component dependencies:
-
-1. **Core Components** (`anya-core/`):
-   - All core AI components are organized under the `anya-core` directory
-   - Each component is maintained as a separate repository
-   - Uses SSH for secure access
-   - Configured for automatic updates and recursive fetching
-
-2. **Enterprise Integration** (`enterprise/`):
-   - Contains enterprise-specific implementations
-   - Minimal dependencies with focused integration points
-   - Direct access to required components
-
-### Development Setup
+## Getting Started
 
 1. Clone the repository with submodules:
 ```bash
-git clone --recursive git@github.com:botshelomokoka/OPSource.git
+git clone --recursive https://github.com/botshelomokoka/OPSource.git
 ```
 
-2. Initialize and update submodules:
+2. Initialize development environment:
 ```bash
-git submodule update --init --recursive
+./scripts/setup.sh
 ```
 
-3. Keep submodules up to date:
+3. Run tests:
 ```bash
-git submodule update --remote
+./scripts/test.sh
 ```
 
-## Installation
+## Development Workflow
 
-1. **Clone the Repository**
-   ```bash
-   git clone --recursive https://github.com/botshelomokoka/OPSource.git
-   cd OPSource
-   ```
+1. **Branch Strategy**
+   - main: stable releases
+   - develop: integration branch
+   - feature/*: new features
+   - fix/*: bug fixes
 
-2. **Set Up Python Environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+2. **Code Review**
+   - Required for all changes
+   - Security review for sensitive changes
+   - Performance review for critical paths
 
-3. **Configure Settings**
-   ```bash
-   cp config/example.env .env
-   # Edit .env with your configuration
-   ```
-
-4. **Run Development Tracker**
-   ```bash
-   python scripts/track_development.py
-   ```
-
-## Documentation
-
-- [Getting Started Guide](docs/getting-started.md)
-- [API Documentation](docs/api.md)
-- [Development Roadmap](ROADMAP.md)
-- [Changelog](CHANGELOG.md)
-- [Contributing Guidelines](CONTRIBUTING.md)
-
-## Development Tracking
-
-OPSource implements automated development tracking across all repositories:
-
-- **Daily Statistics**
-  - Commit activity and trends
-  - Code change analysis
-  - Author contributions
-  - Repository health metrics
-
-- **Automated Reports**
-  - Daily development summaries
-  - Performance metrics
-  - Integration status
-  - Quality indicators
-
-View the latest statistics in the [reports](reports/) directory.
+3. **CI/CD Pipeline**
+   - Automated testing
+   - Security scanning
+   - Performance benchmarking
+   - Documentation updates
 
 ## Contributing
 
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting changes.
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Security
+
+Security is a top priority. See [SECURITY.md](SECURITY.md) for our security policy and reporting procedures.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the terms specified in [LICENSE](LICENSE).
 
-## Support
+## Contact
 
-- Report bugs and issues on our [Issue Tracker](https://github.com/botshelomokoka/OPSource/issues)
-- Join our [Discord Community](https://discord.gg/opsource) for discussions
-- Follow us on [Twitter](https://twitter.com/OPSource) for updates
-
----
-
-<div align="center">
-  <sub>Built with ❤️ by the OPSource Team</sub>
-</div>
+- Issues: GitHub Issues
+- Security: security@botshelomokoka.com
+- General: contact@botshelomokoka.com
