@@ -11,6 +11,72 @@ We love your input! We want to make contributing to OPSource as easy and transpa
 5. Make sure your code lints.
 6. Issue that pull request!
 
+## Repository Structure and Submodules
+
+### Component Organization
+
+The project is organized into several key components, each maintained as a separate repository:
+
+1. **Core AI Components** (`anya-core/`):
+   - `dash33/`: AI decision engine and analytics
+   - `enterprise/`: Enterprise integration and business logic
+   - `mobile/`: Mobile interface and platform-specific code
+   - `web5-rs/`: Web5 implementation in Rust
+
+2. **Enterprise Components** (`enterprise/`):
+   - Focused enterprise-specific implementations
+   - Direct integration with core components
+   - Custom business logic and workflows
+
+### Working with Submodules
+
+When contributing to the project, follow these guidelines for working with submodules:
+
+1. **Initial Setup**:
+   ```bash
+   # Clone the repository with all submodules
+   git clone --recursive git@github.com:botshelomokoka/OPSource.git
+   
+   # If already cloned, initialize and update submodules
+   git submodule update --init --recursive
+   ```
+
+2. **Making Changes**:
+   - Work in the appropriate component directory
+   - Commit changes in the submodule first
+   - Update the parent repository to point to the new commit
+
+3. **Updating Submodules**:
+   ```bash
+   # Update all submodules to their latest versions
+   git submodule update --remote
+   
+   # Update a specific submodule
+   git submodule update --remote anya-core/[component]
+   ```
+
+4. **Creating Pull Requests**:
+   - Submit separate PRs for submodule and parent repository changes
+   - Reference related PRs in your commit messages
+   - Ensure CI passes in both repositories
+
+### Best Practices
+
+1. **Code Organization**:
+   - Keep related code within its appropriate component
+   - Avoid duplicate implementations across components
+   - Use clear and consistent naming conventions
+
+2. **Dependencies**:
+   - Minimize cross-component dependencies
+   - Document any new dependencies clearly
+   - Keep dependency versions in sync across components
+
+3. **Testing**:
+   - Write tests for both component and integration levels
+   - Ensure all tests pass before submitting PRs
+   - Include documentation updates with code changes
+
 ## Pull Request Process
 
 1. Update the README.md with details of changes to the interface
