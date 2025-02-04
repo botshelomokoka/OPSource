@@ -4,6 +4,11 @@ __pycache__/
 *$py.class
 *.so
 .Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
 .env
 .venv
 env/
@@ -25,3 +30,20 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+coverage.xml
+*.cover
+
+# Build
+*.manifest
+*.spec
+.DS_Store
+
+# Logs
+*.log
+logs/

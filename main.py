@@ -3,6 +3,7 @@ OPSource API Server
 Implements Bitcoin Core principles and AI development best practices
 """
 from fastapi import FastAPI, HTTPException, Depends, Request
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer
 from typing import Dict, Any, Optional
@@ -136,21 +137,27 @@ async def get_config(token: str = Depends(oauth2_scheme)):
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request: Request, exc: HTTPException):
     """Handle HTTP exceptions"""
-    return {
-        "status": "error",
-        "code": exc.status_code,
-        "message": exc.detail
-    }
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={
+            "status": "error",
+            "code": exc.status_code,
+            "message": exc.detail
+        }
+    )
 
 @app.exception_handler(Exception)
 async def general_exception_handler(request: Request, exc: Exception):
     """Handle general exceptions"""
     logger.error(f"Unhandled exception: {str(exc)}")
-    return {
-        "status": "error",
-        "code": 500,
-        "message": "Internal server error"
-    }
+    return JSONResponse(
+        status_code=500,
+        content={
+            "status": "error",
+            "code": 500,
+            "message": "Internal server error"
+        }
+    )
 
 if __name__ == "__main__":
     import uvicorn

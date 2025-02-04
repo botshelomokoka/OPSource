@@ -1,0 +1,127 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          components: clippy
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Install cargo-audit
+        run: cargo install cargo-audit
+
+      - name: Run Clippy
+        uses: actions-rs/clippy-check@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --all-targets --all-features -- -D warnings
+
+      - name: Run Cargo Audit
+        run: cargo audit
+
+      - name: Run Security Tests
+        run: cargo test --all-features -- --test-threads=1
+
+      - name: Run Dependencies Check
+        run: |
+          cargo update
+          cargo outdated
+
+      # Initialize CodeQL
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: rust
+          queries: security-and-quality
+
+      # Autobuild attempts to build any compiled languages
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+
+      # Run CodeQL Analysis
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:rust"
+
+      - name: Run Security Scan
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            
+            // Check for common security patterns
+            const patterns = [
+              'unsafe',
+              'as_ptr',
+              'transmute',
+              'mem::forget',
+              'std::ptr',
+              'std::mem::transmute'
+            ];
+            
+            const files = fs.readdirSync('.', { recursive: true });
+            const results = [];
+            
+            for (const file of files) {
+              if (file.endsWith('.rs')) {
+                const content = fs.readFileSync(file, 'utf8');
+                for (const pattern of patterns) {
+                  const matches = content.match(new RegExp(pattern, 'g'));
+                  if (matches) {
+                    results.push(`${file}: Found ${matches.length} occurrences of '${pattern}'`);
+                  }
+                }
+              }
+            }
+            
+            fs.writeFileSync('security_patterns.txt', results.join('\n'));
+
+      - name: Generate Security Report
+        if: always()
+        run: |
+          echo "# Security Audit Report" > security_report.md
+          echo "## Clippy Results" >> security_report.md
+          cargo clippy --all-targets --all-features -- -D warnings 2>> security_report.md || true
+          echo "## Cargo Audit Results" >> security_report.md
+          cargo audit 2>> security_report.md || true
+          echo "## Dependencies Status" >> security_report.md
+          cargo outdated >> security_report.md || true
+          echo "## Security Patterns Found" >> security_report.md
+          cat security_patterns.txt >> security_report.md || true
+
+      - name: Upload Security Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-report
+          path: |
+            security_report.md
+            security_patterns.txt

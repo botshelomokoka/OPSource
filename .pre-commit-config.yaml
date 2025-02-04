@@ -1,0 +1,81 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+    -   id: check-merge-conflict
+    -   id: detect-private-key
+
+-   repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+    -   id: black
+        language_version: python3
+
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+    -   id: flake8
+        additional_dependencies: [flake8-docstrings]
+
+-   repo: https://github.com/PyCQA/bandit
+    rev: 1.7.5
+    hooks:
+    -   id: bandit
+        args: ["-c", "pyproject.toml"]
+        additional_dependencies: ["bandit[toml]"]
+
+-   repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.2.2
+    hooks:
+    -   id: commitizen
+        stages: [commit-msg]
+
+-   repo: local
+    hooks:
+    -   id: custom-pre-commit
+        name: Custom Pre-Commit Hook
+        entry: .github/hooks/pre-commit
+        language: script
+        stages: [commit]
+    -   id: custom-pre-push
+        name: Custom Pre-Push Hook
+        entry: .github/hooks/pre-push
+        language: script
+        stages: [push]
+    -   id: todo-format-check
+        name: TODO Format Check
+        entry: python -c '
+          import sys, re;
+          todo_pattern = r"^#\s*(TODO|FIXME|NOTE)\([\w-]+\)\[(critical|high|normal|low)\]:\s*.+$";
+          required_todos = [
+              "# TODO(john)[high]: Implement error handling",
+              "# FIXME(jane)[critical]: Fix memory leak",
+              "# NOTE(team)[normal]: Consider optimization"
+          ];
+          files = sys.argv[1:];
+          for file in files:
+              if not file.endswith((".py", ".js", ".jsx", ".ts", ".tsx", ".cpp", ".h", ".cs")): continue;
+              with open(file) as f:
+                  content = f.read();
+                  todos = re.findall(r"^#\s*(TODO|FIXME|NOTE).+$", content, re.M);
+                  if not todos:
+                      print(f"Error: {file} is missing required TODOs");
+                      print("Required TODOs:");
+                      for todo in required_todos:
+                          print(f"  {todo}");
+                      sys.exit(1);
+                  for todo in todos:
+                      if not re.match(todo_pattern, f"# {todo}", re.M):
+                          print(f"Error: Invalid TODO format in {file}");
+                          print(f"Found: {todo}");
+                          print("Format should be: TODO(assignee)[priority]: description");
+                          print("Example: TODO(john)[high]: Implement error handling");
+                          sys.exit(1);
+          '
+        language: python
+        files: \.(py|js|jsx|ts|tsx|cpp|h|cs)$
+        additional_dependencies: []

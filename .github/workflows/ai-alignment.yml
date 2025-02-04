@@ -1,0 +1,97 @@
+name: AI IDE Alignment
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  alignment-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        repo: [dash33, mobile, enterprise, web5-rs]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Set up Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        components: rustfmt, clippy
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.16.0'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pytest-cov mypy black isort bandit safety
+        cargo install cargo-audit cargo-tarpaulin
+        flutter pub get
+
+    - name: Code Quality Checks
+      run: |
+        # Python checks
+        black --check .
+        isort --check-only .
+        mypy .
+        bandit -r .
+        safety check
+
+        # Rust checks
+        cargo fmt -- --check
+        cargo clippy -- -D warnings
+        cargo audit
+        cargo tarpaulin --ignore-tests
+
+        # Flutter checks
+        flutter analyze
+        flutter test --coverage
+
+    - name: Documentation Check
+      run: |
+        # Check documentation coverage
+        python -m docstr_coverage .
+        cargo doc --no-deps
+        flutter doc
+
+    - name: Security Scan
+      run: |
+        # OWASP dependency check
+        safety check
+        cargo audit
+        flutter pub outdated
+
+    - name: Performance Benchmarks
+      run: |
+        # Run performance tests
+        python -m pytest benchmark/
+        cargo bench
+        flutter run benchmark
+
+    - name: Accessibility Check
+      if: matrix.repo == 'mobile'
+      run: |
+        flutter test --tags=accessibility
+
+    - name: Upload Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: alignment-results
+        path: |
+          coverage/
+          target/doc/
+          test-results/
+          benchmark-results/

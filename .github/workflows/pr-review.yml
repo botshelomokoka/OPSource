@@ -1,0 +1,78 @@
+name: Basic PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+      - development
+
+jobs:
+  basic-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # PR Size Check
+      - name: Check PR Size
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const MAX_CHANGES = 1000;
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            const changes = files.reduce((acc, file) => acc + file.changes, 0);
+            if (changes > MAX_CHANGES) {
+              core.warning(`PR is large with ${changes} changes. Consider splitting if possible.`);
+            }
+
+      # Documentation Check
+      - name: Check Documentation
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            
+            const codeFiles = files.filter(f => 
+              f.filename.endsWith('.py') || 
+              f.filename.endsWith('.js') || 
+              f.filename.endsWith('.ts')
+            );
+            
+            const docFiles = files.filter(f => 
+              f.filename.endsWith('.md') || 
+              f.filename.includes('/docs/') ||
+              f.filename.endsWith('.rst')
+            );
+            
+            if (codeFiles.length > 0 && docFiles.length === 0) {
+              core.warning('Consider adding documentation for your changes');
+            }
+
+  conventional-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Basic Commit Message Check
+        run: |
+          # Check if any commit message doesn't follow conventional format
+          git log origin/main..HEAD --format=%B | while read line; do
+            if [[ ! "$line" =~ ^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z]+\))?: ]]; then
+              if [[ ! -z "$line" ]]; then
+                echo "Warning: Commit message '$line' doesn't follow conventional format"
+              fi
+            fi
+          done
