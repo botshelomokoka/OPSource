@@ -6,6 +6,7 @@ This is a development environment configured for AI and Bitcoin development foll
 
 1. Ensure Python 3.11+ is installed
 2. Run the setup script:
+
    ```bash
    python setup_dev.py
    ```
