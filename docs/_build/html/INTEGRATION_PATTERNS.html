@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cross-Platform Integration Patterns &mdash; OPSource 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=2ae16414" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=30646c52"></script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script src="_static/js/custom.js?v=d845f544"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2c3e50" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OPSource
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/trading.html">Trading Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="anya/index.html">Anya AI/ML Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dash33/index.html">Dash33 High-Performance Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enterprise/index.html">Enterprise Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mobile/index.html">Mobile Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture/index.html">Architecture Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/index.html">Support Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2c3e50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OPSource</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Cross-Platform Integration Patterns</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/botshelomokoka/opsource/blob/main/docs/INTEGRATION_PATTERNS.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="cross-platform-integration-patterns">
+<h1>Cross-Platform Integration Patterns<a class="headerlink" href="#cross-platform-integration-patterns" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>This document outlines the integration patterns used in the OPSource project for cross-platform ML agent communication between Rust and Flutter/Dart.</p>
+</section>
+<section id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h2>
+<section id="platform-channel-communication">
+<h3>1. Platform Channel Communication<a class="headerlink" href="#platform-channel-communication" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Rust</span> <span class="n">Core</span><span class="p">]</span> <span class="o">&lt;-&gt;</span> <span class="p">[</span><span class="n">Platform</span> <span class="n">Channels</span><span class="p">]</span> <span class="o">&lt;-&gt;</span> <span class="p">[</span><span class="n">Flutter</span><span class="o">/</span><span class="n">Dart</span> <span class="n">UI</span><span class="p">]</span>
+     <span class="o">|</span>                                         <span class="o">|</span>
+<span class="p">[</span><span class="n">ML</span> <span class="n">Models</span><span class="p">]</span> <span class="o">&lt;------------------------&gt;</span> <span class="p">[</span><span class="n">Mobile</span> <span class="n">Optimizations</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="component-layers">
+<h3>2. Component Layers<a class="headerlink" href="#component-layers" title="Link to this heading"></a></h3>
+<section id="rust-core-anya-core">
+<h4>Rust Core (anya-core)<a class="headerlink" href="#rust-core-anya-core" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>MLAgentSystem: Core ML agent implementation</p></li>
+<li><p>MobileBridge: Platform channel interface</p></li>
+<li><p>State Management: Thread-safe state handling</p></li>
+</ul>
+</section>
+<section id="flutter-dart-mobile">
+<h4>Flutter/Dart (mobile)<a class="headerlink" href="#flutter-dart-mobile" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>MLPlatformHandler: Platform channel management</p></li>
+<li><p>MLOptimizer: Mobile-specific optimizations</p></li>
+<li><p>AgentBridge: High-level API interface</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="integration-patterns">
+<h2>Integration Patterns<a class="headerlink" href="#integration-patterns" title="Link to this heading"></a></h2>
+<section id="message-passing">
+<h3>1. Message Passing<a class="headerlink" href="#message-passing" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use structured message types for all cross-platform communication</p></li>
+<li><p>Implement serialization on both sides</p></li>
+<li><p>Handle errors gracefully with proper error types</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="c1">// Dart side</span>
+<span class="kd">class</span><span class="w"> </span><span class="nc">MLEvent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="n">type</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">dynamic</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">DateTime</span><span class="w"> </span><span class="n">timestamp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Rust side</span>
+<span class="n">pub</span><span class="w"> </span><span class="n">struct</span><span class="w"> </span><span class="n">MLEvent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pub</span><span class="w"> </span><span class="nl">event_type:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pub</span><span class="w"> </span><span class="nl">data:</span><span class="w"> </span><span class="nl">serde_json:</span><span class="o">:</span><span class="n">Value</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pub</span><span class="w"> </span><span class="nl">timestamp:</span><span class="w"> </span><span class="nl">chrono:</span><span class="o">:</span><span class="n">DateTime</span><span class="o">&lt;</span><span class="nl">chrono:</span><span class="o">:</span><span class="n">Utc</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="resource-management">
+<h3>2. Resource Management<a class="headerlink" href="#resource-management" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Check device capabilities before heavy operations</p></li>
+<li><p>Implement batching for better performance</p></li>
+<li><p>Monitor battery and network conditions</p></li>
+<li><p>Use chunked processing for large data</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nc">MLOptimizer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shouldExecute</span><span class="p">(</span><span class="n">MLAction</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Check device capability</span>
+<span class="w">    </span><span class="c1">// Check battery level</span>
+<span class="w">    </span><span class="c1">// Check network status</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">conditions_met</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="state-synchronization">
+<h3>3. State Synchronization<a class="headerlink" href="#state-synchronization" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use atomic operations for state updates</p></li>
+<li><p>Implement versioning for model updates</p></li>
+<li><p>Handle concurrent access safely</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">MobileBridge</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ml_core</span><span class="p">:</span><span class="w"> </span><span class="nc">Arc</span><span class="o">&lt;</span><span class="n">Mutex</span><span class="o">&lt;</span><span class="n">MLCore</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">agent_coordinator</span><span class="p">:</span><span class="w"> </span><span class="nc">Arc</span><span class="o">&lt;</span><span class="n">Mutex</span><span class="o">&lt;</span><span class="n">AgentCoordinator</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="error-handling">
+<h3>4. Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Define clear error types</p></li>
+<li><p>Propagate errors across platform boundary</p></li>
+<li><p>Implement recovery mechanisms</p></li>
+</ul>
+<p>Example:</p>
+<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nc">MLAgentException</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="n">message</span><span class="p">;</span>
+<span class="w">  </span><span class="n">MLAgentException</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">message</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="testing-strategy">
+<h3>5. Testing Strategy<a class="headerlink" href="#testing-strategy" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Unit tests for each component</p></li>
+<li><p>Integration tests for cross-platform communication</p></li>
+<li><p>Performance testing for mobile optimizations</p></li>
+</ul>
+</section>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<section id="performance">
+<h3>1. Performance<a class="headerlink" href="#performance" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use isolates for heavy computation in Dart</p></li>
+<li><p>Implement batching for network operations</p></li>
+<li><p>Optimize model size for mobile devices</p></li>
+<li><p>Cache results when appropriate</p></li>
+</ul>
+</section>
+<section id="security">
+<h3>2. Security<a class="headerlink" href="#security" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Validate all cross-platform messages</p></li>
+<li><p>Implement secure key storage</p></li>
+<li><p>Use encryption for sensitive data</p></li>
+<li><p>Verify model integrity</p></li>
+</ul>
+</section>
+<section id="id1">
+<h3>3. Resource Management<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Monitor memory usage</p></li>
+<li><p>Implement proper cleanup</p></li>
+<li><p>Handle background/foreground transitions</p></li>
+<li><p>Manage battery usage</p></li>
+</ul>
+</section>
+<section id="error-recovery">
+<h3>4. Error Recovery<a class="headerlink" href="#error-recovery" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Implement retry mechanisms</p></li>
+<li><p>Handle network failures gracefully</p></li>
+<li><p>Provide fallback behaviors</p></li>
+<li><p>Log errors for debugging</p></li>
+</ul>
+</section>
+</section>
+<section id="implementation-guide">
+<h2>Implementation Guide<a class="headerlink" href="#implementation-guide" title="Link to this heading"></a></h2>
+<section id="setting-up-platform-channels">
+<h3>1. Setting Up Platform Channels<a class="headerlink" href="#setting-up-platform-channels" title="Link to this heading"></a></h3>
+<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="kd">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">platform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MethodChannel</span><span class="p">(</span><span class="s1">&#39;com.opsource.anya/ml_agent&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="implementing-message-handlers">
+<h3>2. Implementing Message Handlers<a class="headerlink" href="#implementing-message-handlers" title="Link to this heading"></a></h3>
+<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">dynamic</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_handleMethodCall</span><span class="p">(</span><span class="n">MethodCall</span><span class="w"> </span><span class="n">call</span><span class="p">)</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">call</span><span class="p">.</span><span class="n">method</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s1">&#39;processObservations&#39;</span><span class="o">:</span>
+<span class="w">      </span><span class="c1">// Handle observation processing</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// ... other cases</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="managing-resources">
+<h3>3. Managing Resources<a class="headerlink" href="#managing-resources" title="Link to this heading"></a></h3>
+<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nc">MLOptimizer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">shouldUpdateModels</span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Check conditions</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">conditions_met</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h3>4. Error Handling<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<div class="highlight-dart notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">await</span><span class="w"> </span><span class="n">platform</span><span class="p">.</span><span class="n">invokeMethod</span><span class="p">(</span><span class="s1">&#39;method_name&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="kd">on</span><span class="w"> </span><span class="n">PlatformException</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Handle platform-specific errors</span>
+<span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Handle general errors</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="versioning-and-updates">
+<h2>Versioning and Updates<a class="headerlink" href="#versioning-and-updates" title="Link to this heading"></a></h2>
+<section id="model-updates">
+<h3>Model Updates<a class="headerlink" href="#model-updates" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Check for updates on app start</p></li>
+<li><p>Download updates in background</p></li>
+<li><p>Verify integrity</p></li>
+<li><p>Apply updates atomically</p></li>
+</ol>
+</section>
+<section id="version-compatibility">
+<h3>Version Compatibility<a class="headerlink" href="#version-compatibility" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Maintain backward compatibility</p></li>
+<li><p>Version all messages and models</p></li>
+<li><p>Implement migration paths</p></li>
+</ul>
+</section>
+</section>
+<section id="monitoring-and-debugging">
+<h2>Monitoring and Debugging<a class="headerlink" href="#monitoring-and-debugging" title="Link to this heading"></a></h2>
+<section id="logging">
+<h3>Logging<a class="headerlink" href="#logging" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Implement structured logging</p></li>
+<li><p>Log cross-platform communication</p></li>
+<li><p>Track performance metrics</p></li>
+</ul>
+</section>
+<section id="performance-monitoring">
+<h3>Performance Monitoring<a class="headerlink" href="#performance-monitoring" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Track message latency</p></li>
+<li><p>Monitor resource usage</p></li>
+<li><p>Profile critical paths</p></li>
+</ul>
+</section>
+</section>
+<section id="future-considerations">
+<h2>Future Considerations<a class="headerlink" href="#future-considerations" title="Link to this heading"></a></h2>
+<section id="scalability">
+<h3>Scalability<a class="headerlink" href="#scalability" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Plan for increased model complexity</p></li>
+<li><p>Consider distributed processing</p></li>
+<li><p>Prepare for multiple ML models</p></li>
+</ul>
+</section>
+<section id="maintenance">
+<h3>Maintenance<a class="headerlink" href="#maintenance" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Document all integration points</p></li>
+<li><p>Maintain test coverage</p></li>
+<li><p>Review performance regularly</p></li>
+</ul>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://flutter.dev/docs/development/platform-integration/platform-channels">Flutter Platform Channels</a></p></li>
+<li><p><a class="reference external" href="https://doc.rust-lang.org/nomicon/ffi.html">Rust FFI</a></p></li>
+<li><p><a class="reference external" href="https://www.tensorflow.org/lite">TensorFlow Lite</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, OPSource Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

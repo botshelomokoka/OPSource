@@ -1,0 +1,4618 @@
+[
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "App Store Submission Preparation (Due: Dec 20, 2024)",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "App store screenshots",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "App description and metadata",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Privacy policy update",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Terms of service finalization",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Final Security Audit",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Penetration testing",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Vulnerability assessment",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Security documentation review",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Performance Optimization",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Memory usage optimization",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Battery consumption analysis",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Network efficiency review",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Documentation Completion",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "User guide finalization",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "API documentation update",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Installation instructions",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Quality Assurance",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Cross-platform testing",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Edge case validation",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "UI/UX final review",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "RGB Protocol Improvements",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced asset management",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Batch transfer implementation",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset history tracking",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Lightning Network Expansion",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel management interface",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment streaming support",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Routing optimization",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Security Enhancements",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-signature support",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Hardware wallet integration",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced encryption options",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Cross-chain Operations",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Atomic swaps",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Bridge integrations",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-chain asset view",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "UI/UX Improvements",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Custom themes",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Gesture controls",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Widget support",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Social Features",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Contact management",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment requests",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Shared wallets",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "DeFi Integration",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "DEX connectivity",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Yield farming",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Liquidity provision",
+    "file": "anya\\mobile\\RELEASE_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key Management System",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure key generation",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key storage implementation",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key backup system",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Recovery mechanism",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "RGB Protocol Implementation",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset schema validation",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "State transition handling",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Transaction construction",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset management",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Lightning Network Integration",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Channel management",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Payment routing",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "State management",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Error handling",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Core Components",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Transaction list",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset display",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Balance widgets",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Navigation system",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Application State",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Wallet state handling",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Transaction state",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "User preferences",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Cache management",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Data Architecture",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Repository pattern",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Service layer",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Data models",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "State updates",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Encryption Systems",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Data encryption",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure communication",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key derivation",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Hash functions",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "User Authentication",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Biometric auth",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "PIN/password system",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Session management",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Token handling",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure Storage",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Encrypted storage",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure preferences",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Cache security",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory security",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory Optimization",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Cache strategy",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory leaks",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Resource cleanup",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Background processes",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Network Layer",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Request batching",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Response caching",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Connection pooling",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Retry logic",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Rendering Optimization",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "List virtualization",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Image optimization",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Animation performance",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Layout optimization",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Test Coverage",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Core logic tests",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "UI component tests",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Utility function tests",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Model tests",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "System Tests",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "API integration",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Blockchain integration",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Payment flow",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Error scenarios",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Performance Metrics",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Load testing",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory profiling",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Network testing",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "UI responsiveness",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "iOS Features",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Native modules",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Security features",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Background tasks",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Push notifications",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Android Features",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Native modules",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Security features",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Background services",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Push notifications",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Build Configuration",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Build variants",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Code signing",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset management",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Dependencies",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Development Tools",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Logging system",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Error tracking",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Analytics",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Debug menu",
+    "file": "anya\\mobile\\TECHNICAL_TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper Bitcoin address validation in `AddressValidator`",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper RGB address validation in `AddressValidator`",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper Bitcoin address normalization",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper RGB address normalization",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement send dialog with chain-specific address validation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add balance validation in send dialog",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement receive dialog with QR code support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement swap dialog with cross-chain functionality",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement wallet details screen",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement security settings dialog",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement transaction fee estimation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add UTXO management and coin selection",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement address book functionality",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add transaction labeling and categorization",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement batch transaction scheduling",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add multi-wallet support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced asset management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Custom asset creation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset metadata management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset transfer history",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Batch transfers",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-recipient transfers",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Scheduled transfers",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Transfer templates",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel opening/closing",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Capacity management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel balancing",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Routing optimization",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Path finding",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Fee optimization",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Reliability metrics",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment streaming",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Streaming setup",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Rate limiting",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Stream monitoring",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-signature support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "M-of-N signatures",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Threshold signatures",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Key rotation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Hardware wallet integration",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Ledger support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Trezor support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Custom hardware support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced encryption",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Key derivation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Secure storage",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Backup solutions",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement performance metrics collection",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up monitoring dashboards",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Configure alerting system",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement cold storage migration workflow",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add network health monitoring",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement automated backup verification",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Increase test coverage to >80%",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add integration tests for all major flows",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement performance testing",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add security testing suite",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up production analytics",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement custom metrics",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Configure user behavior tracking",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up performance analytics",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement atomic swaps",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add bridge integrations",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Create multi-chain asset view",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add custom themes",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement gesture controls",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add widget support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement caching system",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add background sync",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Enable offline support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement voting mechanism",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add proposal creation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up treasury management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add DEX integration",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement yield farming",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Enable liquidity provision",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add team management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement role-based access",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up audit logging",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Research L2 solutions",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement zkRollup support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add Optimistic rollup support",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Desktop application development",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Web interface",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Browser extension",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Hardware wallet design",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Security certification",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Manufacturing pipeline",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Research and architecture",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Consensus mechanism design",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Smart contract platform",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Transaction Fee Estimation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "UTXO Management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-Signature Implementation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset Management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel Management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Key Management System",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Transaction Processing",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset Issuance",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Contract Management",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel Operations",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment Routing",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up GitHub Actions workflow",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up GitHub project boards for feature tracking",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement automated changelog generation",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up continuous integration pipeline",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Configure automated dependency updates",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement semantic versioning",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up automated release notes",
+    "file": "anya\\mobile\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "assignee",
+    "priority": "priority",
+    "text": "description",
+    "file": "docs\\TODO.md",
+    "section": null
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "**{{ todo.type }}** ({{ todo.assignee }}): {{ todo.text }}",
+    "file": "docs\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "**{{ todo.type }}** ({{ todo.assignee }}): {{ todo.text }}",
+    "file": "docs\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "**{{ todo.type }}** ({{ todo.assignee }}): {{ todo.text }}",
+    "file": "docs\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "**{{ todo.type }}** ({{ todo.assignee }}): {{ todo.text }}",
+    "file": "docs\\TODO.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "App Store Submission Preparation (Due: Dec 20, 2024)",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "App store screenshots",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "App description and metadata",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Privacy policy update",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Terms of service finalization",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Final Security Audit",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Penetration testing",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Vulnerability assessment",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Security documentation review",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Performance Optimization",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Memory usage optimization",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Battery consumption analysis",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Network efficiency review",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Documentation Completion",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "User guide finalization",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "API documentation update",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Installation instructions",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Quality Assurance",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Cross-platform testing",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Edge case validation",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "UI/UX final review",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "RGB Protocol Improvements",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced asset management",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Batch transfer implementation",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset history tracking",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Lightning Network Expansion",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel management interface",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment streaming support",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Routing optimization",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Security Enhancements",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-signature support",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Hardware wallet integration",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced encryption options",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Cross-chain Operations",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Atomic swaps",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Bridge integrations",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-chain asset view",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "UI/UX Improvements",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Custom themes",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Gesture controls",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Widget support",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Social Features",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Contact management",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment requests",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Shared wallets",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "DeFi Integration",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "DEX connectivity",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Yield farming",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Liquidity provision",
+    "file": "docs\\archived_todos\\RELEASE_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key Management System",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure key generation",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key storage implementation",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key backup system",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Recovery mechanism",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "RGB Protocol Implementation",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset schema validation",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "State transition handling",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Transaction construction",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset management",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Lightning Network Integration",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Channel management",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Payment routing",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "State management",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Error handling",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Core Components",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Transaction list",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset display",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Balance widgets",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Navigation system",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Application State",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Wallet state handling",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Transaction state",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "User preferences",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Cache management",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Data Architecture",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Repository pattern",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Service layer",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Data models",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "State updates",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Encryption Systems",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Data encryption",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure communication",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Key derivation",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Hash functions",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "User Authentication",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Biometric auth",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "PIN/password system",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Session management",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Token handling",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure Storage",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Encrypted storage",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Secure preferences",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Cache security",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory security",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory Optimization",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Cache strategy",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory leaks",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Resource cleanup",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Background processes",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Network Layer",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Request batching",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Response caching",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Connection pooling",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Retry logic",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Rendering Optimization",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "List virtualization",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Image optimization",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Animation performance",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Layout optimization",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Test Coverage",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Core logic tests",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "UI component tests",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Utility function tests",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Model tests",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "System Tests",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "API integration",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Blockchain integration",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Payment flow",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Error scenarios",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Performance Metrics",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Load testing",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Memory profiling",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Network testing",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "UI responsiveness",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "iOS Features",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Native modules",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Security features",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Background tasks",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Push notifications",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Android Features",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Native modules",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Security features",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Background services",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Push notifications",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Build Configuration",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Build variants",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Code signing",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Asset management",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Dependencies",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Development Tools",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Logging system",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Error tracking",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Analytics",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "low",
+    "text": "Debug menu",
+    "file": "docs\\archived_todos\\TECHNICAL_TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper Bitcoin address validation in `AddressValidator`",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper RGB address validation in `AddressValidator`",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper Bitcoin address normalization",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement proper RGB address normalization",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement send dialog with chain-specific address validation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add balance validation in send dialog",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement receive dialog with QR code support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement swap dialog with cross-chain functionality",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement wallet details screen",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement security settings dialog",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement transaction fee estimation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add UTXO management and coin selection",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement address book functionality",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add transaction labeling and categorization",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement batch transaction scheduling",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add multi-wallet support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced asset management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Custom asset creation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset metadata management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset transfer history",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Batch transfers",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-recipient transfers",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Scheduled transfers",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Transfer templates",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel opening/closing",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Capacity management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel balancing",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Routing optimization",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Path finding",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Fee optimization",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Reliability metrics",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment streaming",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Streaming setup",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Rate limiting",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Stream monitoring",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-signature support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "M-of-N signatures",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Threshold signatures",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Key rotation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Hardware wallet integration",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Ledger support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Trezor support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Custom hardware support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Advanced encryption",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Key derivation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Secure storage",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Backup solutions",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement performance metrics collection",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up monitoring dashboards",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Configure alerting system",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement cold storage migration workflow",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add network health monitoring",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement automated backup verification",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Increase test coverage to >80%",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add integration tests for all major flows",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement performance testing",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add security testing suite",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up production analytics",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement custom metrics",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Configure user behavior tracking",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up performance analytics",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement atomic swaps",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add bridge integrations",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Create multi-chain asset view",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add custom themes",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement gesture controls",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add widget support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement caching system",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add background sync",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Enable offline support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement voting mechanism",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add proposal creation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up treasury management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add DEX integration",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement yield farming",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Enable liquidity provision",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add team management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement role-based access",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up audit logging",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Research L2 solutions",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement zkRollup support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Add Optimistic rollup support",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Desktop application development",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Web interface",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Browser extension",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Hardware wallet design",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Security certification",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Manufacturing pipeline",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Research and architecture",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Consensus mechanism design",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Smart contract platform",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Transaction Fee Estimation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "UTXO Management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Multi-Signature Implementation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset Management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel Management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Key Management System",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Transaction Processing",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Asset Issuance",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Contract Management",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Channel Operations",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Payment Routing",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up GitHub Actions workflow",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up GitHub project boards for feature tracking",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement automated changelog generation",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up continuous integration pipeline",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Configure automated dependency updates",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Implement semantic versioning",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  },
+  {
+    "type": "TODO",
+    "assignee": "unassigned",
+    "priority": "critical",
+    "text": "Set up automated release notes",
+    "file": "docs\\archived_todos\\TODO_20241205.md",
+    "section": null,
+    "completed": false
+  }
+]

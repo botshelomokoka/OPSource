@@ -1,0 +1,32 @@
+# Code Quality and Linting
+black==24.10.0
+flake8==7.1.1
+flake8-docstrings==1.7.0
+pylint==3.3.3
+mypy==1.14.1
+bandit==1.8.0
+pre-commit==4.1.0
+isort==5.13.2
+
+# Testing
+pytest==8.3.4
+pytest-cov==6.0.0
+coverage==7.6.10
+
+# Documentation
+mkdocs>=1.4.0
+mkdocs-material>=9.1.0
+pymdown-extensions>=10.0
+markdown>=3.4.0
+pyyaml>=6.0
+jinja2>=3.1.0
+
+# Git and Version Management
+gitpython>=3.1.0
+semver>=3.0.0
+yq==3.4.3
+
+# Development Tools
+ipython>=8.12.0
+ipdb>=0.13.0
+commitizen==4.1.1
