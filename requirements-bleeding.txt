@@ -1,0 +1,15 @@
+# Bleeding-edge dependencies (6-month cycle)
+
+# Core dependencies
+requests>=2.32.0
+numpy>=1.26.0
+pandas>=2.1.0
+
+# Development dependencies
+pytest>=8.3.4
+pytest-cov>=4.1.0
+black>=23.9.0
+flake8>=6.1.0
+
+# Submodule dependencies
+# Add any bleeding-edge dependencies from anya-core here
