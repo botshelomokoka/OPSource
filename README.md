@@ -1,54 +1,58 @@
-# OPSource Development Environment
+# OPSource
 
-This is a development environment configured for AI and Bitcoin development following core principles and best practices.
+Research and development platform for the Anya Core Bitcoin implementation.
 
-## Setup Instructions
+## Overview
 
-1. Ensure Python 3.11+ is installed
-2. Run the setup script:
+OPSource serves as the primary research and development environment for Anya Core, providing tools, documentation, and experimental features for Bitcoin development.
 
+## Repository Structure
+
+```
+opsource/
+├── src/
+│   ├── research/       # Research implementations and experiments
+│   ├── tools/          # Development and testing tools
+│   └── analysis/       # Performance and security analysis
+├── docs/
+│   ├── research/       # Research papers and documentation
+│   └── specifications/ # Technical specifications
+└── scripts/           # Development and automation scripts
+```
+
+## Key Features
+
+- Bitcoin protocol research
+- Experimental feature development
+- Performance analysis tools
+- Security testing frameworks
+- Development utilities
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/botshelomokoka/opsource.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run development environment:
    ```bash
    python setup_dev.py
    ```
 
-## Port Configuration
+## Related Projects
 
-The development environment uses the following ports:
+- [Anya Core](https://github.com/botshelomokoka/anya) - Main Bitcoin implementation
 
-- **API Server**: 8000
-- **Model Service**: 8001
-- **Inference Service**: 8002
-- **Development Server**: 3000
-- **Bitcoin RPC (testnet)**: 18332
-- **RSK Node**: 4444
-- **RGB Node**: 3000
-- **Database**: 5432
-- **Test Server**: 5000
+## Contributing
 
-## Environment Structure
+Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
 
-```
-OPSource-Dev/
-├── .venv/                 # Virtual environment
-├── certs/                 # SSL certificates for development
-├── logs/                  # Application logs
-├── requirements.txt       # Python dependencies
-├── dev_config.py         # Development configuration
-├── setup_dev.py          # Setup script
-└── README.md             # This file
-```
+## License
 
-## Development Guidelines
-
-- All development follows Bitcoin core principles
-- Uses established libraries (python-bitcoinlib, rust-bitcoin)
-- Supports Taproot and DLC implementations
-- Integrates with RGB and Stacks for smart contracts
-- Implements comprehensive testing
-- Maintains security and privacy best practices
-
-## Security Notes
-
-- Development SSL certificates are for testing only
-- Bitcoin testnet is used by default
-- All ports are configured for local development only
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
