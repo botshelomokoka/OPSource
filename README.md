@@ -1,4 +1,4 @@
-# OPSource
+﻿# OPSource: AI IDE Alignment Framework Implementation
 
 Research and development platform for the Anya Core Bitcoin implementation.
 
