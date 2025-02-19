@@ -14,19 +14,30 @@
     fetchRecurseSubmodules = true
 
 [submodule "anya-core/enterprise"]
-    path = anya-core/enterprise
-    url = https://github.com/botshelomokoka/anya-enterprise.git
+	path = anya-core/enterprise
+	url = https://github.com/botshelomokoka/anya-enterprise.git
     branch = main
     update = merge
     fetchRecurseSubmodules = true
 
-# Web5 dependencies - consolidated under protocols/web5
-[submodule "protocols/web5"]
-    path = protocols/web5
-    url = https://github.com/TBD54566975/web5-rs.git
+# Web5 dependencies
+[submodule "anya-core/enterprise/dependencies/web5-rs"]
+    path = anya-core/enterprise/dependencies/web5-rs
+    url = https://github.com/decentralized-identity/web5-rs.git
     branch = main
     update = merge
-    fetchRecurseSubmodules = true
+
+[submodule "anya-core/mobile/dependencies/web5-rs"]
+    path = anya-core/mobile/dependencies/web5-rs
+    url = https://github.com/decentralized-identity/web5-rs.git
+    branch = main
+    update = merge
+
+[submodule "anya-core/mobile/dependencies/flutter-rust-bridge"]
+    path = anya-core/mobile/dependencies/flutter-rust-bridge
+    url = https://github.com/fzyzcjy/flutter_rust_bridge.git
+    branch = master
+    update = merge
 
 # Hierarchical Bitcoin-core architecture
 [submodule "bitcoin-core"]
@@ -45,19 +56,12 @@
     url = https://github.com/RGB-WG/rgb-core.git
     branch = v0.10
 
-[submodule "interfaces/mobile"]
-    path = interfaces/mobile
-    url = https://github.com/botshelomokoka/anya-mobile.git
-    branch = main
-    update = merge
-
-[submodule "interfaces/enterprise"]
-    path = interfaces/enterprise
-    url = https://github.com/botshelomokoka/anya-enterprise.git
+[submodule "protocols/web5"]
+    path = protocols/web5
+    url = https://github.com/TBD54566975/web5-rs.git
     branch = main
 
 [submodule "ai-agents"]
     path = ai-agents
     url = https://github.com/geminik23/ai-agents.git
     branch = main
-    # Removed exposed API key pattern
