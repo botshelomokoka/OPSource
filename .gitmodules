@@ -70,6 +70,8 @@
     url = https://github.com/geminik23/ai-agents.git
     branch = main
     # Removed exposed API key pattern
+
 [submodule "anya-core/enterprise"]
-	path = anya-core/enterprise
-	url = https://github.com/botshelomokoka/anya-enterprise.git
+    path = anya-core/enterprise
+    url = https://github.com/botshelomokoka/anya-enterprise.git
+    branch = main
