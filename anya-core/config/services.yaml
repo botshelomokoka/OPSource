@@ -1,0 +1,8 @@
+services:
+  mobile:
+    tier_1:
+      - auth
+      - basic_storage
+    tier_2:
+      - web5_integration
+      - advanced_features

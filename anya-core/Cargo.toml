@@ -2,9 +2,14 @@
 name = "anya"
 version = "0.1.0"
 edition = "2021"
-description = "Unified Bitcoin Platform with integrated AI, Web5, Mobile and Enterprise capabilities"
+description = "Unified Bitcoin Platform with integrated AI; Web5; Mobile and Enterprise"
 authors = ["bo_thebig <botshelomokoka@gmail.com>"]
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/botshelomokoka/OPSource"
+documentation = "https://docs.rs/anya"
+readme = "README.md"
+keywords = ["bitcoin", "ai", "web5", "mobile", "enterprise"]
+categories = ["cryptography", "blockchain", "web-programming"]
 
 [workspace]
 members = [
