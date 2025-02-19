@@ -1,0 +1,86 @@
+1|name: Continuous Integration
+2|
+3|on:
+4|  push:
+5|    branches: [ main ]
+6|  pull_request:
+7|    branches: [ main ]
+8|
+9|env:
+10|  CARGO_TERM_COLOR: always
+11|
+12|jobs:
+13|  test:
+14|    name: Test
+15|    runs-on: ubuntu-latest
+16|    steps:
+17|      - uses: actions/checkout@v3
+18|      - uses: actions-rs/toolchain@v1
+19|        with:
+20|          profile: minimal
+21|          toolchain: stable
+22|          override: true
+23|      - uses: actions-rs/cargo@v1
+24|        with:
+25|          command: test
+26|          args: --all-features --workspace
+27|
+28|  fmt:
+29|    name: Rustfmt
+30|    runs-on: ubuntu-latest
+31|    steps:
+32|      - uses: actions/checkout@v3
+33|      - uses: actions-rs/toolchain@v1
+34|        with:
+35|          profile: minimal
+36|          toolchain: stable
+37|          override: true
+38|      - run: rustup component add rustfmt
+39|      - uses: actions-rs/cargo@v1
+40|        with:
+41|          command: fmt
+42|          args: --all -- --check
+43|
+44|  clippy:
+45|    name: Clippy
+46|    runs-on: ubuntu-latest
+47|    steps:
+48|      - uses: actions/checkout@v3
+49|      - uses: actions-rs/toolchain@v1
+50|        with:
+51|          profile: minimal
+52|          toolchain: stable
+53|          override: true
+54|      - run: rustup component add clippy
+55|      - uses: actions-rs/cargo@v1
+56|        with:
+57|          command: clippy
+58|          args: --all-features --workspace -- -D warnings
+59|
+60|  coverage:
+61|    name: Code coverage
+62|    runs-on: ubuntu-latest
+63|    steps:
+64|      - uses: actions/checkout@v3
+65|      - uses: actions-rs/toolchain@v1
+66|        with:
+67|          profile: minimal
+68|          toolchain: stable
+69|          override: true
+70|      - uses: actions-rs/cargo@v1
+71|        with:
+72|          command: install
+73|          args: cargo-tarpaulin
+74|      - uses: actions-rs/cargo@v1
+75|        with:
+76|          command: tarpaulin
+77|          args: --ignore-tests --workspace
+78|
+79|  build:
+80|    runs-on: ubuntu-latest
+81|    steps:
+82|      - uses: actions/checkout@v4
+83|      - name: Build
+84|        run: cargo build --verbose
+85|      - name: Run tests
+86|        run: cargo test --verbose 

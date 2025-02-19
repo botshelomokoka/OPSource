@@ -1,0 +1,5 @@
+[submodule "dependencies/web5-rs"]
+    path = dependencies/web5-rs
+    url = https://github.com/decentralized-identity/web5-rs.git
+    branch = main
+    update = merge
