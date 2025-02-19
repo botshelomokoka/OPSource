@@ -1,17 +1,82 @@
+[package]
+name = "anya"
+version = "0.1.0"
+edition = "2021"
+description = "Unified Bitcoin Platform with integrated AI, Web5, Mobile and Enterprise capabilities"
+authors = ["bo_thebig <botshelomokoka@gmail.com>"]
+license = "MIT OR Apache-2.0"
+
 [workspace]
 members = [
-    "src/bitcoin/anya-bitcoin",
-    "src/enterprise/anya-enterprise",
-    "src/extensions/anya-extensions"
+    ".",
+    "anya-enterprise",
+    "anya-extensions",
+    "anya-bitcoin",
+    "dash33",
+    "mobile",
+    "src/core",
+    "src/mobile"
 ]
+resolver = "2"
 
 [workspace.dependencies]
-bitcoin = "0.30.0"
+# Core dependencies
+tokio = { version = "1.41.1", features = ["full", "macros"] }
+futures = "0.3.30"
+serde = { version = "1.0.215", features = ["derive"] }
+serde_json = "1.0.133"
+serde_yaml = "0.9.25"
+anyhow = "1.0.75"
+thiserror = "1.0.69"
+async-trait = "0.1.77"
+
+# Blockchain Integration
+bitcoin = { version = "0.32.1", features = ["rand"] }
+bitcoincore-rpc = "0.17.0"
+secp256k1 = { version = "0.27.0", features = ["rand"] }
 lightning = "0.0.116"
 rgb-core = "0.10"
 taproot = "0.1.0"
-web5 = "0.1.0"
-handshake-client = "0.1.0"
-rsk = "0.1.0"
-tokio = { version = "1.0", features = ["full"] }
-serde = { version = "1.0", features = ["derive"] }
+
+# Web5 Integration
+web5 = { git = "https://github.com/TBD54566975/web5-rs", tag = "v4.0.0" }
+did-key = "0.2"
+
+[dependencies]
+tokio = { workspace = true }
+futures = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_yaml = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+bitcoin = { workspace = true }
+web5 = { workspace = true }
+
+# Additional deps kept minimal
+chrono = { version = "0.4.31", features = ["serde"], default-features = false }
+uuid = { version = "1.8.0", features = ["v4"] }
+tracing = { version = "0.1.40", features = ["attributes"] }
+
+[dev-dependencies]
+tokio-test = "0.4.3"
+mockall = "0.11.4"
+criterion = "0.5.1"
+
+[features]
+default = ["std", "bitcoin", "mobile", "web5"]
+std = []
+mobile = []
+enterprise = []
+full = ["mobile", "enterprise"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
