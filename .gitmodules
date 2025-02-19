@@ -6,13 +6,6 @@
     update = merge
     fetchRecurseSubmodules = true
 
-[submodule "anya-core/enterprise"]
-    path = anya-core/enterprise
-    url = https://github.com/botshelomokoka/anya-enterprise.git
-    branch = main
-    update = merge
-    fetchRecurseSubmodules = true
-
 [submodule "anya-core/mobile"]
     path = anya-core/mobile
     url = https://github.com/botshelomokoka/anya-mobile.git
