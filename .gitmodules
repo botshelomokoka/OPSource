@@ -60,3 +60,6 @@
     path = ai-agents
     url = https://github.com/geminik23/ai-agents.git
     branch = main
+[submodule "anya-core/mobile"]
+	path = anya-core/mobile
+	url = https://github.com/botshelomokoka/anya-mobile.git
