@@ -53,6 +53,11 @@ stacks-core = "2.1.0"
 dao-governance = { git = "https://github.com/stacks-network/dao-contracts", branch = "main" }
 clarity-lang = "1.0.0"
 
+# Stacks and DAO dependencies
+stacks-common = "0.1.0"
+clarity-sdk = "1.0.0"
+dao-contracts = { git = "https://github.com/stacks-network/dao-contracts", branch = "main" }
+
 [dependencies]
 tokio = { workspace = true }
 futures = { workspace = true }
@@ -76,6 +81,11 @@ stacks-core = { workspace = true }
 dao-governance = { workspace = true }
 clarity-lang = { workspace = true }
 
+# Stacks and DAO dependencies
+stacks-common = { workspace = true }
+clarity-sdk = { workspace = true }
+dao-contracts = { workspace = true }
+
 [dev-dependencies]
 tokio-test = "0.4.3"
 mockall = "0.11.4"
@@ -87,7 +97,7 @@ std = []
 mobile = []
 enterprise = []
 full = ["mobile", "enterprise"]
-dao = ["stacks", "governance"]
+dao = ["std"] # Remove stacks dependency since it's now properly included
 
 [profile.release]
 lto = true
