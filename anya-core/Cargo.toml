@@ -1,110 +1,17 @@
-[package]
-name = "anya"
-version = "0.1.0"
-edition = "2021"
-description = "Unified Bitcoin Platform with integrated AI; Web5; Mobile and Enterprise"
-authors = ["bo_thebig <botshelomokoka@gmail.com>"]
-license = "MIT OR Apache-2.0"
-repository = "https://github.com/botshelomokoka/OPSource"
-documentation = "https://docs.rs/anya"
-readme = "README.md"
-keywords = ["bitcoin", "ai", "web5", "mobile", "enterprise"]
-categories = ["cryptography", "blockchain", "web-programming"]
-
 [workspace]
 members = [
-    ".",
-    "anya-enterprise",
-    "anya-extensions",
-    "anya-bitcoin",
-    "dash33",
-    "mobile",
-    "src/core",
-    "src/mobile"
+    "src/bitcoin/anya-bitcoin",
+    "src/enterprise/anya-enterprise",
+    "src/extensions/anya-extensions"
 ]
-resolver = "2"
 
 [workspace.dependencies]
-# Core dependencies
-tokio = { version = "1.41.1", features = ["full", "macros"] }
-futures = "0.3.30"
-serde = { version = "1.0.215", features = ["derive"] }
-serde_json = "1.0.133"
-serde_yaml = "0.9.25"
-anyhow = "1.0.75"
-thiserror = "1.0.69"
-async-trait = "0.1.77"
-
-# Blockchain Integration
-bitcoin = { version = "0.32.1", features = ["rand"] }
-bitcoincore-rpc = "0.17.0"
-secp256k1 = { version = "0.27.0", features = ["rand"] }
+bitcoin = "0.30.0"
 lightning = "0.0.116"
 rgb-core = "0.10"
 taproot = "0.1.0"
-
-# Web5 Integration
-web5 = { git = "https://github.com/TBD54566975/web5-rs", tag = "v4.0.0" }
-did-key = "0.2"
-
-# DAO Integration
-clarinet-sdk = "1.0.1"
-stacks-core = "2.1.0"
-dao-governance = { git = "https://github.com/stacks-network/dao-contracts", branch = "main" }
-clarity-lang = "1.0.0"
-
-# Stacks and DAO dependencies
-stacks-common = "0.1.0"
-clarity-sdk = "1.0.0"
-dao-contracts = { git = "https://github.com/stacks-network/dao-contracts", branch = "main" }
-
-[dependencies]
-tokio = { workspace = true }
-futures = { workspace = true }
-serde = { workspace = true }
-serde_json = { workspace = true }
-serde_yaml = { workspace = true }
-anyhow = { workspace = true }
-thiserror = { workspace = true }
-async-trait = { workspace = true }
-bitcoin = { workspace = true }
-web5 = { workspace = true }
-
-# Additional deps kept minimal
-chrono = { version = "0.4.31", features = ["serde"], default-features = false }
-uuid = { version = "1.8.0", features = ["v4"] }
-tracing = { version = "0.1.40", features = ["attributes"] }
-
-# DAO Dependencies
-clarinet-sdk = { workspace = true }
-stacks-core = { workspace = true }
-dao-governance = { workspace = true }
-clarity-lang = { workspace = true }
-
-# Stacks and DAO dependencies
-stacks-common = { workspace = true }
-clarity-sdk = { workspace = true }
-dao-contracts = { workspace = true }
-
-[dev-dependencies]
-tokio-test = "0.4.3"
-mockall = "0.11.4"
-criterion = "0.5.1"
-
-[features]
-default = ["std", "bitcoin", "mobile", "web5"]
-std = []
-mobile = []
-enterprise = []
-full = ["mobile", "enterprise"]
-dao = ["std"] # Remove stacks dependency since it's now properly included
-
-[profile.release]
-lto = true
-codegen-units = 1
-opt-level = 3
-panic = "abort"
-
-[profile.dev]
-opt-level = 0
-debug = true
+web5 = "0.1.0"
+handshake-client = "0.1.0"
+rsk = "0.1.0"
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
