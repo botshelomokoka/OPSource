@@ -2,6 +2,12 @@
 mod tests {
     use super::*;
     use mockall::predicate::*;
+    Add unit tests for AnyaDao methods using mock DAO client
+
+    - Added tests for proposal submission, voting, proposal status retrieval, proposal execution, and voting power retrieval.
+    - Utilized `mockall` to create a mock `DaoClient` for testing.
+    - Used `tokio_test::block_on` to run async tests.
+    - Ensured each test sets up expectations and verifies the results correctly.
     use tokio_test::block_on;
 
     // Mock DAO client for testing
