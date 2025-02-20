@@ -2,22 +2,21 @@
 
 Research and development platform for the Anya Core Bitcoin implementation.
 
-## Overview
-
-OPSource serves as the primary research and development environment for Anya Core, providing tools, documentation, and experimental features for Bitcoin development.
-
-## Repository Structure
+## Project Structure
 
 ```
-opsource/
+OPSource/
 ├── src/
-│   ├── research/       # Research implementations and experiments
-│   ├── tools/          # Development and testing tools
-│   └── analysis/       # Performance and security analysis
-├── docs/
-│   ├── research/       # Research papers and documentation
-│   └── specifications/ # Technical specifications
-└── scripts/           # Development and automation scripts
+│   └── core/
+│       ├── dao/          # DAO implementation
+│       │   ├── contracts/
+│       │   ├── tests/
+│       │   └── traits/
+│       └── shared/       # Shared utilities
+│           └── utils/
+├── scripts/             # Build and deployment scripts
+├── docs/               # Documentation
+└── tests/              # Integration tests
 ```
 
 ## Key Features
@@ -28,22 +27,41 @@ opsource/
 - Security testing frameworks
 - Development utilities
 
-## Getting Started
+## Development
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/botshelomokoka/opsource.git
-   ```
+### Prerequisites
+
+- Node.js 18+
+- Git
+- PowerShell 7+
+
+### Setup
+
+1. Clone with submodules:
+
+```powershell
+git clone --recursive https://github.com/botshelomokoka/OPSource.git
+cd OPSource
+```
 
 2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-3. Run development environment:
-   ```bash
-   python setup_dev.py
-   ```
+```powershell
+npm install
+```
+
+3. Initialize environment:
+
+```powershell
+.\scripts\setup-project.ps1
+```
+
+### Available Scripts
+
+- `npm test` - Run tests
+- `npm run check` - Check contracts
+- `npm run build` - Build project
+- `npm run dev` - Watch mode
 
 ## Related Projects
 

@@ -1,0 +1,33 @@
+{
+  "name": "opsource",
+  "version": "1.0.0",
+  "description": "Research and development platform for the Anya Core Bitcoin implementation.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npx @hirosystems/clarinet-sdk check 'src/core/dao/**/*.clar'",
+    "docs": "typedoc --out docs src/",
+    "lint": "eslint src/ tests/",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@hirosystems/clarinet-sdk": "2.14.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "typedoc": "0.27.7",
+    "eslint": "9.20.1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botshelomokoka/OPSource.git"
+  },
+  "license": "ISC"
+}

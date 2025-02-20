@@ -1,8 +1,0 @@
-[submodule "dash33"]
-	url = git@github.com:botshelomokoka/dash33.git
-[submodule "enterprise"]
-	url = git@github.com:botshelomokoka/anya-enterprise.git
-[submodule "mobile"]
-	url = git@github.com:botshelomokoka/anya-mobile.git
-[submodule "dependencies/web5-rs"]
-	url = git@github.com:botshelomokoka/web5-rs.git

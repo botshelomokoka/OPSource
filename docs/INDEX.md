@@ -1,4 +1,56 @@
-# OPSource Documentation Index
+# OPSource Documentation
+
+## Project Overview
+
+- Status: Active Development
+- Version: 0.1.0-alpha
+- Updated: February 20, 2025
+
+## Core Documentation
+
+1. [System Map](./system_map.md)
+   - Project structure
+   - Environment configuration
+   - Testing setup
+
+2. [Development Roadmap](./roadmap.md)
+   - Release schedule
+   - Milestones
+   - Success metrics
+
+3. [Integration Patterns](./INTEGRATION_PATTERNS.md)
+   - Cross-platform patterns
+   - DAO contract integration
+   - Best practices
+
+## Quick Links
+
+### Development Setup
+
+```bash
+# Initial setup
+git clone https://github.com/botshelomokoka/OPSource.git
+cd OPSource
+./scripts/setup_env.sh development
+
+# Run tests
+npm test
+```
+
+### Key Files
+
+| File | Purpose | Location |
+|------|---------|----------|
+| `system_map.md` | System architecture | `/docs` |
+| `roadmap.md` | Development timeline | `/docs` |
+| `setup_env.sh` | Environment setup | `/scripts` |
+
+### Environment Files
+
+| Environment | File | Usage |
+|------------|------|-------|
+| Development | `.env.development` | Local development |
+| Production | `.env.production` | Production deployment |
 
 ## Core Components
 
@@ -138,9 +190,25 @@ Cross-platform mobile capabilities
 - Easy navigation
 - Cross-referencing
 
-### Maintenance
+### Documentation Maintenance
 
 - Regular updates
 - Version control
 - Review process
 - Quality checks
+
+## Document Updates
+
+| Document | Last Updated | Next Review |
+|----------|--------------|-------------|
+| System Map | Feb 20, 2025 | Mar 15, 2025 |
+| Roadmap | Feb 20, 2025 | Mar 15, 2025 |
+| Integration Patterns | Feb 20, 2025 | Mar 15, 2025 |
+
+## Documentation Rules and Guidelines
+
+1. Use Markdown for all documentation
+2. Include file paths in code blocks
+3. Maintain consistent date formats
+4. Update index.md when adding docs
+5. Regular documentation reviews

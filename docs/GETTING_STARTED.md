@@ -2,161 +2,167 @@
 
 ## Prerequisites
 
-- Rust (latest stable version)
-- Git
-- Node.js (for web interfaces)
-- Docker (optional, for containerized deployment)
+### Required Tools
+
+- Node.js v18 or later
+- Git 2.x or later
+- VS Code with extensions:
+  - GitLens
+  - Clarity for VS Code
+  - npm
+  - ESLint
+
+### Optional Tools
+
+- Docker Desktop for Windows
+- PowerShell 7+ (recommended)
 
 ## Installation
 
-1. Clone the repository:
+1.Clone the repository:
 
-```bash
-git clone https://github.com/botshelomokoka/opsource.git
-cd opsource
+```powershell
+git clone https://github.com/botshelomokoka/OPSource.git
+cd OPSource
 ```
 
-2. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your configuration
+2.Set up environment:
+
+```powershell
+# Create environment files
+./scripts/setup_env.sh development
+
+# Install dependencies
+npm install
 ```
 
-3. Install dependencies:
-```bash
-cargo build
+3.Initialize project:
+
+```powershell
+# Setup VS Code configuration
+./scripts/create-vscode-settings.ps1
+
+# Setup development environment
+npm run setup
+```
+
+## Project Structure
+
+```plaintext
+OPSource/
+├── .vscode/                    # VS Code configuration
+├── scripts/                   # Setup and utility scripts
+├── src/                      # Source code
+│   └── core/                # Core implementations
+│       ├── dao/            # DAO implementation
+│       └── shared/        # Shared utilities
+├── docs/                     # Documentation
+└── tests/                    # Integration tests
 ```
 
 ## Quick Start
 
-### Basic Setup
+### Development Setup
 
-1. Initialize the project:
-```rust
-let setup = ProjectSetup::new(
-    UserType::Developer,
-    HashMap::new()
-)?;
-setup.setup().await?;
+```typescript
+// Start development server
+npm run dev
+
+// Run tests
+npm test
+
+// Check contracts
+npm run check
 ```
 
-2. Start the system:
-```rust
-let mut server = HttpServer::new(|| {
-    App::new()
-        .service(create_transaction)
-        .service(get_account)
-})
-.bind("127.0.0.1:8080")?;
-server.run().await?;
-```
+### DAO Contract Integration
 
-### Component Integration
-
-#### Blockchain Integration
-
-```rust
-// Initialize Bitcoin support
-bitcoin::init();
-lightning::init();
-dlc::init();
-stacks::init();
-```
-
-#### Analytics Setup
-
-```rust
-let analytics = AdvancedAnalytics::new(
-    user_metrics,
-    blockchain,
-    data_feeds,
-    dao_rules,
-);
-```
-
-#### ML Integration
-
-```rust
-let ai_engine = InternalAIEngine::init()?;
-ai_engine.perform_research().await?;
+```clarity
+;; Initialize DAO contract
+(contract-call? .dao-core initialize
+  "OPSource DAO"
+  u1000000
+  u100)
 ```
 
 ## User Roles
 
-### Creator
-- Full system access
-- Contract deployment capabilities
-- Admin tool access
+### Administrator
+
+- Environment configuration
+- Contract deployment
+- System monitoring
 
 ### Developer
-- API access
-- Development environment
-- Testing capabilities
 
-### Normal User
-- Basic functionality
-- Wallet operations
-- Network participation
+- Contract development
+- Integration testing
+- Documentation updates
+
+### User
+
+- Contract interaction
+- Proposal submission
+- Voting participation
 
 ## Common Tasks
 
-### Managing Wallets
+### Managing Environment
 
-```rust
-// Initialize wallets
-fs::create_dir_all(format!("{}/stx/wallet", project_name))?;
-fs::create_dir_all(format!("{}/dlc/wallet", project_name))?;
-fs::create_dir_all(format!("{}/lightning/wallet", project_name))?;
-fs::create_dir_all(format!("{}/bitcoin/wallet", project_name))?;
+```powershell
+# Switch to development environment
+./scripts/setup_env.sh development
+
+# Switch to production
+./scripts/setup_env.sh production
 ```
 
-### Network Operations
+### Running Tests
 
-```rust
-// Setup networking
-self.setup_networking().await?;
-self.setup_unified_network().await?;
+```powershell
+# Unit tests
+npm run test:unit
+
+# Integration tests
+npm run test:integration
+
+# Contract tests
+npm run test:contracts
 ```
 
-### Data Analysis
+### Documentation Updates
 
-```rust
-// Initialize analytics
-let market_data = MarketDataFetcher::new();
-process_market_data(&market_data)?;
+```powershell
+# Generate documentation
+npm run docs
+
+# Serve documentation locally
+npm run docs:serve
 ```
-
-## Development Guidelines
-
-1. Follow Rust best practices
-2. Use provided security measures
-3. Implement error handling
-4. Write comprehensive tests
-5. Document new features
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. Connection Problems
-   - Check network configuration
-   - Verify peer discovery settings
-   - Confirm port availability
+1. Environment Setup
+   - Verify Node.js installation: `node --version`
+   - Check npm installation: `npm --version`
+   - Confirm environment files exist
 
-2. Wallet Issues
-   - Verify wallet initialization
-   - Check permissions
-   - Confirm network sync
+2. Build Issues
+   - Clear npm cache: `npm cache clean --force`
+   - Remove node_modules: `rm -r node_modules`
+   - Reinstall dependencies: `npm install`
 
-3. Analytics Errors
-   - Validate data sources
-   - Check ML model status
-   - Verify memory usage
+3. Contract Errors
+   - Verify Clarity version
+   - Check contract syntax
+   - Review error messages in VS Code
 
 ## Next Steps
 
-1. Explore advanced features
-2. Join developer community
-3. Contribute to documentation
-4. Participate in testing
-5. Submit improvements
+1. Review [system_map.md](./system_map.md)
+2. Study [Integration Patterns](./INTEGRATION_PATTERNS.md)
+3. Follow [Development Roadmap](./roadmap.md)
+4. Join developer discussions
+5. Start contributing
