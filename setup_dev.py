@@ -26,6 +26,13 @@ class DevEnvironment:
         self.requirements_file = self.base_dir / 'requirements.txt'
         self.repo_url = "https://github.com/botshelomokoka/OPSource.git"
         
+        # Add Windows-specific paths
+        self.windows_paths = {
+            'appdata': Path(os.getenv('APPDATA')),
+            'localappdata': Path(os.getenv('LOCALAPPDATA')),
+            'programdata': Path(os.getenv('PROGRAMDATA'))
+        }
+        
         # Essential directories
         self.directories = {
             'logs': self.base_dir / 'logs',

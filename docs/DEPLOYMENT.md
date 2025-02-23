@@ -1,10 +1,37 @@
 # OPSource Deployment Guide
 
+## Prerequisites
+
+### Required Tools
+
+- Docker Desktop for Windows
+- Windows Subsystem for Linux 2 (WSL2)
+- kubectl (Kubernetes CLI)
+- Helm v3
+- PowerShell 7+
+
+### Installation Steps
+
+```powershell
+# Install WSL2
+wsl --install
+
+# Install Chocolatey (Run as Administrator)
+Set-ExecutionPolicy Bypass -Scope Process -Force
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+# Install required tools
+choco install kubernetes-cli
+choco install helm
+```
+
 ## Deployment Environments
 
 ### 1. Development Environment
 
-#### Requirements
+#### Development Requirements
+
 - Docker Desktop
 - Kubernetes (local)
 - Helm
@@ -12,34 +39,36 @@
 
 #### Setup
 
-```bash
+```powershell
 # Create development namespace
 kubectl create namespace opsource-dev
 
-# Deploy services
-helm install opsource-dev ./helm/opsource -f values-dev.yaml
+# Deploy using Helm
+helm install opsource-dev .\helm\opsource -f values-dev.yaml
 ```
 
 ### 2. Staging Environment
 
-#### Requirements
+#### Staging Requirements
+
 - Kubernetes cluster
 - CI/CD pipeline
 - Monitoring setup
 
-#### Deployment
+#### Staging Deployment Steps
 
-```bash
+```powershell
 # Create staging namespace
 kubectl create namespace opsource-staging
 
-# Deploy services
-helm install opsource-staging ./helm/opsource -f values-staging.yaml
+# Deploy using Helm
+helm install opsource-staging .\helm\opsource -f values-staging.yaml
 ```
 
 ### 3. Production Environment
 
-#### Requirements
+#### Production Requirements
+
 - Production Kubernetes cluster
 - Load balancers
 - Monitoring and alerting
@@ -47,50 +76,50 @@ helm install opsource-staging ./helm/opsource -f values-staging.yaml
 
 #### Deployment
 
-```bash
+```powershell
 # Create production namespace
 kubectl create namespace opsource-prod
 
-# Deploy services
-helm install opsource-prod ./helm/opsource -f values-prod.yaml
+# Deploy using Helm
+helm install opsource-prod .\helm\opsource -f values-prod.yaml
 ```
 
-## Deployment Process
+## Build and Deploy Process
 
-### 1. Build Process
+### 1. Build Docker Images
 
-```bash
-# Build Docker images
-docker build -t opsource/anya:latest ./anya
-docker build -t opsource/dash33:latest ./dash33
-docker build -t opsource/enterprise:latest ./enterprise
-docker build -t opsource/mobile:latest ./mobile
+```powershell
+# Build images
+docker build -t opsource/anya:latest .\anya
+docker build -t opsource/dash33:latest .\dash33
+docker build -t opsource/enterprise:latest .\enterprise
+docker build -t opsource/mobile:latest .\mobile
 
-# Push images
+# Push to registry
 docker push opsource/anya:latest
 docker push opsource/dash33:latest
 docker push opsource/enterprise:latest
 docker push opsource/mobile:latest
 ```
 
-### 2. Database Migration
+### 2. Database Operations
 
-```bash
+```powershell
 # Run migrations
-./scripts/migrate.sh --env production
+.\scripts\migrate.ps1 -Environment production
 
 # Verify migration
-./scripts/verify-migration.sh
+.\scripts\verify-migration.ps1
 ```
 
 ### 3. Service Deployment
 
-```bash
+```powershell
 # Deploy core services
-kubectl apply -f k8s/core/
+kubectl apply -f .\k8s\core\
 
-# Deploy supporting services
-kubectl apply -f k8s/support/
+# Deploy support services
+kubectl apply -f .\k8s\support\
 
 # Verify deployment
 kubectl get pods -n opsource-prod
@@ -98,16 +127,16 @@ kubectl get pods -n opsource-prod
 
 ## Configuration Management
 
-### 1. Environment Variables
+### Environment Variables
 
 ```yaml
 # config/production.yaml
 database:
-  url: postgresql://user:pass@host:5432/db
+  url: "Server=host;Database=db;User Id=user;Password=pass;"
   pool_size: 10
 
 redis:
-  url: redis://host:6379
+  url: "localhost:6379"
   pool_size: 5
 
 api:
@@ -115,16 +144,16 @@ api:
   workers: 4
 ```
 
-### 2. Secrets Management
+### Secrets Management
 
-```bash
+```powershell
 # Create secrets
-kubectl create secret generic db-credentials \
-    --from-literal=username=myuser \
+kubectl create secret generic db-credentials `
+    --from-literal=username=myuser `
     --from-literal=password=mypass
 
-# Use secrets in deployment
-kubectl apply -f k8s/secrets/
+# Apply secret configuration
+kubectl apply -f .\k8s\secrets\
 ```
 
 ## Monitoring Setup
@@ -330,13 +359,14 @@ kubectl rollout undo deployment/${DEPLOYMENT_NAME}
 ## Deployment Checklist
 
 ### Pre-deployment
-- [ ] Review changes
-- [ ] Run tests
-- [ ] Update documentation
-- [ ] Backup data
-- [ ] Notify stakeholders
 
-### Deployment
+- [ ] Run `.\scripts\pre-deploy-check.ps1`
+- [ ] Backup data using `.\scripts\backup.ps1`
+- [ ] Run tests `npm test`
+- [ ] Update documentation
+
+### Deployment Tasks
+
 - [ ] Deploy database changes
 - [ ] Deploy service updates
 - [ ] Verify deployment
@@ -344,8 +374,9 @@ kubectl rollout undo deployment/${DEPLOYMENT_NAME}
 - [ ] Monitor metrics
 
 ### Post-deployment
-- [ ] Verify functionality
-- [ ] Check logs
-- [ ] Monitor performance
+
+- [ ] Run `.\scripts\verify-deployment.ps1`
+- [ ] Check logs `kubectl logs -n opsource-prod`
+- [ ] Monitor metrics
 - [ ] Update status
 - [ ] Document issues

@@ -26,6 +26,9 @@ wheels/
 env/
 venv/
 ENV/
+.env.secrets
+*.pem
+*.key
 
 # IDE
 .idea/
@@ -50,3 +53,9 @@ coverage.xml
 # Logs
 *.log
 logs/
+
+# Secrets
+.env.*.secrets
+.env.secrets
+*.pem
+*.key

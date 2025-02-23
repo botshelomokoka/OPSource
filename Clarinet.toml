@@ -1,0 +1,17 @@
+[project]
+name = "anya-dao"
+description = "Anya DAO Implementation within Anya Core"
+authors = ["bo_thebig <botshelomokoka@gmail.com>"]
+telemetry = false
+requirements = []
+boot_contracts = []
+
+[contracts.dao-core]
+path = "anya-core/dao/contracts/dao-core.clar"
+clarity_version = 2
+epoch = 2.1
+
+[contracts.dao-trait]
+path = "anya-core/dao/traits/dao-trait.clar"
+clarity_version = 2
+epoch = 2.1
