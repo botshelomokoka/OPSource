@@ -11,22 +11,11 @@
         "rootDir": ".",
         "baseUrl": ".",
         "paths": {
-            "@core/*": [
-                "src/core/*"
-            ],
-            "@shared/*": [
-                "src/core/shared/*"
-            ],
-            "@tests/*": [
-                "tests/*"
-            ],
-            "@hirosystems/clarinet-sdk": ["./types/clarinet-sdk"]
+            "@/*": ["./src/*"]
         },
         "types": [
-            "vitest/globals",
-            "node",
-            "@hirosystems/clarinet-sdk",
-            "jest"
+            "jest",
+            "vitest/globals"
         ],
         "typeRoots": [
             "./node_modules/@types",
