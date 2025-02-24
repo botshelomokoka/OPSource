@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest",
+    "test:watch": "vitest watch",
+    "coverage": "vitest run --coverage",
     "check": "npx @hirosystems/clarinet-sdk check 'src/core/dao/**/*.clar'",
     "docs": "typedoc --out docs src/",
     "lint": "eslint src/ tests/",

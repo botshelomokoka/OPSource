@@ -3,8 +3,12 @@ import { resolve } from 'path';
 
 export default defineConfig({
   test: {
-    globals: true,
-    environment: 'node'
+    include: ['tests/**/*.test.ts'],
+    environment: 'happy-dom',
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html']
+    }
   },
   resolve: {
     alias: {
