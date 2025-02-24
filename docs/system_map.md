@@ -166,3 +166,38 @@ npm run test:weekly     # Run weekly integration suite
 # Monthly Security Scans
 npm run test:security   # Run monthly security tests
 ```
+
+## 2025 Roadmap
+
+- Q2: Advanced voting
+- Q3: Cross-chain support
+- Q4: Formal verification
+
+# System Architecture Map
+
+## 2025 Timeline
+
+- **Q1** (Current)
+  - Core DAO implementation
+  - Basic security
+
+- **Q2**
+  - Advanced voting
+  - Multi-sig
+
+- **Q3**
+  - Cross-chain
+  - Delegation
+
+- **Q4**
+  - Formal verification
+  - Optimizations
+
+## Components
+
+src/
+└── dao/
+└── core.ts # Governance logic
+tests/
+└── dao.test.ts # Validation tests
+docs/ # Documentation

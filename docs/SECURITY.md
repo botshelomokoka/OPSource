@@ -15,21 +15,25 @@ This document outlines the security measures, best practices, and guidelines for
 ### Blockchain Security
 
 #### Bitcoin Network
+
 - Secure wallet implementation
 - Multi-signature support
 - Transaction verification protocols
 
 #### Lightning Network
+
 - Channel security measures
 - Payment routing security
 - Node authentication
 
 #### DLC (Discreet Log Contracts)
+
 - Oracle security
 - Contract verification
 - Privacy preservation
 
 #### Stacks Blockchain
+
 - Smart contract security
 - Token management
 - Cross-chain security measures
@@ -37,11 +41,13 @@ This document outlines the security measures, best practices, and guidelines for
 ### Network Security
 
 #### P2P Network
+
 - Secure peer discovery
 - Connection encryption
 - DDoS protection
 
 #### Cross-Chain Communication
+
 - Atomic swap security
 - Cross-chain verification
 - Transaction validation
@@ -49,11 +55,13 @@ This document outlines the security measures, best practices, and guidelines for
 ### Data Security
 
 #### Storage
+
 - Secure local storage
 - Encrypted user data
 - Secure configuration management
 
 #### Communication
+
 - End-to-end encryption
 - Secure RPC calls
 - Protected API endpoints
@@ -61,6 +69,7 @@ This document outlines the security measures, best practices, and guidelines for
 ## Security Best Practices
 
 ### Development Guidelines
+
 1. Use secure dependency versions
 2. Implement input validation
 3. Follow secure coding standards
@@ -68,6 +77,7 @@ This document outlines the security measures, best practices, and guidelines for
 5. Code review requirements
 
 ### Deployment Guidelines
+
 1. Environment separation
 2. Secure configuration management
 3. Regular security updates
@@ -75,6 +85,7 @@ This document outlines the security measures, best practices, and guidelines for
 5. Incident response procedures
 
 ### User Guidelines
+
 1. Secure key management
 2. Strong password requirements
 3. Two-factor authentication
@@ -84,6 +95,7 @@ This document outlines the security measures, best practices, and guidelines for
 ## Security Procedures
 
 ### Incident Response
+
 1. Incident detection
 2. Containment procedures
 3. Investigation process
@@ -91,6 +103,7 @@ This document outlines the security measures, best practices, and guidelines for
 5. Post-incident analysis
 
 ### Regular Maintenance
+
 1. Security patch management
 2. Dependency updates
 3. Security testing
@@ -99,7 +112,8 @@ This document outlines the security measures, best practices, and guidelines for
 
 ## Reporting Security Issues
 
-Please report security vulnerabilities to security@opsource.com. Include:
+Please report security vulnerabilities to <security@opsource.com>. Include:
+
 1. Description of the vulnerability
 2. Steps to reproduce
 3. Potential impact
@@ -108,7 +122,25 @@ Please report security vulnerabilities to security@opsource.com. Include:
 ## Security Updates
 
 Security updates are released:
+
 - Critical: Within 24 hours
 - High: Within 72 hours
 - Medium: Within 1 week
 - Low: Next release cycle
+
+## Supported Versions
+
+| Version | Supported          | Until       |
+|---------|--------------------|-------------|
+| 0.1.x   | :white_check_mark: | 2025-12-31  |
+
+## Reporting
+
+- Email: <security@dao-project.org>
+- Response: 72 hours
+
+## Measures
+
+- Execution delay
+- Quadratic voting
+- Time validation
