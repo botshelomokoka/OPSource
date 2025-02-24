@@ -20,3 +20,10 @@ class SecureTrainer:
     
     def _verify_update(self, update, sig, public_key):
         return tfe.verify(update, sig, public_key) 
+    # Add missing imports and initialize TFE
++ import tf_encrypted as tfe
++ from tf_encrypted.keras import initializers
+
+class SecureTrainer:
+-    def __init__(self, tee_endpoint):
++    def __init__(self, tee_endpoint: str

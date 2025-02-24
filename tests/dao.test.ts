@@ -1,3 +1,5 @@
+import { getContracts } from '../types/clarinet-sdk';
+
 it('should prevent 51% attack with quadratic voting', async () => {
   const attacker = await createMaliciousActor(51);
   const proposal = await createProposal();

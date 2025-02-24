@@ -8,7 +8,7 @@
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
         "outDir": "dist",
-        "rootDir": "src",
+        "rootDir": ".",
         "baseUrl": ".",
         "paths": {
             "@core/*": [
@@ -19,12 +19,17 @@
             ],
             "@tests/*": [
                 "tests/*"
-            ]
+            ],
+            "@hirosystems/clarinet-sdk": ["./types/clarinet-sdk"]
         },
         "types": [
             "vitest/globals",
             "node",
             "@hirosystems/clarinet-sdk"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./types"
         ]
     },
     "include": [
