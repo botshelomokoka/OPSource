@@ -59,3 +59,6 @@ logs/
 .env.secrets
 *.pem
 *.key
+
+# Dependency directories
+node_modules/
