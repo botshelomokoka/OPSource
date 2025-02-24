@@ -37,3 +37,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Core functionality for blockchain analytics
 - Basic research capabilities
 - Integration with Anya-Core
+
+## v0.4.0 (2024-12-07)
+### Added
+- rust-bitcoin v0.30 integration
+- Taproot descriptor support
+- DLC dispute protocol
+
+### Changed
+- LDK v0.8 compatibility
+- RSK bridge security model
+- HSM oracle signing flow
+
+### Deprecated
+- Legacy SegWit addresses
+- Basic multisig wallets

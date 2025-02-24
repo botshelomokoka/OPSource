@@ -112,3 +112,30 @@
 | Performance issues | Medium | Continuous testing |
 | Integration failures | Medium | Automated testing |
 | Documentation gaps | Low | Regular reviews |
+
+## 2024 Q3-Q4 Priorities
+
+### Protocol Layer
+
+- [ ] Taproot-DLC integration (WIP)
+- [ ] Federated learning oracles
+- [ ] RSK merge-mining v2
+
+### AI Systems
+
+- [ ] UTXO clustering engine
+- [ ] Mempool CNN-LSTM v2
+- [ ] Privacy-preserving ML
+
+### Mobile
+
+- [ ] React Native LDK bindings
+- [ ] Cross-platform PSBT flow
+- [ ] HSM-backed wallet SDK
+
+### 2024 Q4 Stacks Milestones
+
+- [ ] Migrate to fully expressive Clarity v2
+- [ ] Implement sBTC testnet operations
+- [ ] Prepare for Nakamoto PoX v3
+- [ ] Optimize Bitcoin header sync

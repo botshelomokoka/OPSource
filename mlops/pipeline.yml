@@ -1,0 +1,14 @@
+stages:
+  - data_ingestion:
+      sources: [dwn, blockchain, metrics]
+  - federated_training:
+      framework: tf-encrypted
+      schedule: daily
+  - model_serving:
+      format: ONNX
+      targets: [edge, cloud]
+      
+monitoring:
+  drift_detection:
+    threshold: 0.15
+    actions: [retrain, alert] 

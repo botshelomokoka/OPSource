@@ -1,0 +1,21 @@
+stages:
+  - clarity-verify
+  - testnet-deploy
+  - mainnet-sign
+
+clarity-checks:
+  image: stacks-core-ci
+  script:
+    - clarity-cli check ./contracts/**/*.clar
+    - clarity-cli analyze --cov --costs
+    - cargo test --test clarity_vm
+
+signing:
+  stage: mainnet-sign
+  needs: ["testnet-deploy"]
+  rules:
+    - if: $RELEASE_TAG
+  script:
+    - cargo run --release --bin stacks-signer -- \
+        --key $HSM_STACKS_KEY \
+        --contract ./contracts/mainnet.clar 

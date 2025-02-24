@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PSBT",
+  "type": "object",
+  "required": ["version", "inputs", "outputs", "xpub"],
+  "properties": {
+    "version": { 
+      "type": "integer",
+      "const": 2,
+      "description": "PSBT version must be 2 for Taproot"
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "tapInternalKey": { "type": "string", "pattern": "^[0-9a-fA-F]{66}$" },
+        "tapMerkleRoot": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" }
+      }
+    },
+    "xpub": {
+      "type": "string",
+      "contentEncoding": "base58",
+      "contentMediaType": "application/xpub"
+    }
+  }
+} 
