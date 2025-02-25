@@ -4,34 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Unified Bitcoin development platform with integrated mobile and enterprise features"
 
-[workspace]
-members = [
-    ".",
-    "anya-enterprise",
-    "anya-extensions", 
-    "dependencies/anya-core",
-    "dependencies/anya-web5",
-    "anya-bitcoin",
-    "dash33",
-    "mobile",
-    "src/core",
-    "src/mobile",
-    "packages/dash33",
-]
-
-[workspace.dependencies]
-# Core dependencies
-tokio = { version = "1.41.1", features = ["full"] }
-futures = "0.3.30"
-serde = { version = "1.0.215", features = ["derive"] }
-serde_json = "1.0.133"
-serde_yaml = "0.9.25"
-anyhow = "1.0.75"
-thiserror = "1.0.69"
-async-trait = "0.1.77"
-pyo3 = { version = "0.19.2", features = ["extension-module"] }
-
-# Web5 Integration
+[# Web5 Integration
 web5 = { git = "https://github.com/TBD54566975/web5-rs", package = "web5", tag = "v4.0.0" }
 jsonschema = "0.17.1"
 
