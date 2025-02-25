@@ -1,6 +1,6 @@
 # Project TODOs
 
-Last updated: 2025-02-25 15:12:19
+Last updated: 2025-02-25 22:12:17
 
 ## .github
 
@@ -61,10 +61,6 @@ Last updated: 2025-02-25 15:12:19
 - [.github/templates/todo.md:27] in normal_todos %}
 - [.github/templates/todo.md:34] in low_todos %}
 
-## TODO.md
-
-- [TODO.md:1] List
-
 ## anya-core
 
 - [anya-core/dependencies/anya-enterprise/src/ml/mod.rs:198] Implement differential privacy techniques
@@ -73,6 +69,7 @@ Last updated: 2025-02-25 15:12:19
 - [anya-core/dependencies/anya-enterprise/src/ml/mod.rs:201] Integrate with external AI services for enhanced functionality
 - [anya-core/dependencies/anya-enterprise/src/ml/mod.rs:202] Implement natural language processing capabilities
 - [anya-core/scripts/progress_automation.rs:110] Add implementation details\n}}\n",
+- [anya-core/src/bitcoin/dlc/oracle.rs:190] actual implementation would use SECP256K1)
 - [anya-core/src/web5/mod.rs:210] In a real implementation, we wouldn't use a static reference
 - [anya-core/src/web5/mod.rs:310] In a real implementation, we wouldn't use a static reference
 - [anya-core/src/web5/mod.rs:388] In a real implementation, we wouldn't use a static reference
