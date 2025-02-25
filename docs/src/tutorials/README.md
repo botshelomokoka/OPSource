@@ -16,46 +16,38 @@ Welcome to the OPSource tutorials section! Here you'll find step-by-step guides 
 
 ## Video Tutorials
 
-<div class="video-grid">
-    <div class="video-card">
-        <div class="video-thumbnail">🎥</div>
-        <h3>Quick Start Guide</h3>
-        <p>Get up and running with OPSource in 10 minutes</p>
-        <a href="https://youtube.com/opsource/quickstart" class="button">Watch Now</a>
-    </div>
-    
-    <div class="video-card">
-        <div class="video-thumbnail">🎥</div>
-        <h3>Advanced Features</h3>
-        <p>Deep dive into OPSource's advanced capabilities</p>
-        <a href="https://youtube.com/opsource/advanced" class="button">Watch Now</a>
-    </div>
-</div>
+### Quick Start Guide
+
+[![Video Thumbnail](https://img.youtube.com/vi/quickstart/0.jpg)](https://youtube.com/opsource/quickstart)
+**10 minute setup guide**
+
+### Advanced Features
+
+[![Video Thumbnail](https://img.youtube.com/vi/advanced/0.jpg)](https://youtube.com/opsource/advanced)
+**Deep dive into capabilities**
 
 ## Interactive Examples
 
-Try out these interactive examples to learn by doing:
+**Basic Trade**
 
-<div class="interactive-example">
-    <h3>Basic Trade</h3>
-    ```rust
-    let trade = Trade::new()
-        .with_pair("BTC/USD")
-        .with_amount(1.0)
-        .execute();
-    ```
-    <button onclick="runExample('basic-trade')">Run Example</button>
-</div>
+```rust
+let trade = Trade::new()
+    .with_pair("BTC/USD")
+    .with_amount(1.0)
+    .execute();
+```
 
-<div class="interactive-example">
-    <h3>Market Analysis</h3>
-    ```rust
-    let analysis = MarketAnalysis::new()
-        .with_timeframe("1d")
-        .analyze();
-    ```
-    <button onclick="runExample('market-analysis')">Run Example</button>
-</div>
+[Run Example](#basic-trade)
+
+**Market Analysis**
+
+```rust
+let analysis = MarketAnalysis::new()
+    .with_timeframe("1d")
+    .analyze();
+```
+
+[Run Example](#market-analysis)
 
 ## Hands-on Labs
 
@@ -67,21 +59,11 @@ Work through these practical exercises to gain real-world experience:
 
 ## Community Examples
 
-Check out these examples from our community:
+- **Automated Trading System** by @trader_pro  
+  [View Example](examples/automated-trading.md)
 
-<div class="community-examples">
-    <div class="example-card">
-        <h3>Automated Trading System</h3>
-        <p>By @trader_pro</p>
-        <a href="examples/automated-trading.md">View Example</a>
-    </div>
-    
-    <div class="example-card">
-        <h3>Custom Analytics Dashboard</h3>
-        <p>By @data_wizard</p>
-        <a href="examples/analytics-dashboard.md">View Example</a>
-    </div>
-</div>
+- **Custom Analytics Dashboard** by @data_wizard  
+  [View Example](examples/analytics-dashboard.md)
 
 ## Next Steps
 

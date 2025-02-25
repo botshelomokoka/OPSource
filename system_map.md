@@ -1,7 +1,8 @@
 # System Architecture Map
 
-## Project Structure 
-```
+## Project Structure
+
+```text
 OPSource/
 ├── anya-core/               # Core Bitcoin implementation
 │   ├── src/                 # Core source code
@@ -31,6 +32,7 @@ OPSource/
 ## Core Components
 
 ### 1. Bitcoin Integration Layer
+
 - **Purpose**: Core Bitcoin and Lightning functionality
 - **Key Features**:
   - Bitcoin Core & Lightning Network support
@@ -40,6 +42,7 @@ OPSource/
   - Cross-chain capabilities
 
 ### 2. Web5 Integration Layer
+
 - **Purpose**: Decentralized data management
 - **Key Features**:
   - Decentralized Web Nodes (DWN)
@@ -49,6 +52,7 @@ OPSource/
   - Secure data encryption
 
 ### 3. ML/AI System
+
 - **Purpose**: Advanced analytics and prediction
 - **Key Features**:
   - Model optimization
@@ -58,6 +62,7 @@ OPSource/
   - Prediction models
 
 ### 4. Enterprise Features
+
 - **Purpose**: Business operations and integration
 - **Key Features**:
   - Risk management
@@ -67,6 +72,7 @@ OPSource/
   - Business analytics
 
 ### 5. Mobile Application
+
 - **Purpose**: Cross-platform mobile interface
 - **Key Features**:
   - Wallet management
@@ -106,7 +112,7 @@ The system follows hexagonal architecture principles with these port implementat
 
 ## Deployment Architecture
 
-```
+```text
                  ┌───────────────┐
                  │  Mobile App   │
                  └───────┬───────┘
@@ -150,4 +156,4 @@ The system follows hexagonal architecture principles with these port implementat
 | Enterprise         | Planning               | Compliance System          |
 | Mobile             | Alpha                  | RGB Protocol Support       |
 
-*Last updated: 2025-02-24* 
+*Last updated: 2025-02-24*

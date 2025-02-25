@@ -29,7 +29,7 @@
     "@hirosystems/clarinet-sdk": "^0.2.2",
     "@sinonjs/fake-timers": "^14.0.0",
     "@testing-library/jest-dom": "^6.6.3",
-    "@types/jest": "^29.5.14",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.17.19",
     "@types/sinonjs__fake-timers": "^8.1.5",
     "@vitest/coverage-v8": "^1.6.1",
@@ -38,8 +38,8 @@
     "happy-dom": "^17.1.4",
     "tinyrainbow": "^2.0.0",
     "typedoc": "0.27.7",
-    "typescript": "^5.0.0",
-    "vitest": "^1.6.1"
+    "typescript": "^5.4.5",
+    "vitest": "^1.0.0"
   },
   "type": "module",
   "repository": {
