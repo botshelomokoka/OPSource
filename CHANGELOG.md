@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Dual Bitcoin implementation with Python and Rust support
+- Feature flag system for implementation selection
+- Comprehensive test suite for both implementations
+- Bitcoin interface with transaction and wallet operations
+- Configuration system with environment variable support
+- Test driver program for demonstration and validation
 - Package distribution system with SHA256 checksum verification
 - Cross-platform packaging support (Windows PowerShell and Unix bash)
 
@@ -70,10 +76,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced Bitcoin transaction handling
 - Improved testing framework
 
-## [0.2.0] - 2024-10-01
-### Added
-- Core Bitcoin interface components
-- Basic Lightning Network support
-- Initial DAO governance structure
+## [0.2.0] - 2025-03-01
 
-*Last updated: 2025-02-24*
+### Added
+- Enhanced BDK wallet functionality in Rust implementation
+- Electrum server connection for blockchain data in Rust
+- Descriptor-based wallet with BIP39 mnemonic generation
+- Comprehensive error handling and recovery
+- Support for transaction broadcasting via Electrum
+
+### Changed
+- Made Rust the default Bitcoin implementation
+- Updated feature flags to prefer rust-bitcoin by default
+- Improved transaction creation with proper coin selection
+- Enhanced address generation with BDK's descriptor wallets
+- Updated documentation to reflect the completed migration
+
+### Fixed
+- Error handling for failed network connections
+- Transaction fee calculation for varying transaction sizes
+- Balance reporting after wallet synchronization
+
+## [0.1.0] - 2025-02-15
+
+### Added
+- Initial release of dual Bitcoin implementation architecture
+- Common interface definition for Bitcoin operations
+- Python implementation using python-bitcoinlib
+- Basic Rust implementation using rust-bitcoin and BDK
+- Configuration system with environment variable support
+- Test framework to validate identical behavior across implementations
+- Documentation of migration strategy from Python to Rust
+
+*Last updated: 2025-03-05*

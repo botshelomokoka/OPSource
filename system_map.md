@@ -13,6 +13,8 @@ OPSource/
 │   │   ├── enterprise/      # Enterprise features
 │   │   └── extensions/      # Extension system
 │   ├── dependencies/        # Core dependencies
+│   │   ├── anya-bitcoin/    # Bitcoin-specific implementation
+│   │   └── anya-extensions/ # Extension framework
 │   ├── tests/               # Test suite
 │   └── docs/                # Documentation
 ├── anya-bitcoin/           # Bitcoin-specific implementation
@@ -40,6 +42,12 @@ OPSource/
   - Taproot/Schnorr signatures
   - Layer 2 solutions
   - Cross-chain capabilities
+- **Main Libraries**:
+  - rust-bitcoin (v0.32.5): Core data structures and cryptography
+  - BDK (v0.30.2): Wallet operations and descriptor-based key management
+  - LDK (v0.0.116): Lightning Network protocol implementation
+  - RGB Core (v0.10): Asset issuance on Bitcoin
+  - Taproot (v0.1.0): Advanced contract functionality
 
 ### 2. Web5 Integration Layer
 
@@ -91,24 +99,41 @@ The system follows hexagonal architecture principles with these port implementat
 | Compute         | Script Interpreter    | Web Workers           | EVM/Solidity          | Federated Learning    |
 | Networking      | Bitcoin P2P           | libp2p                | OrbitDB               | Secure Aggregation    |
 
+## Bitcoin Implementation Structure
+
+The Bitcoin functionality is organized following a modular approach:
+
+| Component          | Implementation                       | Description                          |
+|--------------------|------------------------------------- |--------------------------------------|
+| Consensus          | anya-bitcoin/src/consensus          | Block and transaction validation      |
+| Mempool            | anya-bitcoin/src/mempool           | Transaction memory pool management    |
+| Networking         | anya-bitcoin/src/net               | P2P network communication             |
+| Script             | anya-bitcoin/src/script            | Script verification and execution     |
+| Wallet             | BDK integration                      | Key and UTXO management              |
+| Lightning          | LDK integration                      | Lightning Network operations         |
+| DLC                | anya-bitcoin/src/dlc               | Discreet Log Contracts                |
+
 ## Dependency Matrix
 
-| Component          | Dependencies                         | Status      |
-|--------------------|------------------------------------- |-------------|
-| Bitcoin Core       | rust-bitcoin v0.32.1, LDK            | Operational |
-| Lightning          | LDK v0.8+                           | Beta        |
-| Web5               | web5 v0.1.0, DWN SDK                | Alpha       |
-| ML/AI              | TensorFlow, PyTorch                 | Development |
-| Mobile             | Flutter, Dart                       | Alpha       |
-| Enterprise         | Aragon OSx, Hyperledger Besu        | Development |
+| Component          | Dependencies                             | Status      |
+|--------------------|----------------------------------------- |-------------|
+| Bitcoin Core       | rust-bitcoin v0.32.5, secp256k1 v0.27.0   | Operational |
+| Lightning          | LDK v0.0.116                            | Beta        |
+| BDK Wallet         | BDK v0.30.2, bitcoincore-rpc v0.17.0      | Alpha       |
+| Web5               | web5 v0.1.0, DWN SDK                    | Alpha       |
+| ML/AI              | TensorFlow, PyTorch                     | Development |
+| Mobile             | Flutter, Dart                           | Alpha       |
+| Enterprise         | Aragon OSx, Hyperledger Besu            | Development |
 
 ## Integration Points
 
 1. **Bitcoin ↔ Web5**: PSBT management, DID:BTCR
-2. **Web5 ↔ ML/AI**: Privacy-preserving data sharing
-3. **ML/AI ↔ Enterprise**: Revenue prediction, risk assessment
-4. **Enterprise ↔ Bitcoin**: Multi-signature governance
-5. **Mobile ↔ All**: Unified interface to all components
+2. **Bitcoin ↔ Lightning**: Channel management, payment routing
+3. **Bitcoin ↔ DLC**: Oracle signatures, adaptor signatures
+4. **Web5 ↔ ML/AI**: Privacy-preserving data sharing
+5. **ML/AI ↔ Enterprise**: Revenue prediction, risk assessment
+6. **Enterprise ↔ Bitcoin**: Multi-signature governance
+7. **Mobile ↔ All**: Unified interface to all components
 
 ## Deployment Architecture
 
@@ -143,17 +168,28 @@ The system follows hexagonal architecture principles with these port implementat
 - **Performance Tracking**: Resource utilization and bottleneck detection
 - **Security Monitoring**: Threat detection and compliance validation
 - **ML/AI Metrics**: Model accuracy, training efficiency, inference latency
+- **Bitcoin Metrics**: Mempool depth, fee estimation, UTXO set analysis
+
+## Migration Strategy (Python to Rust)
+
+| Component          | Current Implementation   | Target Implementation        | Status         |
+|--------------------|--------------------------|-----------------------------|----------------|
+| Bitcoin Core       | python-bitcoinlib        | rust-bitcoin                | In Progress    |
+| Wallet Operations  | python-bitcoinlib        | BDK                         | Planning       |
+| RPC Client         | python-bitcoinrpc        | bitcoincore-rpc             | In Progress    |
+| Key Management     | hdwallet, base58         | secp256k1, BDK              | Planning       |
 
 ## Development Status
 
-| Component          | Status                 | Next Milestone             |
-|--------------------|------------------------|----------------------------|
-| Bitcoin Core       | Operational            | Taproot-DLC Integration    |
-| Lightning          | Beta                   | Channel Management         |
-| Web5               | Alpha                  | DID Rotation System        |
-| ML/AI              | Development            | Federated Learning v2      |
-| DAO                | Development            | Governance Upgrade         |
-| Enterprise         | Planning               | Compliance System          |
-| Mobile             | Alpha                  | RGB Protocol Support       |
+| Component          | Status                 | Next Milestone                |
+|--------------------|------------------------|-------------------------------|
+| Bitcoin Core       | Operational            | Taproot-DLC Integration       |
+| Lightning          | Beta                   | Channel Management            |
+| DLC                | Alpha                  | Oracle Network Integration    |
+| Web5               | Alpha                  | DID Rotation System           |
+| ML/AI              | Development            | Federated Learning v2         |
+| DAO                | Development            | Governance Upgrade            |
+| Enterprise         | Planning               | Compliance System             |
+| Mobile             | Alpha                  | RGB Protocol Support          |
 
-*Last updated: 2025-02-24*
+*Last updated: 2025-03-01*

@@ -7,6 +7,18 @@
   - [Mobile](./anya/mobile/INDEX.md) - Mobile Application Source
 - [Dash33](./dash33/INDEX.md) - Analytics Dashboard & ML Integration
 
+## Bitcoin Implementation
+- [Bitcoin Core](./anya-core/dependencies/anya-bitcoin/README.md) - Core Bitcoin Implementation
+  - [Consensus](./anya-core/dependencies/anya-bitcoin/src/consensus/README.md) - Consensus Rules
+  - [Mempool](./anya-core/dependencies/anya-bitcoin/src/mempool/README.md) - Transaction Mempool
+  - [Network](./anya-core/dependencies/anya-bitcoin/src/net/README.md) - P2P Networking
+  - [Script](./anya-core/dependencies/anya-bitcoin/src/script/README.md) - Script Execution
+  - [DLC](./anya-core/dependencies/anya-bitcoin/src/dlc/README.md) - Discreet Log Contracts
+- [Rust Bitcoin Libraries](./rust-bitcoin-libraries.md) - Rust Bitcoin Library Documentation
+  - [BDK Example](./bdk-wallet-example.rs) - Bitcoin Development Kit Example
+  - [Rust-Bitcoin Example](./rust-bitcoin-example.rs) - Basic Rust-Bitcoin Example
+  - [Cargo Configuration](./Cargo.toml.example) - Example Cargo Configuration
+
 ## Advanced Analytics
 - [Real-time Processing](./dash33/analytics/realtime/README.md)
 - [Cross-chain Analysis](./dash33/analytics/cross_chain/README.md)
@@ -49,5 +61,10 @@
 - [Security Policy](./SECURITY.md)
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 
-*Last updated: 2024-12-07*
+## Migration Guide
+- [Python to Rust Migration](./docs/migration/python_to_rust.md) - Guide for migrating from Python-bitcoinlib to Rust
+- [Integration Patterns](./docs/integration/bitcoin_integration.md) - Patterns for Bitcoin integration
+- [Testing Guide](./docs/testing/bitcoin_testing.md) - Bitcoin-specific testing guidelines
+
+*Last updated: 2025-03-01*
 

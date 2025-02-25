@@ -10,6 +10,7 @@ pub mod key_manager;
 pub mod invoice_manager;
 pub mod payment_router;
 pub mod payment_executor;
+pub mod bitcoin_bridge;
 
 use std::sync::Arc;
 use crate::config::Config;
