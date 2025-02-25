@@ -1,11 +1,12 @@
-export async function executeProposal(proposalId: string, currentTime: number = Date.now()): Promise<void> {
-  const EXECUTION_DELAY = 172800; // 2 days in seconds
-  const proposalCreationTime = Date.now(); // Simulated creation time
+const EXECUTION_DELAY = 86_400_000; // 24h in ms (BIP 112 relative locktime)
 
-  if (currentTime - proposalCreationTime < EXECUTION_DELAY) {
-    throw new Error("Before execution delay");
+export async function executeProposal(id: string, proposalTime: number) {
+  const currentTime = Date.now();
+  
+  // Enforce CHECKSEQUENCEVERIFY equivalent logic
+  if (currentTime < proposalTime + EXECUTION_DELAY) {
+    throw new Error(`Execution locked until ${proposalTime + EXECUTION_DELAY}`);
   }
 
   // Simulated proposal execution logic
-  console.log(`Executing proposal ${proposalId}`);
-} 
+  console.log(`

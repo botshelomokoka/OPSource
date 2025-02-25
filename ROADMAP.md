@@ -2,37 +2,41 @@
 
 ## Current Phase (Q1 2025)
 
-### Alpha Release (v0.1.0) - February 20, 2025
+### Alpha Release (v0.5.0) - February 28, 2025
 
 - [x] Project Infrastructure
   - [x] Directory structure
   - [x] Environment configuration
   - [x] Build scripts
-- [ ] Development Environment
+- [x] Development Environment
   - [x] VS Code settings
-  - [ ] Test framework setup
-  - [ ] CI/CD pipeline
-- [ ] Documentation
-  - [x] System map
+  - [x] Test framework setup
+  - [x] Basic CI/CD pipeline
+- [x] Documentation
+  - [x] System architecture map
   - [x] Integration patterns
-  - [ ] API documentation
+  - [x] Core module documentation
 
-### Beta Release (v0.2.0) - March 15, 2025
+### Beta Release (v0.6.0) - March 15, 2025
 
-- [ ] DAO Core Implementation
-  - [ ] Token contracts
-  - [ ] Proposal system
-  - [ ] Voting mechanism
-- [ ] Smart Contract Development
-  - [ ] Contract traits
-  - [ ] State management
-  - [ ] Event system
-- [ ] Testing Infrastructure
-  - [ ] Unit test suite
-  - [ ] Integration tests
-  - [ ] Contract tests
-
-## Q2 2025 Milestones
+- [ ] Anya-Core Implementation
+  - [ ] Bitcoin Protocol Layer
+    - [ ] Transaction management
+    - [ ] UTXO handling
+    - [ ] Address management
+    - [ ] Lightning Network integration
+  - [ ] Web5 Integration
+    - [ ] DID management
+    - [ ] DWN integration
+    - [ ] Schema repository
+  - [ ] Machine Learning Components
+    - [ ] Model pipeline
+    - [ ] Federated learning
+    - [ ] Secure aggregation
+  - [ ] DAO Governance
+    - [ ] Voting system
+    - [ ] Proposal management
+    - [ ] Time-locked execution
 
 ### RC Release (v0.9.0) - April 1, 2025
 
@@ -41,7 +45,7 @@
   - [ ] Performance testing
   - [ ] Compliance review
 - [ ] Testing Coverage
-  - [ ] 100% contract coverage
+  - [ ] 90%+ code coverage
   - [ ] Integration test suite
   - [ ] Stress testing
 - [ ] Documentation
@@ -70,7 +74,7 @@
 
 - [ ] Enhanced Features
   - [ ] Advanced governance
-  - [ ] Token economics
+  - [ ] Cross-chain operations
   - [ ] Analytics dashboard
 - [ ] Platform Extensions
   - [ ] Mobile integration
@@ -88,54 +92,158 @@
   - [ ] Network optimization
   - [ ] Enhanced security
 
+## Component Roadmap
+
+### Bitcoin Integration
+
+#### Q1 2025
+- [x] Protocol interface design
+- [x] Taproot descriptor support
+- [ ] Transaction signing flow
+- [ ] UTXO management
+
+#### Q2 2025
+- [ ] Lightning Network integration
+- [ ] DLC implementation
+- [ ] Cross-chain bridges
+- [ ] Hardware wallet support
+
+#### Q3-Q4 2025
+- [ ] Advanced scripting
+- [ ] Covenants support
+- [ ] Zero-knowledge proofs
+- [ ] Layer 3 protocols
+
+### Web5 & DID
+
+#### Q1 2025
+- [x] DID implementation
+- [ ] DWN record management
+- [ ] Protocol definitions
+- [ ] Secure messaging
+
+#### Q2 2025
+- [ ] Identity federation
+- [ ] Verifiable credentials
+- [ ] Cross-platform sync
+- [ ] Offline operation
+
+#### Q3-Q4 2025
+- [ ] DID method expansion
+- [ ] Advanced privacy features
+- [ ] Integration with identity providers
+- [ ] Enterprise identity solutions
+
+### Machine Learning & AI
+
+#### Q1 2025
+- [x] ML service architecture
+- [ ] Federated learning infrastructure
+- [ ] Model execution engine
+- [ ] Secure aggregation protocol
+
+#### Q2 2025
+- [ ] Privacy-preserving ML
+- [ ] Differential privacy
+- [ ] Model optimization
+- [ ] Market predictions
+
+#### Q3-Q4 2025
+- [ ] Advanced analytics
+- [ ] Risk assessment
+- [ ] Anomaly detection
+- [ ] Predictive maintenance
+
+### DAO Governance
+
+#### Q1 2025
+- [x] Basic voting mechanism
+- [ ] Proposal system
+- [ ] Time-locked execution
+- [ ] Quadratic voting
+
+#### Q2 2025
+- [ ] Reputation systems
+- [ ] Decision metrics
+- [ ] Delegation mechanisms
+- [ ] Resource allocation
+
+#### Q3-Q4 2025
+- [ ] Cross-chain governance
+- [ ] AI-assisted decision making
+- [ ] Autonomous operations
+- [ ] Advanced analytics
+
 ## Success Metrics
 
 | Milestone | Target | Metric |
 |-----------|--------|--------|
-| Alpha | Feb 20, 2025 | Core functionality |
-| Beta | Mar 15, 2025 | Testing coverage |
-| RC | Apr 1, 2025 | Security audit |
-| Production | May 1, 2025 | Mainnet deployment |
+| Alpha | Feb 28, 2025 | Core functionality working |
+| Beta | Mar 15, 2025 | 75% test coverage |
+| RC | Apr 1, 2025 | Passed security audit |
+| Production | May 1, 2025 | Ready for mainnet |
 
-## Dependencies
+## Dependencies & Requirements
 
-- Node.js ≥ 18.0.0
-- Clarinet SDK
+- Rust 1.70+
+- Node.js 18+
+- Python 3.10+
+- Bitcoin Core 25.0+
+- Web5 SDK 0.1.0+
+- ML frameworks (TensorFlow, PyTorch)
 - Git
-- VS Code + Extensions
 
 ## Risk Management
 
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Security vulnerabilities | High | Regular audits |
-| Performance issues | Medium | Continuous testing |
-| Integration failures | Medium | Automated testing |
-| Documentation gaps | Low | Regular reviews |
+| Risk | Impact | Probability | Mitigation |
+|------|--------|-------------|------------|
+| Security vulnerabilities | High | Medium | Regular audits, penetration testing |
+| Performance bottlenecks | Medium | Medium | Performance testing, profiling |
+| Dependency issues | Medium | High | Strict version management, fallbacks |
+| Integration failures | High | Medium | Extensive testing, continuous integration |
+| Feature scope creep | Medium | High | Strict prioritization, MVP focus |
 
-## 2024 Q3-Q4 Priorities
+## Hexagonal Architecture Development
+
+### Core Domains (Q1 2025)
+- [x] Define port interfaces
+- [ ] Implement adapters for Bitcoin
+- [ ] Implement adapters for Web5
+- [ ] Implement adapters for ML
+
+### Adapters (Q2 2025)
+- [ ] External API adapters
+- [ ] Storage adapters
+- [ ] UI adapters
+- [ ] Networking adapters
+
+### Infrastructure (Q3-Q4 2025)
+- [ ] Scalability enhancements
+- [ ] Performance optimization
+- [ ] Security hardening
+- [ ] Enterprise integration
+
+## 2025 Priorities
 
 ### Protocol Layer
-
-- [ ] Taproot-DLC integration (WIP)
-- [ ] Federated learning oracles
-- [ ] RSK merge-mining v2
+- [ ] Taproot-DLC integration (Complete by Q2)
+- [ ] Federated learning oracles (Complete by Q3)
+- [ ] RSK merge-mining v2 (Complete by Q4)
 
 ### AI Systems
-
-- [ ] UTXO clustering engine
-- [ ] Mempool CNN-LSTM v2
-- [ ] Privacy-preserving ML
+- [ ] UTXO clustering engine (Complete by Q2)
+- [ ] Mempool CNN-LSTM v2 (Complete by Q3)
+- [ ] Privacy-preserving ML (Complete by Q4)
 
 ### Mobile
+- [ ] React Native LDK bindings (Complete by Q2)
+- [ ] Cross-platform PSBT flow (Complete by Q3)
+- [ ] HSM-backed wallet SDK (Complete by Q4)
 
-- [ ] React Native LDK bindings
-- [ ] Cross-platform PSBT flow
-- [ ] HSM-backed wallet SDK
+### Stacks Integration
+- [ ] Migrate to Clarity v2 (Complete by Q2)
+- [ ] Implement sBTC testnet (Complete by Q3) 
+- [ ] Prepare for Nakamoto PoX v3 (Complete by Q4)
+- [ ] Optimize Bitcoin header sync (Complete by Q4)
 
-### 2024 Q4 Stacks Milestones
-
-- [ ] Migrate to fully expressive Clarity v2
-- [ ] Implement sBTC testnet operations
-- [ ] Prepare for Nakamoto PoX v3
-- [ ] Optimize Bitcoin header sync
+*Last updated: 2025-02-24*

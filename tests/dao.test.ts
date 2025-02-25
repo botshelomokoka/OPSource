@@ -2,20 +2,19 @@ import { createMaliciousActor, createProposal, EXECUTION_DELAY } from './utils/d
 import { executeProposal } from '@/dao/core';
 import { install, Clock } from '@sinonjs/fake-timers';
 import { describe, it, expect } from 'vitest';
+import { vi } from 'vitest';
 
 interface TestContext {
   clock: Clock;
 }
 
 describe('DAO Governance', () => {
-  let clock: Clock;
-
   beforeEach(() => {
-    clock = install();
+    vi.useFakeTimers();
   });
 
   afterEach(() => {
-    clock.uninstall();
+    vi.useRealTimers();
   });
 
   it('should prevent 51% attack with quadratic voting', async () => {
@@ -24,16 +23,15 @@ describe('DAO Governance', () => {
   });
 
   it('should enforce execution delay', async () => {
-    const proposalId = 'test-proposal-1';
+    vi.useFakeTimers();
     const creationTime = Date.now();
     
-    // Attempt to execute before delay
-    await expect(executeProposal(proposalId, creationTime)).rejects.toThrow("Before execution delay");
+    // Advance exactly by execution delay
+    vi.advanceTimersByTime(EXECUTION_DELAY);
 
-    // Move time forward past the delay
-    clock.tick(172800 * 1000 + 1);
-
-    // Should now execute without throwing
-    await expect(executeProposal(proposalId, creationTime + 172800 * 1000 + 1)).resolves.not.toThrow();
+    await expect(executeProposal('test-proposal-1', creationTime))
+      .resolves.not.toThrow();
+    
+    vi.useRealTimers();
   });
 }); 

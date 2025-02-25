@@ -10,6 +10,11 @@ export default defineConfig({
   test: {
     globals: true,
     include: ['tests/**/*.test.ts'],
-    setupFiles: ['./tests/setup.ts']
+    setupFiles: ['./tests/setup.ts'],
+    testTimeout: 15_000,
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html']
+    }
   }
 });
