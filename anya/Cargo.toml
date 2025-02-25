@@ -71,7 +71,6 @@ rsk = "0.1.0"
 taproot = "0.1.0"
 
 # Web5 and DID Dependencies
-web5 = "0.1.0"
 did-key = "0.2"
 handshake-client = "0.1.0"
 
@@ -95,11 +94,11 @@ thiserror = { workspace = true }
 async-trait = { workspace = true }
 
 # Web5 Integration
-web5 = { workspace = true }
+web5 = { workspace = true, optional = true }
 jsonschema = { workspace = true }
 
 # Blockchain Integration
-bitcoin = { workspace = true }
+bitcoin = { workspace = true, optional = true }
 bitcoincore-rpc = { workspace = true }
 
 # Networking
@@ -141,7 +140,6 @@ rust-bitcoin = { workspace = true }
 lightning = { workspace = true }
 rgb-core = { workspace = true }
 taproot = { workspace = true }
-web5 = { workspace = true }
 tokio = { workspace = true }
 serde = { workspace = true }
 
@@ -156,10 +154,12 @@ proptest = { workspace = true }
 tonic-build = "0.10.2"
 
 [features]
-default = ["std", "bitcoin", "mobile", "web5"]
+default = ["std", "bitcoin_integration", "mobile", "web5"]
 std = []
 nightly = []
+bitcoin_integration = ["bitcoin"]
 mobile = []
+web5 = ["dep:web5"]
 enterprise = []
 full = ["mobile", "enterprise"]
 
