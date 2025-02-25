@@ -1,12 +1,13 @@
 [workspace]
 members = [
     "anya-core",
-    "anya-core/enterprise",
-    "anya-core/mobile",
+    "anya-core/src/enterprise/anya-enterprise",
+    "anya-core/src/extensions/anya-extensions",
     "anya-core/dependencies/anya-bitcoin",
     "anya-core/dependencies/anya-extensions"
 ]
 resolver = "2"
+version = "0.1.0"
 
 [workspace.dependencies]
 tokio = { version = "1.41.1", features = ["full"] }
@@ -47,3 +48,7 @@ rsk = "0.1.0"
 taproot = "0.1.0"
 react-native-rust = "0.1.0"
 uniffi = "0.24"
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
