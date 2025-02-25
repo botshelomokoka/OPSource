@@ -5,6 +5,9 @@ export class ChannelManager {
   ) {}
 
   calculateFeeRate(): number {
-    return this.liquidity / this.capacity;
+    // Available liquidity ratio
+    const availableRatio = this.liquidity / this.capacity;
+    // Apply 25% multiplier for fee calculation (BIP recommendations)
+    return 0.25 * availableRatio;
   }
 } 

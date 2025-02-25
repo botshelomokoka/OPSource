@@ -15,7 +15,7 @@
         },
         "types": [
             "jest",
-            "vitest/globals"
+            "node"
         ],
         "typeRoots": [
             "./node_modules/@types",

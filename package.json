@@ -18,7 +18,10 @@
     "lint": "eslint src/ tests/",
     "build": "tsc",
     "dev": "tsc --watch",
-    "test:win": "vitest run 'tests/**/*.test.ts'"
+    "test:win": "vitest run 'tests/**/*.test.ts'",
+    "package": "node -e \"process.platform === 'win32' ? require('child_process').spawn('powershell', ['-Command', '.\\\\scripts\\\\package.ps1'], {stdio: 'inherit'}) : require('child_process').spawn('bash', ['./scripts/package.sh'], {stdio: 'inherit'})\"",
+    "package:win": "powershell -Command .\\scripts\\package.ps1",
+    "package:unix": "bash ./scripts/package.sh"
   },
   "devDependencies": {
     "@hirosystems/clarinet-sdk": "^0.2.2",
@@ -26,8 +29,9 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.0.0",
+    "@types/sinonjs__fake-timers": "^8.1.5",
     "@vitest/coverage-v8": "^1.6.1",
-    "@vitest/ui": "^0.30.1",
+    "@vitest/ui": "^1.6.1",
     "eslint": "9.20.1",
     "happy-dom": "^17.1.4",
     "tinyrainbow": "^2.0.0",
