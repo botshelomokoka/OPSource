@@ -129,7 +129,7 @@ table.docutils th {
 }
 
 .wy-side-nav-search {
-    background-color: var(--secondary-color);
+    background: #2c3e50 !important;
 }
 
 .wy-menu-vertical li.current {
@@ -212,4 +212,9 @@ table.docutils th {
     background-color: var(--accent-color);
     z-index: 1000;
     transition: width 0.2s ease;
+}
+
+h2[aria-level] {
+    position: relative;
+    margin: 1.5em 0 0.8em;
 }
