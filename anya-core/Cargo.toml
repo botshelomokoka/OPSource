@@ -60,9 +60,6 @@ proptest = "1.2.0"
 test-log = { version = "0.2.14", features = ["trace"] }
 
 # Bitcoin Core Dependencies
-bitcoin = "0.30.0"
-bitcoin-wallet = "0.3.0"
-rust-bitcoin = "0.30.0"
 lightning = "0.0.116"
 
 # Smart Contract Dependencies
@@ -136,8 +133,6 @@ jsonwebtoken = "9.2.0"
 totp-rs = "5.4.0"
 
 # Bitcoin Core Dependencies
-bitcoin = { workspace = true }
-rust-bitcoin = { workspace = true }
 lightning = { workspace = true }
 rgb-core = { workspace = true }
 taproot = { workspace = true }
@@ -173,4 +168,3 @@ panic = "abort"
 [profile.dev]
 opt-level = 0
 debug = true
-G
