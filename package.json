@@ -21,7 +21,9 @@
     "test:win": "vitest run 'tests/**/*.test.ts'",
     "package": "node -e \"process.platform === 'win32' ? require('child_process').spawn('powershell', ['-Command', '.\\\\scripts\\\\package.ps1'], {stdio: 'inherit'}) : require('child_process').spawn('bash', ['./scripts/package.sh'], {stdio: 'inherit'})\"",
     "package:win": "powershell -Command .\\scripts\\package.ps1",
-    "package:unix": "bash ./scripts/package.sh"
+    "package:unix": "bash ./scripts/package.sh",
+    "type-check": "tsc --noEmit",
+    "postinstall": "npm run type-check"
   },
   "devDependencies": {
     "@hirosystems/clarinet-sdk": "^0.2.2",
