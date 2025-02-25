@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing Guide &mdash; OPSource 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=2ae16414" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=01f34227"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=30646c52"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script src="../_static/js/custom.js?v=d845f544"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Troubleshooting Guide" href="../troubleshooting/index.html" />
+    <link rel="prev" title="Architecture Overview" href="../architecture/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2c3e50" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            OPSource
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quick-start.html">Quick Start Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/trading.html">Trading Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../anya/index.html">Anya AI/ML Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dash33/index.html">Dash33 High-Performance Trading Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../enterprise/index.html">Enterprise Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mobile/index.html">Mobile Platform</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Architecture Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#code-of-conduct">Code of Conduct</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-process">Development Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-standards">Coding Standards</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rust">Rust</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-request-process">Pull Request Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-reporting">Issue Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#release-process">Release Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#community">Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#recognition">Recognition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Support Resources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2c3e50" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OPSource</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Contributing Guide</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/botshelomokoka/opsource/blob/main/docs/contributing/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contributing-guide">
+<h1>Contributing Guide<a class="headerlink" href="#contributing-guide" title="Link to this heading"></a></h1>
+<p>Thank you for your interest in contributing to OPSource! This guide will help you get started with contributing to our project.</p>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#code-of-conduct" id="id1">Code of Conduct</a></p></li>
+<li><p><a class="reference internal" href="#getting-started" id="id2">Getting Started</a></p></li>
+<li><p><a class="reference internal" href="#development-process" id="id3">Development Process</a></p></li>
+<li><p><a class="reference internal" href="#coding-standards" id="id4">Coding Standards</a></p>
+<ul>
+<li><p><a class="reference internal" href="#python" id="id5">Python</a></p></li>
+<li><p><a class="reference internal" href="#rust" id="id6">Rust</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#documentation" id="id7">Documentation</a></p></li>
+<li><p><a class="reference internal" href="#testing" id="id8">Testing</a></p></li>
+<li><p><a class="reference internal" href="#pull-request-process" id="id9">Pull Request Process</a></p></li>
+<li><p><a class="reference internal" href="#issue-reporting" id="id10">Issue Reporting</a></p></li>
+<li><p><a class="reference internal" href="#release-process" id="id11">Release Process</a></p></li>
+<li><p><a class="reference internal" href="#security" id="id12">Security</a></p></li>
+<li><p><a class="reference internal" href="#community" id="id13">Community</a></p></li>
+<li><p><a class="reference internal" href="#recognition" id="id14">Recognition</a></p></li>
+<li><p><a class="reference internal" href="#license" id="id15">License</a></p></li>
+</ul>
+</nav>
+<section id="code-of-conduct">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Code of Conduct</a><a class="headerlink" href="#code-of-conduct" title="Link to this heading"></a></h2>
+<p>We are committed to providing a friendly, safe, and welcoming environment for all contributors. Please read and follow our <span class="xref std std-doc">code-of-conduct</span>.</p>
+</section>
+<section id="getting-started">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Getting Started</a><a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Fork the repository</p></li>
+<li><p>Clone your fork:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-username/opsource.git
+<span class="nb">cd</span><span class="w"> </span>opsource
+</pre></div>
+</div>
+</li>
+<li><p>Create a virtual environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate<span class="w">  </span><span class="c1"># Linux/macOS</span>
+venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate<span class="w">     </span><span class="c1"># Windows</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install dependencies:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="development-process">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Development Process</a><a class="headerlink" href="#development-process" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Create a branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/your-feature-name
+</pre></div>
+</div>
+</li>
+<li><p>Make your changes</p></li>
+<li><p>Run tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>tests/
+cargo<span class="w"> </span><span class="nb">test</span><span class="w">    </span><span class="c1"># for Rust components</span>
+</pre></div>
+</div>
+</li>
+<li><p>Submit a pull request</p></li>
+</ol>
+</section>
+<section id="coding-standards">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Coding Standards</a><a class="headerlink" href="#coding-standards" title="Link to this heading"></a></h2>
+<section id="python">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Python</a><a class="headerlink" href="#python" title="Link to this heading"></a></h3>
+<p>We follow PEP 8 with these additions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Good</span>
+<span class="k">def</span> <span class="nf">calculate_position</span><span class="p">(</span><span class="n">price</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">amount</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate position value.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        price: Asset price</span>
+<span class="sd">        amount: Position size</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: Position value</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">price</span> <span class="o">*</span> <span class="n">amount</span>
+</pre></div>
+</div>
+</section>
+<section id="rust">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Rust</a><a class="headerlink" href="#rust" title="Link to this heading"></a></h3>
+<p>Follow the Rust style guide:</p>
+<div class="highlight-rust notranslate"><div class="highlight"><pre><span></span><span class="c1">// Good</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Position</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">price</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="p">,</span>
+<span class="w">    </span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">Position</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">new</span><span class="p">(</span><span class="n">price</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="p">,</span><span class="w"> </span><span class="n">amount</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">Self</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="bp">Self</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">price</span><span class="p">,</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="documentation">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Documentation</a><a class="headerlink" href="#documentation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use clear, concise language</p></li>
+<li><p>Include code examples</p></li>
+<li><p>Add docstrings to all public APIs</p></li>
+<li><p>Update relevant documentation files</p></li>
+</ul>
+</section>
+<section id="testing">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Testing</a><a class="headerlink" href="#testing" title="Link to this heading"></a></h2>
+<p>Requirements:</p>
+<ul class="simple">
+<li><p>Unit tests for all new features</p></li>
+<li><p>Integration tests for API changes</p></li>
+<li><p>Performance tests for critical paths</p></li>
+<li><p>Documentation tests</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># test_trading.py</span>
+<span class="k">def</span> <span class="nf">test_order_creation</span><span class="p">():</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="n">create_order</span><span class="p">(</span>
+        <span class="n">pair</span><span class="o">=</span><span class="s2">&quot;BTC/USD&quot;</span><span class="p">,</span>
+        <span class="n">side</span><span class="o">=</span><span class="s2">&quot;buy&quot;</span><span class="p">,</span>
+        <span class="n">amount</span><span class="o">=</span><span class="mf">1.0</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="n">order</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;pending&quot;</span>
+    <span class="k">assert</span> <span class="n">order</span><span class="o">.</span><span class="n">pair</span> <span class="o">==</span> <span class="s2">&quot;BTC/USD&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="pull-request-process">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Pull Request Process</a><a class="headerlink" href="#pull-request-process" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Update documentation</p></li>
+<li><p>Add tests</p></li>
+<li><p>Update CHANGELOG.md</p></li>
+<li><p>Get review from maintainers</p></li>
+<li><p>Address feedback</p></li>
+<li><p>Merge after approval</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PRs must pass all CI checks before merging.</p>
+</div>
+</section>
+<section id="issue-reporting">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Issue Reporting</a><a class="headerlink" href="#issue-reporting" title="Link to this heading"></a></h2>
+<p>When reporting issues:</p>
+<ol class="arabic simple">
+<li><p>Use issue templates</p></li>
+<li><p>Include reproduction steps</p></li>
+<li><p>Attach relevant logs</p></li>
+<li><p>Add system information</p></li>
+</ol>
+<p>Example:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>## Description
+Trading order fails to execute
+
+## Steps to Reproduce
+1. Create buy order
+2. Set price at market
+3. Submit order
+
+## Expected Behavior
+Order executes successfully
+
+## Actual Behavior
+Order fails with timeout
+
+## System Info
+- OS: Windows 11
+- Python: 3.11
+- OPSource: 1.0.0
+</pre></div>
+</div>
+</section>
+<section id="release-process">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Release Process</a><a class="headerlink" href="#release-process" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Version bump</p></li>
+<li><p>Update CHANGELOG.md</p></li>
+<li><p>Create release branch</p></li>
+<li><p>Run release tests</p></li>
+<li><p>Create GitHub release</p></li>
+<li><p>Deploy to production</p></li>
+</ol>
+</section>
+<section id="security">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Security</a><a class="headerlink" href="#security" title="Link to this heading"></a></h2>
+<p>Report security issues to <a class="reference external" href="mailto:security&#37;&#52;&#48;opsource&#46;dev">security<span>&#64;</span>opsource<span>&#46;</span>dev</a></p>
+<p>DO NOT:
+* Create public issues
+* Share exploit details
+* Disclose vulnerabilities</p>
+</section>
+<section id="community">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Community</a><a class="headerlink" href="#community" title="Link to this heading"></a></h2>
+<p>Join our community:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://discord.gg/opsource">Discord</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/opsource">Twitter</a></p></li>
+<li><p><a class="reference external" href="https://forum.opsource.dev">Forum</a></p></li>
+</ul>
+</section>
+<section id="recognition">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Recognition</a><a class="headerlink" href="#recognition" title="Link to this heading"></a></h2>
+<p>Contributors will be:</p>
+<ul class="simple">
+<li><p>Added to CONTRIBUTORS.md</p></li>
+<li><p>Mentioned in release notes</p></li>
+<li><p>Invited to core team (significant contributions)</p></li>
+</ul>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Core Team</div>
+<p class="sd-card-text">Meet our core development team.</p>
+</div>
+<span class="sd-stretched-link sd-hide-link-text">team/core</span></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Contributors</div>
+<p class="sd-card-text">View all project contributors.</p>
+</div>
+<span class="sd-stretched-link sd-hide-link-text">team/contributors</span></div>
+</div>
+</div>
+</div>
+</section>
+<section id="license">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">License</a><a class="headerlink" href="#license" title="Link to this heading"></a></h2>
+<p>By contributing, you agree to license your work under our project license (MIT).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../architecture/index.html" class="btn btn-neutral float-left" title="Architecture Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting/index.html" class="btn btn-neutral float-right" title="Troubleshooting Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, OPSource Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
