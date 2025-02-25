@@ -19,6 +19,8 @@
 
 ## Installation
 
+### Option 1: Clone Repository
+
 1.Clone the repository:
 
 ```powershell
@@ -44,6 +46,39 @@ npm install
 
 # Setup development environment
 npm run setup
+```
+
+### Option 2: Use Packaged Version
+
+1.Download the latest package:
+
+```powershell
+# Download directly from GitHub releases
+curl -LO https://github.com/botshelomokoka/OPSource/raw/main/packages/opsource-0.1.0.zip
+
+# Or clone repository and use packaged version
+git clone https://github.com/botshelomokoka/OPSource.git
+cd OPSource/packages
+```
+
+2.Verify package integrity:
+
+```powershell
+# Get SHA256 checksum
+Get-FileHash -Path opsource-0.1.0.zip -Algorithm SHA256
+
+# Compare with the expected value in .sha256 file
+Get-Content opsource-0.1.0.zip.sha256
+```
+
+3.Extract and use:
+
+```powershell
+# Extract the package
+Expand-Archive -Path opsource-0.1.0.zip -DestinationPath ./opsource
+
+# Navigate to extracted directory
+cd opsource
 ```
 
 ## Project Structure
@@ -138,6 +173,22 @@ npm run docs
 
 # Serve documentation locally
 npm run docs:serve
+```
+
+### Creating Distribution Packages
+
+```powershell
+# Package for distribution (auto-detects platform)
+npm run package
+
+# Package explicitly for Windows
+npm run package:win
+
+# Package explicitly for Unix-based systems
+npm run package:unix
+
+# Package with custom options
+.\scripts\package.ps1 -version "0.1.0" -outputDir "custom-output"
 ```
 
 ## Troubleshooting

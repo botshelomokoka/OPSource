@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Package distribution system with SHA256 checksum verification
+- Cross-platform packaging support (Windows PowerShell and Unix bash)
+
+## [0.1.0] - 2025-02-25
+
+### Added
 - [2025-02-24] Implemented core ML service architecture
 - [2025-02-24] Added Bitcoin protocol stubs and adapter pattern  
 - [2025-02-24] Created Web5 integration framework
@@ -69,12 +75,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Core Bitcoin interface components
 - Basic Lightning Network support
 - Initial DAO governance structure
-
-## [0.1.0] - 2024-09-01
-### Added
-- Initial release of OPSource
-- Core functionality for blockchain analytics
-- Basic research capabilities
-- Integration with Anya-Core
 
 *Last updated: 2025-02-24*

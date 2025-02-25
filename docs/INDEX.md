@@ -212,3 +212,14 @@ Cross-platform mobile capabilities
 3. Maintain consistent date formats
 4. Update index.md when adding docs
 5. Regular documentation reviews
+
+## Documentation Structure
+
+| Document | Description |
+|----------|-------------|
+| [GETTING_STARTED.md](./GETTING_STARTED.md) | Initial setup guide |
+| [system_map.md](./system_map.md) | System architecture overview |
+| [INTEGRATION_PATTERNS.md](./INTEGRATION_PATTERNS.md) | Integration patterns |
+| [PACKAGING.md](./PACKAGING.md) | Packaging and distribution guide |
+| [DEPLOYMENT.md](./DEPLOYMENT.md) | Deployment procedures |
+| [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) | Common issues and solutions |
