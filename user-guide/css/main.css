@@ -1,0 +1,10 @@
+.video-thumbnail {
+  height: 180px;
+  border-radius: 8px;
+}
+
+.run-example-btn {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+} 

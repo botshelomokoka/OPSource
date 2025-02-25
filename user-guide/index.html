@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPSource User Guide</title>
+  <link rel="stylesheet" href="../_static/css/theme.css">
+  <link rel="stylesheet" href="../_static/css/custom.css">
+  <!-- Bitcoin protocol verification hash: 0x8f3a92a7e8e9c1d3f5b6a7c8d9e0f1a2b3c4d5e6 -->
+</head>
+<body>
+  <header class="page-header" role="banner">
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="../index.html" class="home-link">OPSource</a>
+      <ul role="menubar">
+        <li role="none"><a role="menuitem" href="../index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="index.html" aria-current="page">User Guide</a></li>
+        <li role="none"><a role="menuitem" href="../api/index.html">API Reference</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content" role="main">
+    <div class="container">
+      <h1>User Guide</h1>
+      
+      <section id="tutorials" aria-labelledby="tutorials-heading">
+        <h2 id="tutorials-heading">Video Tutorials</h2>
+        <p>Get up to speed quickly with these helpful video tutorials:</p>
+        
+        <div class="video-grid">
+          <article class="video-card">
+            <div class="video-thumbnail" aria-hidden="true">🎥</div>
+            <h3>Quick Start Guide</h3>
+            <p>Get up and running with OPSource in 10 minutes</p>
+            <a href="https://youtube.com/opsource/quickstart" class="button">Watch Now</a>
+          </article>
+          
+          <article class="video-card">
+            <div class="video-thumbnail" aria-hidden="true">🎥</div>
+            <h3>Advanced Features</h3>
+            <p>Deep dive into OPSource's advanced capabilities</p>
+            <a href="https://youtube.com/opsource/advanced" class="button">Watch Now</a>
+          </article>
+        </div>
+      </section>
+      
+      <section id="examples" aria-labelledby="examples-heading">
+        <h2 id="examples-heading">Interactive Examples</h2>
+        <p>Try out these interactive examples to learn by doing:</p>
+        
+        <div class="interactive-example">
+          <h3>Basic Trade</h3>
+          <pre><code class="language-rust">let trade = Trade::new()
+    .with_pair("BTC/USD")
+    .with_amount(1.0)
+    .execute();</code></pre>
+          <button class="run-example-btn" onclick="runExample('basic-trade')">Run Example</button>
+        </div>
+        
+        <div class="interactive-example">
+          <h3>Market Analysis</h3>
+          <pre><code class="language-rust">let analysis = MarketAnalysis::new()
+    .with_timeframe("1d")
+    .analyze();</code></pre>
+          <button class="run-example-btn" onclick="runExample('market-analysis')">Run Example</button>
+        </div>
+      </section>
+      
+      <section id="labs" aria-labelledby="labs-heading">
+        <h2 id="labs-heading">Hands-on Labs</h2>
+        <p>Work through these practical exercises to gain real-world experience:</p>
+        <ol>
+          <li><a href="labs/trading-bot.html">Building a Trading Bot</a></li>
+          <li><a href="labs/custom-indicators.html">Creating Custom Indicators</a></li>
+          <li><a href="labs/risk-management.html">Implementing Risk Management</a></li>
+        </ol>
+      </section>
+      
+      <section id="community" aria-labelledby="community-heading">
+        <h2 id="community-heading">Community Examples</h2>
+        <p>Check out these examples from our community:</p>
+        <ul>
+          <li><a href="community/hedge-fund.html">Hedge Fund Integration</a></li>
+          <li><a href="community/metrics-dashboard.html">Metrics Dashboard</a></li>
+          <li><a href="community/alerts.html">Custom Alert System</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; 2025 OPSource. Built with <a href="https://sphinx-doc.org/">Sphinx</a>.</p>
+      <p class="version-info">Version: 0.1.0 - Last updated: 2025-02-24</p>
+    </div>
+  </footer>
+
+  <script src="../_static/js/main.js"></script>
+  <script>
+    function runExample(exampleId) {
+      console.log(`Running example: ${exampleId}`);
+      // Example execution logic
+    }
+  </script>
+</body>
+</html>
