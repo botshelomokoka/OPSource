@@ -145,6 +145,29 @@ impl Config {
             _ => LightningImplementationType::Mock,
         }
     }
+
+    /// Determine which Bitcoin implementation to use based on configuration
+    pub fn get_bitcoin_implementation_type(&self) -> crate::bitcoin::BitcoinImplementationType {
+        // Check if we have an explicit setting in the config
+        if self.use_rust_bitcoin {
+            return crate::bitcoin::BitcoinImplementationType::Rust;
+        } else {
+            return crate::bitcoin::BitcoinImplementationType::Python;
+        }
+    }
+
+    /// Check if we should use the Rust Bitcoin implementation
+    pub fn uses_rust_bitcoin(&self) -> bool {
+        self.use_rust_bitcoin
+    }
+
+    /// Set the Bitcoin implementation type
+    pub fn set_bitcoin_implementation(&mut self, implementation_type: crate::bitcoin::BitcoinImplementationType) {
+        match implementation_type {
+            crate::bitcoin::BitcoinImplementationType::Rust => self.use_rust_bitcoin = true,
+            crate::bitcoin::BitcoinImplementationType::Python => self.use_rust_bitcoin = false,
+        }
+    }
 }
 
 /// Create a default configuration for testing

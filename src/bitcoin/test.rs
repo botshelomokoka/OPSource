@@ -6,8 +6,9 @@ use crate::bitcoin::{
         BitcoinInterface, BitcoinImplementationType, AddressType,
         create_bitcoin_interface
     },
-    BitcoinResult
+    BitcoinResult, BitcoinError, BitcoinTransaction, BitcoinAddress
 };
+use crate::config::Config;
 
 #[cfg(test)]
 mod tests {
@@ -111,7 +112,7 @@ mod tests {
 
 // Test running functionality
 pub fn run_tests() -> Result<(), String> {
-    let config = crate::config::Config::default();
+    let config = Config::default();
     
     println!("Running Bitcoin implementation tests...");
     
