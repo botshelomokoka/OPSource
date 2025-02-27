@@ -4,14 +4,11 @@
 /// Main configuration struct for the application
 #[derive(Debug, Clone)]
 pub struct Config {
-    /// Whether to use the Rust Bitcoin implementation (true) or Python (false)
-    pub use_rust_bitcoin: bool,
-    
     /// Bitcoin network to connect to (mainnet, testnet, regtest)
-    pub bitcoin_network: Option<String>,
+    pub bitcoin_network: String,
     
     /// Bitcoin RPC connection URL
-    pub bitcoin_rpc_url: Option<String>,
+    pub bitcoin_rpc_url: String,
     
     /// Bitcoin RPC username
     pub bitcoin_rpc_user: Option<String>,
@@ -44,23 +41,20 @@ pub struct Config {
 impl Default for Config {
     fn default() -> Self {
         let mut features = std::collections::HashMap::new();
+        features.insert("taproot".to_string(), true);
+        features.insert("lightning".to_string(), false);
+        features.insert("dlc".to_string(), false);
         
-        // Set default feature flags
-        features.insert("use_electrum".to_string(), true);
-        features.insert("verify_blocks".to_string(), false);
-        features.insert("lightning_enabled".to_string(), false);
-        
-        Config {
-            use_rust_bitcoin: true, // Default to Rust implementation
-            bitcoin_network: Some("testnet".to_string()),
-            bitcoin_rpc_url: Some("http://localhost:18332".to_string()),
+        Self {
+            bitcoin_network: "testnet".to_string(),
+            bitcoin_rpc_url: "http://localhost:18332".to_string(),
             bitcoin_rpc_user: None,
             bitcoin_rpc_pass: None,
             bitcoin_data_dir: None,
             wallet_path: None,
-            lightning_implementation: Some("mock".to_string()), // Default to mock implementation
+            lightning_implementation: Some("ldk".to_string()),
             lightning_node_pubkey: None,
-            lightning_listen_addr: Some("0.0.0.0:9735".to_string()),
+            lightning_listen_addr: None,
             lightning_data_dir: None,
             features,
         }
@@ -68,65 +62,66 @@ impl Default for Config {
 }
 
 impl Config {
-    /// Load configuration from environment variables
+    /// Create a configuration from environment variables
     pub fn from_env() -> Self {
         let mut config = Config::default();
         
-        // Load from environment variables if available
-        if let Ok(val) = std::env::var("USE_RUST_BITCOIN") {
-            config.use_rust_bitcoin = val.to_lowercase() == "true";
+        // Bitcoin configuration
+        if let Ok(network) = std::env::var("BITCOIN_NETWORK") {
+            config.bitcoin_network = network;
         }
         
-        if let Ok(val) = std::env::var("BITCOIN_NETWORK") {
-            config.bitcoin_network = Some(val);
+        if let Ok(rpc_url) = std::env::var("BITCOIN_RPC_URL") {
+            config.bitcoin_rpc_url = rpc_url;
         }
         
-        if let Ok(val) = std::env::var("BITCOIN_RPC_URL") {
-            config.bitcoin_rpc_url = Some(val);
+        if let Ok(rpc_user) = std::env::var("BITCOIN_RPC_USER") {
+            config.bitcoin_rpc_user = Some(rpc_user);
         }
         
-        if let Ok(val) = std::env::var("BITCOIN_RPC_USER") {
-            config.bitcoin_rpc_user = Some(val);
+        if let Ok(rpc_pass) = std::env::var("BITCOIN_RPC_PASS") {
+            config.bitcoin_rpc_pass = Some(rpc_pass);
         }
         
-        if let Ok(val) = std::env::var("BITCOIN_RPC_PASS") {
-            config.bitcoin_rpc_pass = Some(val);
+        if let Ok(data_dir) = std::env::var("BITCOIN_DATA_DIR") {
+            config.bitcoin_data_dir = Some(data_dir);
         }
         
-        if let Ok(val) = std::env::var("BITCOIN_DATA_DIR") {
-            config.bitcoin_data_dir = Some(val);
+        if let Ok(wallet_path) = std::env::var("WALLET_PATH") {
+            config.wallet_path = Some(wallet_path);
         }
         
-        if let Ok(val) = std::env::var("WALLET_PATH") {
-            config.wallet_path = Some(val);
+        // Lightning configuration
+        if let Ok(lightning_impl) = std::env::var("LIGHTNING_IMPLEMENTATION") {
+            config.lightning_implementation = Some(lightning_impl);
         }
         
-        // Lightning Network configuration
-        if let Ok(val) = std::env::var("LIGHTNING_IMPLEMENTATION") {
-            config.lightning_implementation = Some(val);
+        if let Ok(lightning_pubkey) = std::env::var("LIGHTNING_NODE_PUBKEY") {
+            config.lightning_node_pubkey = Some(lightning_pubkey);
         }
         
-        if let Ok(val) = std::env::var("LIGHTNING_NODE_PUBKEY") {
-            config.lightning_node_pubkey = Some(val);
+        if let Ok(lightning_addr) = std::env::var("LIGHTNING_LISTEN_ADDR") {
+            config.lightning_listen_addr = Some(lightning_addr);
         }
         
-        if let Ok(val) = std::env::var("LIGHTNING_LISTEN_ADDR") {
-            config.lightning_listen_addr = Some(val);
-        }
-        
-        if let Ok(val) = std::env::var("LIGHTNING_DATA_DIR") {
-            config.lightning_data_dir = Some(val);
+        if let Ok(lightning_dir) = std::env::var("LIGHTNING_DATA_DIR") {
+            config.lightning_data_dir = Some(lightning_dir);
         }
         
         // Feature flags
-        if let Ok(val) = std::env::var("LIGHTNING_ENABLED") {
-            config.features.insert("lightning_enabled".to_string(), val.to_lowercase() == "true");
+        if let Ok(features_str) = std::env::var("ENABLED_FEATURES") {
+            for feature in features_str.split(',') {
+                let feature = feature.trim();
+                if !feature.is_empty() {
+                    config.features.insert(feature.to_string(), true);
+                }
+            }
         }
         
         config
     }
     
-    /// Check if a specific feature is enabled
+    /// Check if a feature is enabled
     pub fn is_feature_enabled(&self, feature: &str) -> bool {
         self.features.get(feature).copied().unwrap_or(false)
     }
@@ -136,41 +131,25 @@ impl Config {
         self.features.insert(feature.to_string(), enabled);
     }
     
-    /// Get the Lightning implementation type based on configuration
+    /// Get the Lightning implementation type
     pub fn get_lightning_implementation_type(&self) -> crate::lightning::interface::LightningImplementationType {
-        use crate::lightning::interface::LightningImplementationType;
-        
         match self.lightning_implementation.as_deref() {
-            Some("ldk") => LightningImplementationType::LDK,
-            _ => LightningImplementationType::Mock,
+            Some("ldk") => crate::lightning::interface::LightningImplementationType::LDK,
+            Some("mock") => crate::lightning::interface::LightningImplementationType::Mock,
+            _ => crate::lightning::interface::LightningImplementationType::LDK,
         }
     }
-
-    /// Determine which Bitcoin implementation to use based on configuration
-    pub fn get_bitcoin_implementation_type(&self) -> crate::bitcoin::BitcoinImplementationType {
-        // Check if we have an explicit setting in the config
-        if self.use_rust_bitcoin {
-            return crate::bitcoin::BitcoinImplementationType::Rust;
-        } else {
-            return crate::bitcoin::BitcoinImplementationType::Python;
-        }
-    }
-
-    /// Check if we should use the Rust Bitcoin implementation
-    pub fn uses_rust_bitcoin(&self) -> bool {
-        self.use_rust_bitcoin
-    }
-
-    /// Set the Bitcoin implementation type
-    pub fn set_bitcoin_implementation(&mut self, implementation_type: crate::bitcoin::BitcoinImplementationType) {
-        match implementation_type {
-            crate::bitcoin::BitcoinImplementationType::Rust => self.use_rust_bitcoin = true,
-            crate::bitcoin::BitcoinImplementationType::Python => self.use_rust_bitcoin = false,
-        }
+    
+    /// Get the Bitcoin implementation type
+    pub fn get_bitcoin_implementation_type(&self) -> crate::bitcoin::interface::BitcoinImplementationType {
+        crate::bitcoin::interface::BitcoinImplementationType::Rust
     }
 }
 
-/// Create a default configuration for testing
+/// Create a test configuration for unit tests
 pub fn test_config() -> Config {
-    Config::default()
+    let mut config = Config::default();
+    config.bitcoin_network = "regtest".to_string();
+    config.bitcoin_rpc_url = "http://localhost:18443".to_string();
+    config
 } 
