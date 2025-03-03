@@ -30,7 +30,7 @@ eth-rlp==2.2.0
 eth-typing==5.1.0
 eth-utils==5.2.0
 eth_abi==5.2.0
-fastapi==0.115.8
+fastapi==0.115.11
 filelock==3.17.0
 flake8==7.1.1
 flatbuffers==25.2.10
