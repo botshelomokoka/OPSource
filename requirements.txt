@@ -93,7 +93,7 @@ python-bitcoinlib==0.12.2
 python-bitcoinrpc==1.0
 python-dotenv==1.0.1
 pyunormalize==16.0.0
-pywin32==308
+pywin32==309
 PyYAML==6.0.2
 regex==2024.11.6
 requests==2.32.3
