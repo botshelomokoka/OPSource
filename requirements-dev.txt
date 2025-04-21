@@ -10,7 +10,7 @@ isort==6.0.0
 
 # Testing
 pytest==8.3.4
-pytest-cov==6.0.0
+pytest-cov==6.1.1
 coverage==7.6.10
 
 # Documentation
