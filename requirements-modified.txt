@@ -80,7 +80,7 @@ propcache==0.3.1
 protobuf==5.29.3
 pycodestyle==2.12.1
 pycparser==2.22
-pycryptodome==3.21.0
+pycryptodome==3.22.0
 pydantic==2.10.6
 pydantic_core==2.30.0
 pyflakes==3.2.0
