@@ -33,7 +33,7 @@ eth-utils==5.2.0
 eth_abi==5.2.0
 fastapi==0.115.12
 filelock==3.17.0
-flake8==7.1.1
+flake8==7.2.0
 flatbuffers==25.2.10
 frozenlist==1.6.0
 fsspec==2025.2.0
